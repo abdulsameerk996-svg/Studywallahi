@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Class 9 Physics · Onam Exam 2026 · Prediction + Type-Answer Quiz</title>
+<style>
+  :root{
+    --bg:#0e1116; --panel:#161b22; --panel2:#1c232d; --line:#2a333f;
+    --tx:#e6edf3; --dim:#9aa7b4; --acc:#4f9cf9; --acc2:#7c5cff;
+    --ok:#3fb950; --okbg:#123420; --bad:#f85149; --badbg:#3a1618;
+    --warn:#d29922; --warnbg:#3a2f10;
+    --r:14px;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f5f7fa; --panel:#ffffff; --panel2:#f0f3f7; --line:#dde3ea;
+           --tx:#14181d; --dim:#5b6672; --okbg:#e4f6e9; --badbg:#fdeaea; --warnbg:#fdf4e0; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+       font:15.5px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
+  .wrap{max-width:880px;margin:0 auto;padding:18px 16px 90px}
+  header{padding:22px 0 12px}
+  h1{font-size:1.5rem;margin:0 0 4px;letter-spacing:-.02em}
+  .sub{color:var(--dim);font-size:.9rem}
+  .pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:.72rem;
+        font-weight:600;letter-spacing:.02em;border:1px solid var(--line)}
+  .pill.hi{background:var(--okbg);color:var(--ok);border-color:transparent}
+  .pill.med{background:var(--warnbg);color:var(--warn);border-color:transparent}
+  .pill.low{background:var(--panel2);color:var(--dim)}
+  .pill.ch{background:var(--panel2);color:var(--dim)}
+  .tabs{display:flex;gap:6px;margin:18px 0 20px;background:var(--panel2);
+        padding:5px;border-radius:12px;border:1px solid var(--line)}
+  .tabs button{flex:1;padding:9px 8px;border:0;background:transparent;color:var(--dim);
+        font:inherit;font-weight:600;font-size:.88rem;border-radius:8px;cursor:pointer}
+  .tabs button.on{background:var(--acc);color:#fff}
+  .panel{display:none} .panel.on{display:block}
+
+  /* ---------- report ---------- */
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+        padding:18px;margin:0 0 14px}
+  .card h2{font-size:1.05rem;margin:0 0 10px;letter-spacing:-.01em}
+  .card h3{font-size:.92rem;margin:16px 0 6px;color:var(--acc)}
+  .card p{margin:0 0 10px}
+  .card ul{margin:0 0 10px;padding-left:20px} .card li{margin:0 0 6px}
+  .card a{color:var(--acc);text-decoration:none;border-bottom:1px solid rgba(79,156,249,.4);font-weight:600}
+  .card a:hover{border-bottom-color:var(--acc)}
+  table{width:100%;border-collapse:collapse;font-size:.86rem;margin:8px 0 12px}
+  th,td{text-align:left;padding:8px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--dim);font-weight:600;font-size:.76rem;text-transform:uppercase;letter-spacing:.04em}
+  .note{background:var(--warnbg);border-left:3px solid var(--warn);padding:11px 13px;
+        border-radius:0 8px 8px 0;font-size:.88rem;margin:0 0 12px}
+  .bar{height:6px;background:var(--panel2);border-radius:99px;overflow:hidden;min-width:70px}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+
+  /* ---------- quiz ---------- */
+  .toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
+  .toolbar select,.toolbar button{background:var(--panel);color:var(--tx);border:1px solid var(--line);
+        border-radius:9px;padding:8px 11px;font:inherit;font-size:.85rem;cursor:pointer}
+  .score{margin-left:auto;font-size:.85rem;color:var(--dim);font-weight:600}
+  .score b{color:var(--tx);font-size:1rem}
+  .q{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+     padding:16px;margin:0 0 12px}
+  .qhead{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 9px}
+  .qno{font-weight:700;font-size:.8rem;color:var(--dim);margin-right:2px}
+  .marks{font-size:.72rem;font-weight:700;color:var(--acc)}
+  .qtext{margin:0 0 12px;font-size:1rem}
+  .qtext .given{display:block;margin-top:6px;color:var(--dim);font-size:.87rem}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
+  .ansrow{display:flex;gap:8px}
+  .ansrow input{flex:1;min-width:0;background:var(--panel2);border:1px solid var(--line);
+        color:var(--tx);border-radius:10px;padding:11px 13px;font:inherit}
+  .ansrow input:focus{outline:2px solid var(--acc);outline-offset:-1px;border-color:transparent}
+  .ansrow button{background:var(--acc);color:#fff;border:0;border-radius:10px;
+        padding:11px 16px;font:inherit;font-weight:600;cursor:pointer;white-space:nowrap}
+  .ansrow button:active{transform:scale(.97)}
+  .fb{margin:11px 0 0;padding:12px 14px;border-radius:10px;font-size:.9rem;display:none}
+  .fb.show{display:block}
+  .fb.good{background:var(--okbg);border-left:3px solid var(--ok)}
+  .fb.part{background:var(--warnbg);border-left:3px solid var(--warn)}
+  .fb.bad{background:var(--badbg);border-left:3px solid var(--bad)}
+  .fb .verdict{font-weight:700;margin:0 0 6px}
+  .fb .model{margin:0 0 8px}
+  .fb .why{color:var(--dim);font-size:.86rem;margin:0}
+  .fb code{background:rgba(127,127,127,.18);padding:1px 5px;border-radius:4px}
+  .empty{color:var(--dim);text-align:center;padding:40px 0}
+
+  /* ---------- mock paper ---------- */
+  .paper{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:20px 20px 22px;margin:0 0 14px}
+  .phead{text-align:center;border-bottom:2px solid var(--line);padding-bottom:14px;margin:0 0 18px}
+  .phead h2{margin:0 0 4px;font-size:1.1rem;letter-spacing:.01em}
+  .phead .meta{color:var(--dim);font-size:.85rem}
+  .phead .split{display:flex;justify-content:space-between;margin-top:10px;font-size:.85rem;font-weight:600}
+  .sechead{background:var(--panel2);border-radius:9px;padding:9px 13px;margin:22px 0 14px;
+           font-size:.85rem;font-weight:700;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+  .sechead span{font-weight:600;color:var(--dim)}
+  .mq{margin:0 0 16px;padding:0 0 0 34px;position:relative}
+  .mq > .n{position:absolute;left:0;top:0;font-weight:700;color:var(--dim);font-size:.9rem}
+  .mq .sub{display:block;margin:6px 0 0 12px;color:var(--tx)}
+  .mq .data{display:block;margin-top:6px;color:var(--dim);font-size:.87rem;font-style:italic}
+  .mq .mk{color:var(--acc);font-weight:700;font-size:.8rem;white-space:nowrap}
+  .revealbtn{background:transparent;border:1px dashed var(--line);color:var(--dim);
+             border-radius:8px;padding:5px 11px;font:inherit;font-size:.78rem;cursor:pointer;margin-top:8px}
+  .ansbox{display:none;margin-top:9px;padding:12px 14px;background:var(--okbg);
+          border-left:3px solid var(--ok);border-radius:0 9px 9px 0;font-size:.9rem}
+  .ansbox b{color:var(--tx)}
+  .mtable{width:100%;font-size:.88rem;margin:8px 0}
+  .mtable td{border:1px solid var(--line);padding:7px 10px}
+  svg.graph{max-width:100%;height:auto;display:block;margin:10px 0}
+
+  /* ---------- diagrams ---------- */
+  .dia{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px 18px;margin:0 0 14px}
+  .dia h3{margin:0 0 3px;font-size:1rem;color:var(--tx)}
+  .dia .cap{color:var(--dim);font-size:.85rem;margin:0 0 10px}
+  .dia .exp{font-size:.89rem;margin:10px 0 0}
+  .dia .exp b{color:var(--acc)}
+  .diabox{background:#fbfcfe;border:1px solid var(--line);border-radius:10px;padding:10px;overflow-x:auto}
+  .diabox svg{display:block;margin:0 auto;max-width:100%;height:auto;color:#1a2029}
+  .fb .diabox{margin-top:10px}
+  .ansbox .diabox{margin-top:10px}
+  .ray{stroke:#e0322f;stroke-width:2.4;fill:none;stroke-linecap:round}
+  .ray2{stroke:#1a7f37;stroke-width:2.4;fill:none;stroke-linecap:round}
+  .ray3{stroke:#8250df;stroke-width:2.4;fill:none;stroke-linecap:round}
+  .norm{stroke:#1a2029;stroke-width:1.2;stroke-dasharray:5 4;fill:none;opacity:.75}
+  .edge{stroke:#1a2029;stroke-width:1.8;fill:none}
+  .fillA{fill:#dce9fb} .fillB{fill:#c6def7} .fillC{fill:#fde8c8}
+  .lbl{font:600 12.5px -apple-system,Segoe UI,Roboto,sans-serif;fill:#1a2029}
+  .lblS{font:600 11px -apple-system,Segoe UI,Roboto,sans-serif;fill:#5b6672}
+  .lblR{font:700 12px -apple-system,Segoe UI,Roboto,sans-serif;fill:#e0322f}
+  footer{color:var(--dim);font-size:.78rem;text-align:center;padding:26px 0 0;line-height:1.7}
+  .stickybar{position:fixed;left:0;right:0;bottom:0;background:var(--panel);
+        border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:10px;
+        align-items:center;justify-content:center;font-size:.85rem}
+  .stickybar .fill{width:120px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Class 9 Physics — Onam Exam 2026</h1>
+  <div class="sub">Kerala SCERT · First Terminal Exam · <b>Mon 17 Aug 2026, afternoon session</b> · 40 marks / 1½ hrs<br>
+  <span style="font-size:.82rem">Sources disagree on the exact date (13th, 17th and 19th all appear online) — confirm yours with the school.</span></div>
+</header>
+
+<div class="tabs">
+  <button id="t-quiz" class="on" onclick="tab('quiz')">Quiz</button>
+  <button id="t-end" onclick="tab('end')">Endless</button>
+  <button id="t-mock" onclick="tab('mock')">Mock Paper</button>
+  <button id="t-dia" onclick="tab('dia')">Diagrams</button>
+  <button id="t-src" onclick="tab('src')">Sources</button>
+  <button id="t-rep" onclick="tab('rep')">Report</button>
+</div>
+
+<!-- ===================== REPORT ===================== -->
+<div id="p-rep" class="panel">
+
+  <div class="note">
+    <b>Straight talk first.</b> Nobody — not Xylem, not Eduport, not Exam Winner, not me — has the actual
+    2026 paper. Kerala first-term papers are set at district/school level and are not leaked in advance.
+    What follows is a <i>probability</i> map built from the textbook, the SCERT model papers, and past
+    first-term papers. "100% sure question" videos are marketing language for "very high frequency topic."
+    Treat the ★★★ items as near-certain <i>topics</i>, not near-certain wordings.
+  </div>
+
+  <div class="card">
+    <h2>1 · What's actually in the portion</h2>
+    <p>The Class 9 Physics book (new SCERT textbook, 8 chapters) splits into Part 1 = Ch 1–4, Part 2 = Ch 5–8.
+       First term covers what was taught June → July, and the exam is only 40 marks in 1½ hours.</p>
+    <table>
+      <tr><th>Chapter</th><th>In the Onam paper?</th><th>Weight I'd expect</th></tr>
+      <tr><td><b>1. Refraction of Light</b></td><td><span class="pill hi">Certain</span></td><td>~14–18 marks</td></tr>
+      <tr><td><b>2. Equations of Motion</b></td><td><span class="pill hi">Certain</span></td><td>~14–18 marks</td></tr>
+      <tr><td><b>3. Laws of Motion</b></td><td><span class="pill med">Possible — if your teacher finished it</span></td><td>0–8 marks</td></tr>
+      <tr><td>4. Gravitation</td><td><span class="pill low">Unlikely</span></td><td>0</td></tr>
+      <tr><td>5–8 (Buoyancy, Work &amp; Energy, Electricity, Sound)</td><td><span class="pill low">No</span></td><td>0</td></tr>
+    </table>
+    <p><b>Action:</b> check your own class notebook. If Laws of Motion was started and momentum (<span class="mono">p = mv</span>)
+       was taught, do the Ch 3 questions in the quiz too — I've tagged them separately. If not, ignore them and put
+       that time into refraction numericals.</p>
+  </div>
+
+  <div class="card">
+    <h2>2 · Paper pattern (this is the reliable part)</h2>
+    <p>Every SCERT Class 9 Physics model paper follows the same skeleton, and first-term papers copy it:</p>
+    <table>
+      <tr><th>Section</th><th>Format</th><th>Total</th><th>What it tests</th></tr>
+      <tr><td>I</td><td>Answer 3 of 4 · 1 mark</td><td>3</td><td>One-word / MCQ / odd-one-out. Definitions and units.</td></tr>
+      <tr><td>II</td><td>Answer 7 of 9 · 2 marks</td><td>14</td><td>Short reason, one-step numerical, match the following.</td></tr>
+      <tr><td>III</td><td>Answer 5 of 6 · 3 marks</td><td>15</td><td>Two-step numericals, explain-with-diagram.</td></tr>
+      <tr><td>IV</td><td>Answer 2 of 3 · 4 marks</td><td>8</td><td>Long: derivation, graph, multi-part numerical.</td></tr>
+    </table>
+    <p><b>The choice matters more than people realise.</b> You skip 1 in Section I, 2 in II, 1 in III, 1 in IV.
+       So there is room to drop your weakest topic entirely. But you cannot drop a whole chapter — both
+       chapters appear in every section.</p>
+    <p><b>Cool-off time:</b> 15 minutes before writing. Use it to mark which questions you'll skip, and to
+       write the three motion equations on the rough side of the answer sheet before you forget them.</p>
+  </div>
+
+  <div class="card">
+    <h2>3 · Highest-probability question types, with reasoning</h2>
+
+    <h3>Chapter 1 — Refraction of Light</h3>
+    <table>
+      <tr><th>Question type</th><th>Odds</th><th>Why it comes</th></tr>
+      <tr><td>Calculate speed of light in a medium from n, or n from speed</td><td>★★★</td>
+          <td>Only formula in the chapter that gives a clean one-step numerical. Perfect 2-mark question. Appears in almost every model paper.</td></tr>
+      <tr><td>Explain a real-life phenomenon (mirage / twinkling stars / early sunrise / pool looks shallow / bent pencil)</td><td>★★★</td>
+          <td>The new textbook is written around real-life applications. Examiners love these because they separate memorisers from understanders. Expect one 2-mark and one 3-mark.</td></tr>
+      <tr><td>Total internal reflection: two conditions + critical angle</td><td>★★★</td>
+          <td>The single most "examinable" definition in the chapter, and it links to optical fibre + diamond sparkle. Frequently the 4-mark question.</td></tr>
+      <tr><td>Laws of refraction / bends toward or away from normal</td><td>★★★</td>
+          <td>Guaranteed somewhere — usually a 1-mark fill-in or part of a 2-mark.</td></tr>
+      <tr><td>Snell's law numerical (find angle or index)</td><td>★★</td>
+          <td>Comes up when the paper-setter wants a harder 3-mark. Needs sin values, so some setters avoid it at Class 9.</td></tr>
+      <tr><td>Refractive index table comparison (which is denser / where is light slowest)</td><td>★★</td>
+          <td>Easy 1–2 mark, tests whether you understand n is a ratio, not a speed.</td></tr>
+      <tr><td>What changes and what stays the same during refraction (speed, wavelength, frequency)</td><td>★★</td>
+          <td>Classic trick question. Frequency does <i>not</i> change — high chance as a 1-mark or MCQ distractor.</td></tr>
+      <tr><td>Ray diagram: glass slab / lateral shift</td><td>★★</td>
+          <td>Diagram questions are cheap to mark. Often 3-mark "draw and label".</td></tr>
+    </table>
+
+    <h3>Chapter 2 — Equations of Motion</h3>
+    <table>
+      <tr><th>Question type</th><th>Odds</th><th>Why it comes</th></tr>
+      <tr><td>Numerical using v = u + at or s = ut + ½at²</td><td>★★★</td>
+          <td>The bread and butter of this chapter. There will be at least two, almost certainly three.</td></tr>
+      <tr><td>Distance vs displacement (definition or a circular-track problem)</td><td>★★★</td>
+          <td>The conceptual anchor of the chapter. Circular track / return-to-start problems where displacement = 0 are an examiner favourite because students auto-pilot and answer with distance.</td></tr>
+      <tr><td>Velocity–time graph: find acceleration and displacement (area under graph)</td><td>★★★</td>
+          <td>Graph questions carry 3–4 marks and are easy to set. "Area under v–t graph = displacement" is the exact fact they test.</td></tr>
+      <tr><td>Free fall / stone thrown upward (max height, time to return)</td><td>★★★</td>
+          <td>Directly worked in the textbook. Setters lift these with numbers changed. Watch the sign of g and that v = 0 at the top.</td></tr>
+      <tr><td>Braking / deceleration numerical using v² = u² + 2as</td><td>★★</td>
+          <td>Ties to the road-safety theme the chapter is built on. Good 3-mark.</td></tr>
+      <tr><td>Scalar vs vector classification</td><td>★★</td>
+          <td>Cheap 1-mark. Know: distance, speed, time, mass = scalar; displacement, velocity, acceleration, force = vector.</td></tr>
+      <tr><td>Uniform vs non-uniform motion / interpret a distance–time graph shape</td><td>★★</td>
+          <td>Usually 1–2 marks. Straight line = uniform, curve = non-uniform.</td></tr>
+      <tr><td>Derive one of the three equations (graphically)</td><td>★</td>
+          <td>Possible as the 4-mark, but Class 9 setters more often ask for the graph interpretation instead of the derivation.</td></tr>
+    </table>
+
+    <h3>Chapter 3 — Laws of Motion (only if taught)</h3>
+    <table>
+      <tr><th>Question type</th><th>Odds</th><th>Why it comes</th></tr>
+      <tr><td>State Newton's laws / examples of inertia</td><td>★★</td><td>If the chapter is in portion, this is the guaranteed easy question.</td></tr>
+      <tr><td>Momentum calculation p = mv, or force from change in momentum</td><td>★★</td><td>The only numerical if only the first half of the chapter was covered.</td></tr>
+      <tr><td>Why a cricketer pulls hands back while catching</td><td>★★</td><td>The textbook's signature example. Impulse reasoning, 2–3 marks.</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>4 · Background check on the channels</h2>
+    <p>You asked how likely these channels are to actually guess the questions. Here's an honest read.</p>
+    <table>
+      <tr><th>Channel</th><th>What it is</th><th>How much to trust the "sure questions"</th></tr>
+      <tr><td><b>Xylem Learning</b></td>
+          <td>Kozhikode-based edtech founded 2020 by Ananthu S Kumar, bootstrapped, ~1,300+ staff. Core business is NEET/JEE; Kerala state-syllabus school classes are a large free-YouTube funnel into paid courses.</td>
+          <td><b>Medium-high on topics, low on exact questions.</b> Big faculty team means their topic selection is well-informed. But the school-syllabus content is a marketing channel — "100% sure" framing is designed to get the click.</td></tr>
+      <tr><td><b>Eduport</b></td>
+          <td>Calicut-based, founded by Ajas, literally started as a YouTube channel before becoming an app. 600K+ app downloads, 50+ instructors, dedicated Class 7/8/9/SSLC streams. Publishes answer-key discussion videos right after each Onam paper.</td>
+          <td><b>Medium-high.</b> The fact that they post answer keys within hours means they systematically collect real papers — so their pattern knowledge is genuinely good. Their post-exam accuracy is verifiable; their pre-exam predictions are not.</td></tr>
+      <tr><td><b>Exam Winner</b></td>
+          <td>Separate Class 9 / SSLC channels, chapter-wise "one-shot" videos with named faculty (Dilsha for most Class 9 physics chapters). Heavy on "Most Important Questions" / "100% Sure Questions" titling.</td>
+          <td><b>Medium.</b> Their one-shot videos are solid revision. The "sure question" videos are essentially a filtered list of textbook + model-paper questions — useful, but the title overpromises.</td></tr>
+      <tr><td><b>PW (Physics Wallah) Kerala</b></td>
+          <td>The Kerala arm of Physics Wallah — founded 2016 by Alakh Pandey as a YouTube channel, now a listed company (IPO Nov 2025, ~$2.8B valuation before it). In Kerala it runs <b>PW Kerala SSLC</b> and <b>PW Kerala Plus 2 &amp; KEAM</b>.</td>
+          <td><b>Not useful for you.</b> I could not find a PW Kerala channel covering <b>Class 9 state syllabus</b> — their Kerala presence starts at SSLC (Class 10) and Plus Two. If you're watching a PW video for this exam, check it isn't Class 9 <i>CBSE</i> content (PW Foundation), which is a different textbook: CBSE Class 9 has no "Refraction of Light" chapter at all, and its motion chapter is sequenced differently.</td></tr>
+      <tr><td><b>"Major Exam Online"</b></td>
+          <td>I couldn't verify a channel by this exact name in the Kerala Class 9 space. You may be thinking of Exam Winner, or a smaller regional channel that doesn't surface in search.</td>
+          <td><b>Unverified.</b> If you send me the channel link I'll check it properly.</td></tr>
+    </table>
+    <h3>The honest verdict</h3>
+    <ul>
+      <li><b>Their topic prediction is genuinely good</b> — maybe 80–90% of the topics they flag will appear in some form. That's not clairvoyance; a 40-mark paper on two chapters has a limited number of things it <i>can</i> ask.</li>
+      <li><b>Their exact-question prediction is weak</b> — realistically 10–30% of specific wordings match. And Kerala first-term papers vary by district, so a channel can't hit all of them.</li>
+      <li><b>The real value is the filtering</b>, not the prophecy. They tell you which 20 things out of 60 to revise. That's worth watching.</li>
+      <li><b>Watch out for:</b> videos recycled from previous years (check the upload date), and predictions based on the old syllabus. The textbook changed — if a video mentions chapters that aren't in your book, close it.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>5 · Two-day plan (you have ~48 hours)</h2>
+    <ul>
+      <li><b>Today:</b> Do the quiz on this page end to end. Every question you miss, mark the chapter and reread that textbook page — not a video, the actual page.</li>
+      <li><b>Tonight:</b> Write out from memory: the 3 equations of motion, n = c/v, sin C = 1/n, and the two conditions for TIR. If you can't do it blind, you don't know it yet.</li>
+      <li><b>Tomorrow morning:</b> Solve last year's Class 9 first-term physics paper under timer (search "Kerala Class 9 first term physics question paper 2025" — Education Observer and AglaSem both host it free).</li>
+      <li><b>Tomorrow evening:</b> One channel revision video at 1.5× speed, just to catch anything you missed. Then stop. Do not start Gravitation.</li>
+      <li><b>Exam day:</b> In the 15-min cool-off, write the formulas on the rough page first. Then pick your skips.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== QUIZ ===================== -->
+<div id="p-quiz" class="panel on">
+  <div class="toolbar">
+    <select id="filter" onchange="render()">
+      <option value="core">Core portion (Ch 1 + 2)</option>
+      <option value="all">Everything incl. Ch 3</option>
+      <option value="1">Ch 1 · Refraction only</option>
+      <option value="2">Ch 2 · Equations of Motion only</option>
+      <option value="3">Ch 3 · Laws of Motion only</option>
+      <option value="star">★★★ highest-probability only</option>
+    </select>
+    <button onclick="shuffleQs()">Shuffle</button>
+    <button onclick="resetAll()">Reset</button>
+    <div class="score">Score <b><span id="got">0</span> / <span id="tot">0</span></b></div>
+  </div>
+  <div id="qlist"></div>
+</div>
+
+<!-- ===================== MOCK PAPER ===================== -->
+<div id="p-mock" class="panel">
+  <div class="note">
+    Written to the exact SCERT Class 9 Physics first-terminal skeleton for <b>2026–27</b>: 40 marks, 1½ hours,
+    four sections with internal choice. Sit it under timer with a clock in front of you. Answers are hidden
+    until you click — don't cheat yourself.
+  </div>
+  <div class="toolbar">
+    <button onclick="revealAll(true)">Show all answers</button>
+    <button onclick="revealAll(false)">Hide all answers</button>
+  </div>
+
+  <div class="paper">
+    <div class="phead">
+      <h2>FIRST TERMINAL EVALUATION 2026–27</h2>
+      <div class="meta">STANDARD IX &nbsp;·&nbsp; PHYSICS</div>
+      <div class="split"><span>Time: 1½ Hours</span><span>Total Score: 40</span></div>
+      <div class="meta" style="margin-top:10px;text-align:left;font-size:.83rem">
+        <b>General instructions:</b> 15 minutes cool-off time. Read the questions carefully.
+        Answer only the required number of questions from each section. Take g = 10 m/s² and
+        speed of light in vacuum c = 3 × 10⁸ m/s wherever needed.
+      </div>
+    </div>
+
+    <!-- SECTION I -->
+    <div class="sechead"><b>SECTION I</b><span>Answer any 3 questions. 1 score each. (3 × 1 = 3)</span></div>
+
+    <div class="mq"><span class="n">1.</span>
+      When light travels from air into glass, which of these remains unchanged?
+      <span class="sub">(a) speed &nbsp;&nbsp; (b) wavelength &nbsp;&nbsp; (c) frequency &nbsp;&nbsp; (d) direction</span>
+      <button class="revealbtn" onclick="reveal('a1',this)">Show model answer</button>
+      <div class="ansbox" id="a1"><b>(c) frequency.</b> Frequency is fixed by the source of light. Speed and wavelength both decrease on entering glass, and the ray changes direction because it enters obliquely.</div>
+    </div>
+
+    <div class="mq"><span class="n">2.</span>
+      The area under a velocity–time graph gives the __________ of the body.
+      <button class="revealbtn" onclick="reveal('a2',this)">Show model answer</button>
+      <div class="ansbox" id="a2"><b>Displacement</b> (distance travelled).</div>
+    </div>
+
+    <div class="mq"><span class="n">3.</span>
+      Find the odd one out: <i>distance, speed, time, velocity.</i>
+      <button class="revealbtn" onclick="reveal('a3',this)">Show model answer</button>
+      <div class="ansbox" id="a3"><b>Velocity</b> — it is the only vector quantity in the list. Distance, speed and time are all scalars.</div>
+    </div>
+
+    <div class="mq"><span class="n">4.</span>
+      The refractive index of diamond is 2.42, and that of water is 1.33. In which medium does light travel faster?
+      <button class="revealbtn" onclick="reveal('a4',this)">Show model answer</button>
+      <div class="ansbox" id="a4"><b>Water.</b> Since v = c/n, a smaller refractive index means a greater speed of light in the medium.</div>
+    </div>
+
+    <!-- SECTION II -->
+    <div class="sechead"><b>SECTION II</b><span>Answer any 7 questions. 2 scores each. (7 × 2 = 14)</span></div>
+
+    <div class="mq"><span class="n">5.</span>
+      The refractive index of water is 1.33. Calculate the speed of light in water.
+      <button class="revealbtn" onclick="reveal('a5',this)">Show model answer</button>
+      <div class="ansbox" id="a5">n = c/v, so v = c/n = (3 × 10⁸) / 1.33 = <b>2.26 × 10⁸ m/s</b><br>
+      <i>Marking: 1 for writing the correct formula, 1 for the answer with unit.</i></div>
+    </div>
+
+    <div class="mq"><span class="n">6.</span>
+      Write any two differences between distance and displacement.
+      <button class="revealbtn" onclick="reveal('a6',this)">Show model answer</button>
+      <div class="ansbox" id="a6">
+      (i) Distance is the <b>total length of the path</b> covered; displacement is the <b>shortest straight-line distance</b> between the initial and final positions.<br>
+      (ii) Distance is a <b>scalar</b>; displacement is a <b>vector</b>.<br>
+      (iii) Distance can never be zero for a body in motion, but displacement can be zero if the body returns to its starting point.</div>
+    </div>
+
+    <div class="mq"><span class="n">7.</span>
+      We can see the Sun about two minutes before it actually rises above the horizon. Give the reason.
+      <button class="revealbtn" onclick="reveal('a7',this)">Show model answer</button>
+      <div class="ansbox" id="a7">This is due to <b>atmospheric refraction</b>. The optical density of the atmosphere increases towards the Earth's surface, so sunlight entering it bends continuously <b>towards the normal</b>. As a result the Sun appears to be at a position <b>higher than its actual position</b>, and becomes visible before it has actually risen.</div>
+    </div>
+
+    <div class="mq"><span class="n">8.</span>
+      A car starting from rest attains a velocity of 20 m/s in 8 seconds. Calculate its acceleration.
+      <button class="revealbtn" onclick="reveal('a8',this)">Show model answer</button>
+      <div class="ansbox" id="a8">u = 0, v = 20 m/s, t = 8 s<br>v = u + at → 20 = 0 + a(8) → a = 20/8 = <b>2.5 m/s²</b></div>
+    </div>
+
+    <div class="mq"><span class="n">9.</span>
+      Match the phenomenon in Column A with its cause in Column B.
+      <table class="mtable">
+        <tr><td><b>Column A</b></td><td><b>Column B</b></td></tr>
+        <tr><td>(i) Mirage</td><td>(a) Refraction at the air–water surface</td></tr>
+        <tr><td>(ii) Twinkling of stars</td><td>(b) Total internal reflection inside a fibre</td></tr>
+        <tr><td>(iii) Optical fibre</td><td>(c) Total internal reflection in hot air layers</td></tr>
+        <tr><td>(iv) A pencil in water looks bent</td><td>(d) Continuously changing atmospheric refraction</td></tr>
+      </table>
+      <button class="revealbtn" onclick="reveal('a9',this)">Show model answer</button>
+      <div class="ansbox" id="a9"><b>(i) – (c), &nbsp; (ii) – (d), &nbsp; (iii) – (b), &nbsp; (iv) – (a)</b></div>
+    </div>
+
+    <div class="mq"><span class="n">10.</span>
+      Define critical angle. Write the relation connecting critical angle and refractive index.
+      <button class="revealbtn" onclick="reveal('a10',this)">Show model answer</button>
+      <div class="ansbox" id="a10">The <b>critical angle</b> is the angle of incidence in the optically denser medium for which the angle of refraction in the rarer medium becomes <b>90°</b>.<br>
+      Relation: <b>sin C = 1/n</b> &nbsp; (where n is the refractive index of the denser medium with respect to the rarer one).</div>
+    </div>
+
+    <div class="mq"><span class="n">11.</span>
+      A body moves along a circular path with constant speed. Its velocity, however, is not constant. Why?
+      <button class="revealbtn" onclick="reveal('a11',this)">Show model answer</button>
+      <div class="ansbox" id="a11">Velocity is a <b>vector</b>, so it depends on both magnitude and direction. On a circular path the <b>direction of motion changes continuously</b>, even though the magnitude (speed) stays the same. So the velocity keeps changing, which means the body is accelerating.</div>
+    </div>
+
+    <div class="mq"><span class="n">12.</span>
+      A stone is dropped from a height of 20 m. How long does it take to reach the ground?
+      <span class="data">Take g = 10 m/s²</span>
+      <button class="revealbtn" onclick="reveal('a12',this)">Show model answer</button>
+      <div class="ansbox" id="a12">"Dropped" means u = 0, and a = g = 10 m/s².<br>
+      s = ut + ½at² → 20 = 0 + ½(10)t² = 5t²<br>
+      t² = 4 → <b>t = 2 s</b></div>
+    </div>
+
+    <div class="mq"><span class="n">13.</span>
+      State the two laws of refraction of light.
+      <button class="revealbtn" onclick="reveal('a13',this)">Show model answer</button>
+      <div class="ansbox" id="a13"><b>First law:</b> The incident ray, the refracted ray and the normal drawn at the point of incidence all lie in the <b>same plane</b>.<br>
+      <b>Second law (Snell's law):</b> For a given pair of media, the ratio <b>sin i / sin r is a constant</b>. This constant is the refractive index of the second medium with respect to the first.</div>
+    </div>
+
+    <!-- SECTION III -->
+    <div class="sechead"><b>SECTION III</b><span>Answer any 5 questions. 3 scores each. (5 × 3 = 15)</span></div>
+
+    <div class="mq"><span class="n">14.</span>
+      A ball is thrown vertically upward with a velocity of 30 m/s.
+      <span class="sub">(a) Find the maximum height it reaches.</span>
+      <span class="sub">(b) Find the time taken to reach the maximum height.</span>
+      <span class="sub">(c) What is its total time of flight?</span>
+      <span class="data">Take g = 10 m/s²</span>
+      <button class="revealbtn" onclick="reveal('a14',this)">Show model answer</button>
+      <div class="ansbox" id="a14">
+      At the highest point the ball momentarily stops, so v = 0. Taking upward as positive, a = −g = −10 m/s².<br>
+      <b>(a)</b> v² = u² + 2as → 0 = 30² − 2(10)h → 900 = 20h → <b>h = 45 m</b><br>
+      <b>(b)</b> v = u + at → 0 = 30 − 10t → <b>t = 3 s</b><br>
+      <b>(c)</b> The time to come down equals the time to go up, so total time of flight = <b>6 s</b></div>
+    </div>
+
+    <div class="mq"><span class="n">15.</span>
+      Explain, with reasons, how a mirage is formed on a tarred road on a hot summer day.
+      <button class="revealbtn" onclick="reveal('a15',this)">Show model answer</button>
+      <div class="ansbox" id="a15">
+      • On a hot day the air layer just above the road is strongly heated, so it becomes <b>optically rarer</b> than the cooler air above it.<br>
+      • Light coming from the sky therefore travels from denser layers into rarer layers and <b>bends away from the normal</b> at each layer, so the ray gradually curves.<br>
+      • At one of these layers the angle of incidence becomes <b>greater than the critical angle</b>, and the light undergoes <b>total internal reflection</b>.<br>
+      • This reflected light reaches the observer's eye from below, forming an <b>inverted image of the sky</b> that looks like a pool of water on the road.</div>
+    </div>
+
+    <div class="mq"><span class="n">16.</span>
+      A bus travelling at 25 m/s is brought to rest over a distance of 62.5 m by applying brakes.
+      <span class="sub">(a) Calculate its retardation.</span>
+      <span class="sub">(b) How long does it take to stop?</span>
+      <button class="revealbtn" onclick="reveal('a16',this)">Show model answer</button>
+      <div class="ansbox" id="a16">
+      u = 25 m/s, v = 0, s = 62.5 m<br>
+      <b>(a)</b> v² = u² + 2as → 0 = 625 + 2a(62.5) → 125a = −625 → a = −5 m/s².<br>
+      The negative sign shows it is retardation, so the retardation is <b>5 m/s²</b>.<br>
+      <b>(b)</b> v = u + at → 0 = 25 + (−5)t → <b>t = 5 s</b></div>
+    </div>
+
+    <div class="mq"><span class="n">17.</span>
+      Draw a ray diagram showing the path of a ray of light passing obliquely through a rectangular glass slab. Mark the lateral shift and explain why the emergent ray is parallel to the incident ray.
+      <button class="revealbtn" onclick="reveal('a17',this)">Show model answer</button>
+      <div class="ansbox" id="a17">
+      <b>Diagram:</b> Draw the slab as a rectangle. Show the incident ray striking the top surface obliquely, the normal at that point, the refracted ray bending <b>towards the normal</b> inside the glass, then the emergent ray at the bottom surface bending <b>away from the normal</b>. Draw a dotted extension of the original incident ray — the perpendicular gap between that dotted line and the emergent ray is the <b>lateral shift</b>.<br><br>
+      <b>Explanation:</b> The light bends towards the normal on entering (air → glass, rarer to denser) and by exactly the same amount away from the normal on leaving (glass → air, denser to rarer), because the two surfaces are parallel. The two deviations cancel, so the <b>emergent ray is parallel to the incident ray</b> — only shifted sideways.</div>
+    </div>
+
+    <div class="mq"><span class="n">18.</span>
+      The refractive index of a certain glass is 1.5.
+      <span class="sub">(a) Find the speed of light inside this glass.</span>
+      <span class="sub">(b) State the two conditions needed for total internal reflection.</span>
+      <button class="revealbtn" onclick="reveal('a18',this)">Show model answer</button>
+      <div class="ansbox" id="a18">
+      <b>(a)</b> v = c/n = (3 × 10⁸)/1.5 = <b>2 × 10⁸ m/s</b><br>
+      <b>(b)</b> (i) Light must travel from an <b>optically denser medium to an optically rarer medium</b>.<br>
+      (ii) The <b>angle of incidence must be greater than the critical angle</b> of that pair of media.</div>
+    </div>
+
+    <div class="mq"><span class="n">19.</span>
+      Why does a cut diamond sparkle brilliantly? Name one more device that works on the same principle and state one of its uses.
+      <button class="revealbtn" onclick="reveal('a19',this)">Show model answer</button>
+      <div class="ansbox" id="a19">
+      Diamond has a very high refractive index (2.42), so its <b>critical angle is very small — about 24°</b>. Light entering the diamond strikes the inner faces at angles greater than this almost every time, so it undergoes <b>repeated total internal reflection</b> inside the stone before emerging through the top. This concentrated light is seen as sparkle, and the cut of the stone is designed to encourage it.<br><br>
+      <b>Another device:</b> the <b>optical fibre</b>, which also works on total internal reflection. Uses: telecommunication and internet data transmission, and endoscopy in medicine.</div>
+    </div>
+
+    <!-- SECTION IV -->
+    <div class="sechead"><b>SECTION IV</b><span>Answer any 2 questions. 4 scores each. (2 × 4 = 8)</span></div>
+
+    <div class="mq"><span class="n">20.</span>
+      An object starts from rest and moves with a uniform acceleration of 4 m/s².
+      <span class="sub">(a) Find its velocity at the end of 5 seconds.</span>
+      <span class="sub">(b) Find the distance travelled in those 5 seconds.</span>
+      <span class="sub">(c) Find the distance travelled during the 5th second alone.</span>
+      <span class="sub">(d) What is the shape of its velocity–time graph?</span>
+      <button class="revealbtn" onclick="reveal('a20',this)">Show model answer</button>
+      <div class="ansbox" id="a20">
+      u = 0, a = 4 m/s²<br>
+      <b>(a)</b> v = u + at = 0 + 4(5) = <b>20 m/s</b><br>
+      <b>(b)</b> s = ut + ½at² = 0 + ½(4)(5²) = 2 × 25 = <b>50 m</b><br>
+      <b>(c)</b> Distance in the 5th second = (distance in 5 s) − (distance in 4 s)<br>
+      &nbsp;&nbsp;&nbsp;= 50 − [½(4)(4²)] = 50 − 32 = <b>18 m</b><br>
+      &nbsp;&nbsp;&nbsp;<i>(Or directly: s<sub>n</sub> = u + ½a(2n−1) = 0 + ½(4)(9) = 18 m)</i><br>
+      <b>(d)</b> A <b>straight line passing through the origin</b>, sloping upward — because the velocity increases uniformly with time. Its slope gives the acceleration, 4 m/s².</div>
+    </div>
+
+    <div class="mq"><span class="n">21.</span>
+      The velocity–time graph of a body is shown below.
+      <svg class="graph" viewBox="0 0 420 250" width="420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Velocity-time graph">
+        <line x1="55" y1="205" x2="400" y2="205" stroke="currentColor" stroke-width="1.6"/>
+        <line x1="55" y1="205" x2="55" y2="25" stroke="currentColor" stroke-width="1.6"/>
+        <polyline points="55,205 155,105 305,105 355,205" fill="none" stroke="#4f9cf9" stroke-width="2.6"/>
+        <line x1="55" y1="105" x2="155" y2="105" stroke="currentColor" stroke-width=".8" stroke-dasharray="4 4" opacity=".5"/>
+        <line x1="155" y1="105" x2="155" y2="205" stroke="currentColor" stroke-width=".8" stroke-dasharray="4 4" opacity=".5"/>
+        <line x1="305" y1="105" x2="305" y2="205" stroke="currentColor" stroke-width=".8" stroke-dasharray="4 4" opacity=".5"/>
+        <text x="38" y="110" font-size="12" fill="currentColor" text-anchor="end">20</text>
+        <text x="38" y="210" font-size="12" fill="currentColor" text-anchor="end">0</text>
+        <text x="155" y="222" font-size="12" fill="currentColor" text-anchor="middle">4</text>
+        <text x="305" y="222" font-size="12" fill="currentColor" text-anchor="middle">10</text>
+        <text x="355" y="222" font-size="12" fill="currentColor" text-anchor="middle">12</text>
+        <text x="228" y="242" font-size="12.5" fill="currentColor" text-anchor="middle">Time (s)</text>
+        <text x="16" y="120" font-size="12.5" fill="currentColor" text-anchor="middle" transform="rotate(-90 16 120)">Velocity (m/s)</text>
+      </svg>
+      <span class="sub">(a) Describe the motion of the body in each of the three parts.</span>
+      <span class="sub">(b) Calculate the acceleration during the first 4 seconds.</span>
+      <span class="sub">(c) Calculate the total displacement of the body.</span>
+      <button class="revealbtn" onclick="reveal('a21',this)">Show model answer</button>
+      <div class="ansbox" id="a21">
+      <b>(a)</b> 0–4 s: velocity increases uniformly from 0 to 20 m/s — <b>uniform acceleration</b>.<br>
+      4–10 s: velocity stays at 20 m/s — <b>uniform velocity, zero acceleration</b>.<br>
+      10–12 s: velocity falls uniformly from 20 m/s to 0 — <b>uniform retardation</b>.<br>
+      <b>(b)</b> Acceleration = slope = (20 − 0)/(4 − 0) = <b>5 m/s²</b><br>
+      <b>(c)</b> Displacement = area under the graph = area of triangle + rectangle + triangle<br>
+      &nbsp;&nbsp;&nbsp;= ½(4)(20) + (6)(20) + ½(2)(20)<br>
+      &nbsp;&nbsp;&nbsp;= 40 + 120 + 20 = <b>180 m</b></div>
+    </div>
+
+    <div class="mq"><span class="n">22.</span>
+      (a) What is meant by total internal reflection?<br>
+      <span class="sub">(b) A medium has a refractive index of 2. Calculate its critical angle. (sin 30° = 0.5)</span>
+      <span class="sub">(c) Explain why stars appear to twinkle while planets do not.</span>
+      <button class="revealbtn" onclick="reveal('a22',this)">Show model answer</button>
+      <div class="ansbox" id="a22">
+      <b>(a)</b> When a ray of light travelling in an optically denser medium strikes the surface of a rarer medium at an angle of incidence <b>greater than the critical angle</b>, the ray is not refracted at all — it is <b>reflected back completely into the denser medium</b>. This is total internal reflection.<br>
+      <b>(b)</b> sin C = 1/n = 1/2 = 0.5, therefore <b>C = 30°</b><br>
+      <b>(c)</b> Starlight passes through atmospheric layers whose optical density keeps changing, so it is refracted by continuously varying amounts. Since a star is extremely far away it behaves as a <b>point source</b>, so these variations make its apparent brightness and position flicker — it twinkles. A planet is far closer and behaves as a <b>collection of many point sources</b>; the variations from different points average out, so a planet shines steadily.</div>
+    </div>
+
+    <div class="sechead" style="margin-top:26px"><b>End of question paper</b><span>Total: 3 + 14 + 15 + 8 = 40 scores</span></div>
+  </div>
+</div>
+
+<!-- ===================== ENDLESS ===================== -->
+<div id="p-end" class="panel">
+  <div class="note">
+    <b>Unlimited practice.</b> Every question here is generated fresh — same high-probability question types as
+    the main quiz, but with different numbers, different media, different graphs each time. The graph questions
+    draw a <b>new graph every single time</b>, so you can't memorise the answer. Keep hitting "8 more" until the
+    method feels automatic.
+  </div>
+  <div class="toolbar">
+    <select id="efilter" onchange="eNew(8,false)">
+      <option value="core">Core portion (Ch 1 + 2)</option>
+      <option value="all">Everything incl. Ch 3</option>
+      <option value="1">Ch 1 · Refraction only</option>
+      <option value="2">Ch 2 · Motion only</option>
+      <option value="graph">Graph questions only</option>
+      <option value="3">Ch 3 · Laws of Motion only</option>
+    </select>
+    <button onclick="eNew(8,true)">8 more</button>
+    <button onclick="eNew(8,false)">Fresh set</button>
+    <button onclick="eReset()">Reset score</button>
+    <div class="score" id="estat">Attempted <b>0</b> · scored <b>0</b></div>
+  </div>
+  <div id="elist"></div>
+  <div style="text-align:center;padding:6px 0 10px">
+    <button onclick="eNew(8,true)" style="background:var(--acc);color:#fff;border:0;border-radius:10px;
+      padding:13px 26px;font:inherit;font-weight:700;cursor:pointer">Give me 8 more</button>
+  </div>
+</div>
+
+<!-- ===================== SOURCES ===================== -->
+<div id="p-src" class="panel">
+
+  <div class="card" style="border-color:#3fb950">
+    <h2>The thing nobody in those videos tells you</h2>
+    <p><b>Your Class 9 exam is not a board exam.</b> Kerala's Pareeksha Bhavan (KBPE) conducts exactly two
+    real common state exams — <b>SSLC (Class 10)</b> and <b>Plus Two</b>. There is no state board paper for
+    Class 9. What SCERT publishes for Class 9 is labelled, in its own words, a <b>"Model Question Paper"</b> —
+    a sample. The actual first-terminal papers are set below state level (district / sub-district / school),
+    which is why archives like Education Observer carry <i>several different PDFs</i> as "the" Class 9 physics
+    first-term paper for the same year.</p>
+    <p>Three consequences, and they change how you should spend tonight:</p>
+    <ul>
+      <li><b>"100% sure questions" is structurally impossible</b> for this exam — not because the channels are
+      dishonest, but because there is no single paper for anyone to know. For SSLC that phrase at least refers
+      to a real common paper. For Class 9 it cannot.</li>
+      <li><b>Nobody fact-checks these predictions.</b> I searched for post-exam commentary — forums, news,
+      comments — where anyone says "channel X predicted it and it came." I found <b>nothing, in either
+      direction</b>. No channel publishes an audited hit rate. That's a genuine blind spot, not evidence they're
+      good or bad.</li>
+      <li><b>So chase the source material, not the prophecy.</b> Whoever set your paper drew from the SCERT
+      question pool and past first-term papers. Those are public. Working through them beats watching someone
+      guess.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Do these tonight, in this order</h2>
+    <table>
+      <tr><th>#</th><th>Source</th><th>Why it's ranked here</th></tr>
+      <tr><td><b>1</b></td>
+          <td><b>SCERT Question Pool</b><br><span class="mono" style="font-size:.8rem">questionpool.scert.kerala.gov.in</span> ·
+              <a href="https://samagra.kite.kerala.gov.in/" target="_blank" rel="noopener">Samagra portal</a></td>
+          <td>Official chapter-wise question bank with answer hints, published by SCERT as prep material. This is
+              the raw stock paper-setters actually draw from. The closest thing to a legitimate "leak" that exists,
+              and it's free and public. <b>Start here.</b></td></tr>
+      <tr><td><b>2</b></td>
+          <td><b>A+ Blog — 5 first-term model papers</b><br>
+              <a href="https://www.aplusblog.in/2025/08/class-9-physics-summative-assesment.html" target="_blank" rel="noopener">aplusblog.in · Class 9 Physics new-pattern sets</a></td>
+          <td>Five complete new-pattern first-term Physics papers, English and Malayalam medium, with answer keys.
+              I verified the page. Also has the <a href="https://www.aplusblog.in/2024/08/std-9-samagra-first-tersample-question.html" target="_blank" rel="noopener">Samagra first-terminal sample paper</a> with keys.
+              The single highest-value non-official find.</td></tr>
+      <tr><td><b>3</b></td>
+          <td><b>Education Observer forum — real past papers</b><br>
+              <a href="https://www.educationobserver.com/forum/showthread.php?tid=26977" target="_blank" rel="noopener">Class 9 first-term Physics thread</a></td>
+          <td>The actual <b>2023, 2024 and 2025</b> Class 9 Physics first-term papers, both mediums, several with
+              answer keys. Real papers beat model papers. Free, may need registration to download.</td></tr>
+      <tr><td><b>4</b></td>
+          <td><b>Textbooks All — Ch 2 question bank</b><br>
+              <a href="https://textbooksall.blogspot.com/2025/03/scert-kerala-textbooks-solutions-study_24.html" target="_blank" rel="noopener">Equations of Motion, 40 Q&amp;A</a></td>
+          <td>Verified: 40 questions on Chapter 2 with full worked solutions — MCQs, definitions, numericals,
+              graph interpretation, scenario problems. Also has
+              <a href="https://textbooksall.blogspot.com/2024/06/scert-kerala-textbooks-solutions-study_24.html" target="_blank" rel="noopener">Chapter 1 Q&amp;A</a>.</td></tr>
+      <tr><td><b>5</b></td>
+          <td><b>HSSLive</b><br>
+              <a href="https://www.hsslive.guru/kerala-syllabus-9th-standard-physics-solutions-chapter-1/" target="_blank" rel="noopener">Ch 1</a> ·
+              <a href="https://www.hsslive.guru/kerala-syllabus-9th-standard-physics-solutions-chapter-2/" target="_blank" rel="noopener">Ch 2</a> ·
+              <a href="https://www.hsslive.guru/kerala-syllabus-class-9-physics-model-question-papers/" target="_blank" rel="noopener">5 model papers</a></td>
+          <td>Full textbook solutions both mediums, plus five model papers. I used these to build this quiz —
+              Set 1 and Set 3 confirm the paper covers Ch 1–4 and excludes Ch 5–8 entirely.</td></tr>
+      <tr><td><b>6</b></td>
+          <td><b>A+ Blog / apluseducare — chapter notes</b><br>
+              <a href="https://www.aplusblog.in/2024/06/std-9-physics-chapter-1-refraction-of.html" target="_blank" rel="noopener">Ch 1 Refraction Q&amp;A (EM + MM)</a></td>
+          <td>Chapter-wise textbook Q&amp;A, PDF notes, online tests, and the SCERT Teacher Text. Run by a
+              practising teacher (Malappuram). Both mediums side by side.</td></tr>
+    </table>
+    <p class="note" style="margin-top:14px"><b>If you only have two hours:</b> item 3 (one real past paper, under
+    timer) then item 1 (question pool for the two chapters). That combination is worth more than every prediction
+    video put together.</p>
+  </div>
+
+  <div class="card">
+    <h2>YouTube — the full sweep, including the small ones</h2>
+    <p>You were right that a small channel could matter. One did turn up. But the honest ranking puts the big
+    two on top because they're the only ones I could verify are active in 2026 <i>and</i> teaching the current
+    textbook.</p>
+    <table>
+      <tr><th>Channel</th><th>Verdict</th><th>Detail</th></tr>
+      <tr><td><b>Exam Winner Class 9</b><br><span class="lblS">554K subs · ~9 uploads/week</span></td>
+          <td><span class="pill hi">Best overall</span></td>
+          <td>Verified active in 2026 and the largest by far. Chapter one-shots for Refraction, Equations of
+              Motion and Laws of Motion (teacher: Dilsha), <b>plus Onam-specific "important questions" videos for
+              Physics specifically</b> — the only channel where I could confirm that exists for Class 9 Physics.
+              Watch out: an older duplicate channel "Exam Winner Class 9 2023" also exists — make sure you're on
+              the current one.</td></tr>
+      <tr><td><b>Xylem Class 9 (State)</b><br><span class="mono" style="font-size:.78rem">@xylemclass9-2024</span></td>
+          <td><span class="pill hi">Good — check the handle</span></td>
+          <td>Confirmed Kerala-state Refraction of Light videos and 2026 activity. <b>Critical:</b> Xylem also runs
+              <span class="mono">@xylemcbse9</span>. Land on the CBSE one and everything you watch is the wrong
+              textbook — CBSE Class 9 has no Refraction of Light chapter at all.</td></tr>
+      <tr><td><b>Peecees Channel for Education</b><br><span class="lblS">small individual teacher</span></td>
+          <td><span class="pill med">The small-channel find</span></td>
+          <td>Exactly the kind of channel you suspected. Runs a dedicated <b>"KERALA 9 PHYSICS"</b> playlist (20
+              videos) titled to the new textbook's exact chapter order — "NEW TEXT | CLASS 9 PHYSICS | CHAPTER 1 |
+              REFRACTION OF LIGHT". Narrow and on-target. I could not verify its subscriber count, last upload date,
+              or teaching quality, so treat it as a promising lead rather than a safe bet.</td></tr>
+      <tr><td><b>Eduport Class 9</b></td>
+          <td><span class="pill med">Useful after, not before</span></td>
+          <td>Has the Class 9 Onam 2026 timetable video and posts <b>answer-key discussion videos within hours</b>
+              of each paper — genuinely valuable, but that's after you've written. Notably: they have "100% sure
+              questions" videos for Class 9 English, Hindi and Maths, but I could <b>not find one for Class 9
+              Physics</b>. Check the channel directly rather than trusting search.</td></tr>
+      <tr><td><b>Bio-Vision (Subhash Soman)</b></td>
+          <td><span class="pill med">Blog &gt; channel</span></td>
+          <td>The <a href="https://www.biovisions.in/p/class-9-physics.html" target="_blank" rel="noopener">blog side</a>
+              is clearly active in 2026 and runs a "Final Touch" first-term series across Class 9 subjects, with
+              Ch 1 and Ch 2 posts in both mediums. The video channel is thinner. Go to the blog.</td></tr>
+      <tr><td><b>KITE VICTERS / First Bell</b><br><span class="lblS">Kerala govt official</span></td>
+          <td><span class="pill low">Careful — likely outdated</span></td>
+          <td>The one officially government-run channel, so tempting. But the Class 9 Physics episodes I could find
+              look like <b>2020-era pandemic broadcasts</b>, which predate the current textbook. Check the upload
+              date and the chapter name before trusting anything here.</td></tr>
+      <tr><td><b>PW Foundation / PW NEEV Class 9</b></td>
+          <td><span class="pill low">Wrong syllabus</span></td>
+          <td>CBSE, not Kerala SCERT. PW's Kerala presence stops at SSLC and Plus Two. Do not use for this paper.</td></tr>
+      <tr><td colspan="3"><b>Searched for and could not confirm exist</b> for Kerala Class 9 Physics: Vahan Learning,
+          Winners Education, Focus Academy, Sasthram, Edumate, Brainy Bees, Padasala, and <b>"Major Exam Online"</b>.
+          Either they don't cover this, or they're too small to surface in search. If a friend actually uses one,
+          that hyperlocal tip beats anything a search engine can find — send me the link and I'll check it.</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Instagram, Telegram and the rest</h2>
+    <p>Instagram blocks automated checking, so follower counts below are unverified — judge them in-app.
+    <b>Telegram turned out to be the more useful platform</b> for this syllabus.</p>
+    <table>
+      <tr><th>Where</th><th>What</th><th>Worth it?</th></tr>
+      <tr><td><b>Telegram — Textbooks All</b><br><span class="mono" style="font-size:.78rem">t.me/textbooksall</span></td>
+          <td>~19.1K members. Posts SCERT Kerala summative-assessment papers and answer keys for Standards 6–10,
+              including Class 9 first-term material. Active in 2026.</td>
+          <td><span class="pill hi">Yes</span></td></tr>
+      <tr><td><b>Telegram — A+ Blog</b><br><span class="mono" style="font-size:.78rem">t.me/aplusblog</span></td>
+          <td>~2.37K members. Class 8 / 9 / SSLC focused — physics notes, model papers, answer keys, "Final Touch"
+              first-term guides. Active through Aug 2026. Companion to the site ranked #2 above.</td>
+          <td><span class="pill hi">Yes</span></td></tr>
+      <tr><td><b>Instagram</b><br><span class="mono" style="font-size:.78rem">@xylem_class9</span> ·
+              <span class="mono" style="font-size:.78rem">@examwinner_class_9</span></td>
+          <td>Class-9-specific accounts from the two channels ranked highest above. Mirrors their video content in
+              short form. Handles may vary — Exam Winner's own site lists a different handle in its footer, so
+              search in-app rather than trusting a link.</td>
+          <td><span class="pill med">Follow, don't rely</span></td></tr>
+      <tr><td><b>WhatsApp</b></td>
+          <td>No credible public Class 9 group found. Kerala Notes — a well-known Kerala student site — runs groups
+              for SSLC and Plus One/Two only, and <b>explicitly has none for Class 9</b>.</td>
+          <td><span class="pill low">Nothing here</span></td></tr>
+      <tr><td><b>Reddit / Quora</b></td>
+          <td>No Kerala-SCERT-specific discussion found at all. Results were generic CBSE/ICSE threads.</td>
+          <td><span class="pill low">Skip</span></td></tr>
+    </table>
+  </div>
+
+  <div class="card" style="border-color:#f85149">
+    <h2>Two warnings before you go searching yourself</h2>
+    <p><b>1 · Anyone offering a "leaked" Class 9 paper is running a scam.</b> Paper-leak scams on Telegram and
+    WhatsApp are a documented pattern in India, including arrests in Kerala and Karnataka. For a first-terminal
+    exam set at school or district level, there is no single paper to leak — so the product being sold cannot
+    exist. Don't pay, don't join, don't forward. Beyond the money, using a leaked paper is cheating, and the
+    downside if it's real is far worse than the downside of an ordinary mark.</p>
+    <p><b>2 · Avoid the WhatsApp "group link" farm sites.</b> Searching for Kerala study groups surfaces sites
+    like zoneofwagroup / activewagroup / joinwagroupnow. These are SEO link-farms, not vetted by any school or
+    publisher, and joining unknown groups from them carries a real spam and phishing risk.</p>
+    <p style="margin:0"><b>And the boring truth:</b> the free, legitimate sources in this tab — SCERT's question
+    pool, three years of real past papers, five model papers with keys — are more than you can get through in two
+    days. There is no shortcut that beats simply doing them.</p>
+  </div>
+</div>
+
+<!-- ===================== DIAGRAMS ===================== -->
+<div id="p-dia" class="panel">
+  <div class="note">
+    These are the diagrams that earn marks. In Kerala papers a <b>labelled diagram is worth marks on its own</b> —
+    if a question says "explain", draw the diagram even when it doesn't ask for one. Copy each of these
+    onto paper by hand at least once; you will not remember them by looking.
+  </div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+    <marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e0322f"/></marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="ahp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8250df"/></marker>
+    <marker id="ahk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a2029"/></marker>
+  </defs></svg>
+
+  <div class="dia" id="d-refract">
+    <h3>1 · Refraction: air → glass</h3>
+    <p class="cap">Chapter 1 · the diagram behind every "bends towards the normal" question</p>
+    <div class="diabox"><svg viewBox="0 0 420 250" width="420">
+      <rect x="0" y="0" width="420" height="125" class="fillA"/>
+      <rect x="0" y="125" width="420" height="125" class="fillB"/>
+      <line x1="0" y1="125" x2="420" y2="125" class="edge"/>
+      <line x1="210" y1="25" x2="210" y2="230" class="norm"/>
+      <path d="M105,45 L210,125" class="ray" marker-end="url(#ahr)"/>
+      <path d="M210,125 L262,225" class="ray2" marker-end="url(#ahg)"/>
+      <path d="M210,125 L315,205" stroke="#8a94a0" stroke-width="1.4" stroke-dasharray="5 4" fill="none"/>
+      <path d="M210,90 A 35,35 0 0 0 185,110" fill="none" stroke="#e0322f" stroke-width="1.3"/>
+      <path d="M210,165 A 40,40 0 0 0 231,163" fill="none" stroke="#1a7f37" stroke-width="1.3"/>
+      <text x="186" y="104" class="lblR">i</text>
+      <text x="216" y="172" class="lblR" fill="#1a7f37">r</text>
+      <text x="12" y="22" class="lbl">AIR (rarer)</text>
+      <text x="12" y="148" class="lbl">GLASS (denser)</text>
+      <text x="216" y="40" class="lblS">Normal</text>
+      <text x="100" y="40" class="lblS">incident ray</text>
+      <text x="252" y="243" class="lblS">refracted ray</text>
+      <text x="300" y="222" class="lblS" fill="#8a94a0">original direction</text>
+    </svg></div>
+    <p class="exp"><b>What to say:</b> going from a rarer to a denser medium, light slows down and bends
+    <b>towards the normal</b>, so <b>r &lt; i</b>. Going the other way (glass → air) it bends <b>away</b> from the
+    normal. A ray hitting the surface along the normal (i = 0) is not bent at all.</p>
+  </div>
+
+  <div class="dia" id="d-slab">
+    <h3>2 · Rectangular glass slab and lateral shift</h3>
+    <p class="cap">Chapter 1 · a very common 3-mark "draw and explain"</p>
+    <div class="diabox"><svg viewBox="0 0 430 260" width="430">
+      <rect x="95" y="90" width="230" height="95" class="fillB"/>
+      <rect x="95" y="90" width="230" height="95" class="edge" fill="none"/>
+      <line x1="150" y1="52" x2="150" y2="128" class="norm"/>
+      <line x1="250" y1="148" x2="250" y2="222" class="norm"/>
+      <path d="M45,45 L150,90" class="ray" marker-end="url(#ahr)"/>
+      <path d="M150,90 L250,185" class="ray2" marker-end="url(#ahg)"/>
+      <path d="M250,185 L352,229" class="ray3" marker-end="url(#ahp)"/>
+      <path d="M150,90 L352,177" stroke="#8a94a0" stroke-width="1.4" stroke-dasharray="5 4" fill="none"/>
+      <path d="M362,177 L362,229" stroke="#1a2029" stroke-width="1.3" marker-start="url(#ahk)" marker-end="url(#ahk)"/>
+      <text x="368" y="207" class="lblS">lateral</text>
+      <text x="368" y="220" class="lblS">shift</text>
+      <text x="128" y="84" class="lblR">i</text>
+      <text x="158" y="118" class="lblS" fill="#1a7f37">r</text>
+      <text x="258" y="212" class="lblS" fill="#8250df">e</text>
+      <text x="180" y="145" class="lbl">GLASS SLAB</text>
+      <text x="14" y="30" class="lbl">AIR</text>
+      <text x="18" y="82" class="lblS">incident ray</text>
+      <text x="268" y="245" class="lblS">emergent ray</text>
+    </svg></div>
+    <p class="exp"><b>What to say:</b> the ray bends <b>towards</b> the normal entering the glass and <b>away</b> from
+    the normal leaving it. Because the two faces are parallel, the two bendings are equal and opposite, so
+    <b>angle e = angle i</b> and the <b>emergent ray is parallel to the incident ray</b> — just displaced sideways.
+    That sideways displacement is the <b>lateral shift</b>, and it increases with a thicker slab or a larger angle of incidence.</p>
+  </div>
+
+  <div class="dia" id="d-tir">
+    <h3>3 · Critical angle and total internal reflection</h3>
+    <p class="cap">Chapter 1 · the single most likely 4-mark diagram</p>
+    <div class="diabox"><svg viewBox="0 0 440 260" width="440">
+      <rect x="0" y="0" width="440" height="130" class="fillA"/>
+      <rect x="0" y="130" width="440" height="130" class="fillB"/>
+      <line x1="0" y1="130" x2="440" y2="130" class="edge"/>
+      <line x1="95" y1="38" x2="95" y2="222" class="norm"/>
+      <line x1="215" y1="38" x2="215" y2="222" class="norm"/>
+      <line x1="330" y1="38" x2="330" y2="222" class="norm"/>
+      <path d="M50,222 L95,130" class="ray" marker-end="url(#ahr)"/>
+      <path d="M95,130 L158,48" class="ray2" marker-end="url(#ahg)"/>
+      <path d="M162,225 L215,130" class="ray" marker-end="url(#ahr)"/>
+      <path d="M215,130 L300,130" class="ray2" marker-end="url(#ahg)"/>
+      <path d="M272,228 L330,130" class="ray" marker-end="url(#ahr)"/>
+      <path d="M330,130 L390,232" class="ray3" marker-end="url(#ahp)"/>
+      <text x="12" y="22" class="lbl">RARER (air)</text>
+      <text x="12" y="152" class="lbl">DENSER (glass)</text>
+      <text x="58" y="250" class="lblR">i &lt; C</text>
+      <text x="176" y="250" class="lblR">i = C</text>
+      <text x="292" y="252" class="lblR">i &gt; C</text>
+      <text x="24" y="72" class="lblS" fill="#1a7f37">refracted ray</text>
+      <text x="238" y="122" class="lblS" fill="#1a7f37">r = 90° (grazes)</text>
+      <text x="238" y="196" class="lblS" fill="#8250df">totally</text>
+      <text x="238" y="209" class="lblS" fill="#8250df">reflected</text>
+    </svg></div>
+    <p class="exp"><b>What to say:</b> as the angle of incidence inside the denser medium increases, the refracted
+    ray bends further from the normal. At one particular angle — the <b>critical angle C</b> — the refracted ray
+    grazes along the surface (<b>r = 90°</b>). Beyond that, no light escapes: it is <b>totally internally reflected</b>
+    back into the denser medium. Relation: <b>sin C = 1/n</b>. For glass C ≈ 42°, water ≈ 49°, diamond ≈ 24°.</p>
+  </div>
+
+  <div class="dia" id="d-mirage">
+    <h3>4 · Formation of a mirage</h3>
+    <p class="cap">Chapter 1 · high-probability 3-mark explanation</p>
+    <div class="diabox"><svg viewBox="0 0 440 250" width="440">
+      <rect x="0" y="0" width="440" height="215" class="fillA"/>
+      <rect x="0" y="215" width="440" height="35" fill="#3b4149"/>
+      <circle cx="52" cy="42" r="17" fill="#f2b705"/>
+      <line x1="0" y1="120" x2="440" y2="120" class="norm"/>
+      <line x1="0" y1="158" x2="440" y2="158" class="norm"/>
+      <line x1="0" y1="186" x2="440" y2="186" class="norm"/>
+      <line x1="0" y1="204" x2="440" y2="204" class="norm"/>
+      <path d="M78,58 C 150,110 200,180 238,206 C 276,180 322,140 372,116" class="ray" marker-end="url(#ahr)"/>
+      <path d="M372,116 L250,214" stroke="#8a94a0" stroke-width="1.4" stroke-dasharray="5 4" fill="none"/>
+      <ellipse cx="392" cy="110" rx="19" ry="11" fill="#fff" stroke="#1a2029" stroke-width="1.4"/>
+      <circle cx="392" cy="110" r="4.5" fill="#1a2029"/>
+      <text x="374" y="94" class="lblS">observer</text>
+      <text x="300" y="34" class="lblS">cooler, denser air</text>
+      <text x="300" y="200" class="lblS">hot, rarer air</text>
+      <text x="152" y="238" class="lblS" fill="#fff">hot road surface</text>
+      <text x="186" y="200" class="lblS" fill="#e0322f">TIR here</text>
+      <text x="262" y="228" class="lblS" fill="#fff">apparent &quot;water&quot;</text>
+      <text x="78" y="42" class="lblS">light from the sky</text>
+    </svg></div>
+    <p class="exp"><b>What to say, in order:</b> (1) air near the hot road becomes <b>optically rarer</b>;
+    (2) light from the sky passing from denser to rarer layers <b>bends away from the normal</b> and curves;
+    (3) at some layer the angle of incidence exceeds the <b>critical angle</b>, so <b>total internal reflection</b> occurs;
+    (4) the reflected light reaches the eye from below, giving an <b>inverted image of the sky</b> that looks like water.</p>
+  </div>
+
+  <div class="dia" id="d-sunrise">
+    <h3>5 · Why the Sun is seen before it actually rises</h3>
+    <p class="cap">Chapter 1 · atmospheric refraction, 2-mark</p>
+    <div class="diabox"><svg viewBox="0 0 440 240" width="440">
+      <rect x="0" y="0" width="440" height="170" class="fillA"/>
+      <rect x="0" y="170" width="440" height="70" fill="#a8c8a0"/>
+      <line x1="0" y1="170" x2="440" y2="170" class="edge"/>
+      <ellipse cx="392" cy="200" rx="20" ry="20" fill="#f2b705" opacity=".9"/>
+      <ellipse cx="392" cy="92" rx="20" ry="20" fill="#f2b705" opacity=".38" stroke="#c99400" stroke-dasharray="4 3"/>
+      <path d="M372,197 C 290,168 170,142 62,168" class="ray" marker-end="url(#ahr)"/>
+      <path d="M62,168 L372,92" stroke="#8a94a0" stroke-width="1.4" stroke-dasharray="5 4" fill="none"/>
+      <ellipse cx="48" cy="164" rx="16" ry="10" fill="#fff" stroke="#1a2029" stroke-width="1.4"/>
+      <circle cx="48" cy="164" r="4" fill="#1a2029"/>
+      <text x="24" y="146" class="lblS">observer</text>
+      <text x="330" y="228" class="lblS">actual Sun</text>
+      <text x="316" y="240" class="lblS">(below horizon)</text>
+      <text x="288" y="66" class="lblS">apparent Sun</text>
+      <text x="150" y="126" class="lblS">light curves through denser air layers</text>
+      <text x="12" y="188" class="lbl">HORIZON</text>
+    </svg></div>
+    <p class="exp"><b>What to say:</b> air density <b>increases towards the ground</b>, so sunlight entering the
+    atmosphere is refracted continuously <b>towards the normal</b> and travels along a curved path. The observer
+    sees the Sun in the direction the light finally arrives from — which is <b>higher than its true position</b>.
+    So the Sun is visible about 2 minutes <b>before</b> actual sunrise and 2 minutes <b>after</b> actual sunset.</p>
+  </div>
+
+  <div class="dia" id="d-depth">
+    <h3>6 · Apparent depth — why a pool looks shallower</h3>
+    <p class="cap">Chapter 1 · 2-mark reasoning or numerical</p>
+    <div class="diabox"><svg viewBox="0 0 400 250" width="400">
+      <rect x="60" y="85" width="280" height="145" class="fillB"/>
+      <path d="M60,55 L60,230 L340,230 L340,55" class="edge" fill="none" stroke-width="2.4"/>
+      <line x1="60" y1="85" x2="340" y2="85" class="edge"/>
+      <ellipse cx="170" cy="222" rx="17" ry="5.5" fill="#d4a017" stroke="#8a6a10"/>
+      <ellipse cx="170" cy="160" rx="17" ry="5.5" fill="none" stroke="#8a94a0" stroke-dasharray="4 3"/>
+      <path d="M170,222 L215,85" class="ray"/>
+      <path d="M170,222 L240,85" class="ray"/>
+      <path d="M215,85 L260,10" class="ray2" marker-end="url(#ahg)"/>
+      <path d="M240,85 L289,33" class="ray2" marker-end="url(#ahg)"/>
+      <line x1="215" y1="85" x2="170" y2="160" stroke="#8a94a0" stroke-width="1.4" stroke-dasharray="5 4"/>
+      <line x1="240" y1="85" x2="170" y2="160" stroke="#8a94a0" stroke-width="1.4" stroke-dasharray="5 4"/>
+      <text x="70" y="226" class="lblS">real position</text>
+      <text x="70" y="164" class="lblS">apparent position</text>
+      <line x1="132" y1="222" x2="152" y2="222" stroke="#5b6672" stroke-width="1.1" stroke-dasharray="3 3"/>
+      <line x1="146" y1="160" x2="152" y2="160" stroke="#5b6672" stroke-width="1.1" stroke-dasharray="3 3"/>
+      <text x="238" y="78" class="lblS">water surface</text>
+      <text x="296" y="26" class="lblS">to eye</text>
+      <text x="248" y="115" class="lbl">WATER</text>
+    </svg></div>
+    <p class="exp"><b>What to say:</b> rays from the coin bend <b>away from the normal</b> as they leave the water.
+    The eye traces them back in straight lines, and those backward extensions meet at a point <b>above</b> the real
+    coin. So the coin — and the pool bottom — appears raised. <b>n = real depth / apparent depth</b>.</p>
+  </div>
+
+  <div class="dia" id="d-fibre">
+    <h3>7 · Optical fibre</h3>
+    <p class="cap">Chapter 1 · the standard application of TIR</p>
+    <div class="diabox"><svg viewBox="0 0 440 160" width="440">
+      <rect x="25" y="40" width="390" height="80" rx="40" class="fillA"/>
+      <rect x="25" y="58" width="390" height="44" rx="22" class="fillB"/>
+      <path d="M14,102 L95,62 L176,102 L257,62 L338,102 L410,66" class="ray" marker-end="url(#ahr)"/>
+      <text x="30" y="30" class="lblS">cladding (rarer)</text>
+      <text x="330" y="30" class="lblS">core (denser)</text>
+      <text x="105" y="146" class="lblS">total internal reflection at every bounce</text>
+    </svg></div>
+    <p class="exp"><b>What to say:</b> light entering one end always strikes the core–cladding boundary at an angle
+    <b>greater than the critical angle</b>, so it is <b>totally internally reflected</b> again and again and travels
+    the whole length with almost no loss — even around bends. <b>Uses:</b> internet and telephone data transmission,
+    and endoscopy in medicine.</p>
+  </div>
+
+  <div class="dia" id="d-disp">
+    <h3>8 · Distance vs displacement</h3>
+    <p class="cap">Chapter 2 · the trap question in every paper</p>
+    <div class="diabox"><svg viewBox="0 0 440 220" width="440">
+      <circle cx="108" cy="108" r="68" fill="none" class="norm" stroke-width="2"/>
+      <path d="M108,40 A 68,68 0 1 1 104,40.1" fill="none" stroke="#e0322f" stroke-width="2.4" marker-end="url(#ahr)"/>
+      <circle cx="108" cy="40" r="5.5" fill="#1a2029"/>
+      <text x="118" y="34" class="lblS">start = finish</text>
+      <text x="30" y="200" class="lbl">distance = 400 m</text>
+      <text x="30" y="216" class="lbl" fill="#e0322f">displacement = 0</text>
+      <circle cx="272" cy="168" r="5.5" fill="#1a2029"/>
+      <circle cx="404" cy="62" r="5.5" fill="#1a2029"/>
+      <path d="M272,168 C 282,72 340,52 404,62" class="ray" marker-end="url(#ahr)"/>
+      <path d="M272,168 L404,62" class="ray2" stroke-dasharray="6 4" marker-end="url(#ahg)"/>
+      <text x="262" y="186" class="lblS">A</text>
+      <text x="410" y="54" class="lblS">B</text>
+      <text x="296" y="44" class="lblS" fill="#e0322f">path = distance</text>
+      <text x="322" y="152" class="lblS" fill="#1a7f37">displacement</text>
+    </svg></div>
+    <p class="exp"><b>What to say:</b> distance is the <b>whole path length</b> (scalar); displacement is the
+    <b>shortest straight line from start to finish</b>, with direction (vector). A complete round trip gives
+    <b>displacement = 0</b> but distance equal to the full path. Displacement is never greater than distance.</p>
+  </div>
+
+  <div class="dia" id="d-graphs">
+    <h3>9 · Motion graphs you must be able to read</h3>
+    <p class="cap">Chapter 2 · guaranteed marks in Section III or IV</p>
+    <div class="diabox"><svg viewBox="0 0 440 210" width="440">
+      <line x1="40" y1="165" x2="195" y2="165" class="edge"/><line x1="40" y1="165" x2="40" y2="25" class="edge"/>
+      <path d="M40,165 L165,45" class="ray"/>
+      <path d="M40,165 C 90,160 140,110 168,32" class="ray2"/>
+      <path d="M40,120 L180,120" class="ray3"/>
+      <text x="118" y="196" class="lblS" text-anchor="middle">Distance–time</text>
+      <text x="20" y="98" class="lblS" text-anchor="middle" transform="rotate(-90 20 98)">distance</text>
+      <text x="166" y="60" class="lblS" fill="#e0322f">uniform</text>
+      <text x="112" y="26" class="lblS" fill="#1a7f37">non-uniform</text>
+      <text x="184" y="116" class="lblS" fill="#8250df">at rest</text>
+      <line x1="255" y1="165" x2="418" y2="165" class="edge"/><line x1="255" y1="165" x2="255" y2="25" class="edge"/>
+      <path d="M255,165 L380,55" class="ray"/>
+      <path d="M255,95 L400,95" class="ray3"/>
+      <path d="M255,45 L370,150" class="ray2"/>
+      <text x="336" y="196" class="lblS" text-anchor="middle">Velocity–time</text>
+      <text x="235" y="98" class="lblS" text-anchor="middle" transform="rotate(-90 235 98)">velocity</text>
+      <text x="352" y="48" class="lblS" fill="#e0322f">uniform accn</text>
+      <text x="404" y="91" class="lblS" fill="#8250df">a = 0</text>
+      <text x="330" y="146" class="lblS" fill="#1a7f37">retardation</text>
+    </svg></div>
+    <p class="exp"><b>The four facts:</b> slope of a <b>distance–time</b> graph = <b>speed</b>; a straight inclined line
+    means uniform motion and a curve means non-uniform. Slope of a <b>velocity–time</b> graph = <b>acceleration</b>;
+    <b>area under</b> a velocity–time graph = <b>displacement</b>. Nearly every graph question is one of these four.</p>
+  </div>
+
+  <div class="dia" id="d-freefall">
+    <h3>10 · Stone thrown vertically upward</h3>
+    <p class="cap">Chapter 2 · the textbook worked example, reused constantly</p>
+    <div class="diabox"><svg viewBox="0 0 380 250" width="380">
+      <rect x="0" y="222" width="380" height="28" fill="#a8c8a0"/>
+      <line x1="0" y1="222" x2="380" y2="222" class="edge"/>
+      <line x1="160" y1="40" x2="160" y2="222" class="norm"/>
+      <circle cx="160" cy="52" r="9" fill="#e0322f"/>
+      <circle cx="160" cy="212" r="9" fill="#8a94a0"/>
+      <path d="M120,215 L120,60" class="ray" marker-end="url(#ahr)"/>
+      <path d="M205,60 L205,215" class="ray2" marker-end="url(#ahg)"/>
+      <path d="M300,52 L300,222" stroke="#1a2029" stroke-width="1.3" marker-start="url(#ahk)" marker-end="url(#ahk)"/>
+      <line x1="160" y1="52" x2="306" y2="52" class="norm"/>
+      <text x="46" y="140" class="lblS" fill="#e0322f">going up</text>
+      <text x="46" y="154" class="lblS" fill="#e0322f">a = −g</text>
+      <text x="216" y="140" class="lblS" fill="#1a7f37">coming down</text>
+      <text x="216" y="154" class="lblS" fill="#1a7f37">a = +g</text>
+      <text x="176" y="44" class="lbl">v = 0 at the top</text>
+      <text x="234" y="206" class="lblS">u = 30 m/s</text>
+      <text x="310" y="140" class="lbl">h</text>
+    </svg></div>
+    <p class="exp"><b>The three things being tested:</b> at the highest point <b>v = 0</b> (that is the whole trick);
+    taking up as positive, <b>a = −g</b> on the way up; and the <b>time up equals the time down</b>, so total flight
+    time is double. With u = 30 m/s and g = 10 m/s²: h = u²/2g = <b>45 m</b>, t<sub>up</sub> = u/g = <b>3 s</b>,
+    total flight = <b>6 s</b>.</p>
+  </div>
+</div>
+
+<footer>
+  Built for the Kerala SCERT Class 9 first-terminal exam, 17 Aug 2026.<br>
+  Predictions are probability estimates from textbook + SCERT model papers + past first-term papers — not leaked questions.
+</footer>
+</div>
+
+<script>
+/* ============ QUESTION BANK ============ */
+const QS = [];
+QS.push(
+/* ---------------- CHAPTER 1 · REFRACTION OF LIGHT ---------------- */
+{ch:1,p:3,m:2,
+ q:"The refractive index of glass is 1.5. Find the speed of light in glass.<span class='given'>Speed of light in vacuum, c = 3 × 10⁸ m/s</span>",
+ dia:"d-refract",
+ ph:"e.g. 2 x 10^8 m/s",
+ num:2e8, tol:0.06e8, method:["c/n","v=c/n","3/1.5"],
+ ans:"v = c/n = (3 × 10⁸) / 1.5 = <b>2 × 10⁸ m/s</b>",
+ why:"This is the only clean one-step numerical the chapter offers, so almost every model paper and past first-term paper carries some version of it. Glass (1.5), water (1.33) and diamond (2.42) are the three numbers they rotate between."},
+
+{ch:1,p:3,m:1,
+ q:"Light travels through a medium at 2.5 × 10⁸ m/s. What is the refractive index of that medium?",
+ ph:"a number",
+ num:1.2, tol:0.03, method:["c/v"],
+ ans:"n = c/v = (3 × 10⁸)/(2.5 × 10⁸) = <b>1.2</b>",
+ why:"The reverse of the standard numerical. Setters use it as a 1-mark when they already used n → v elsewhere in the paper."},
+
+{ch:1,p:3,m:2,
+ q:"Define refractive index and write its formula.",
+ ph:"definition + formula",
+ key:[["speed of light","velocity of light","c/v"],["vacuum","air"],["medium","c/v"]],
+ ans:"Refractive index (n) of a medium is the <b>ratio of the speed of light in vacuum to the speed of light in that medium</b>. n = c/v. It has <b>no unit</b> (it is a ratio).",
+ why:"A definition question is guaranteed in Section I or II. The 'no unit' part is the sneaky half-mark — many students write m/s."},
+
+{ch:1,p:3,m:3,
+ q:"State the two conditions necessary for total internal reflection to take place.",
+ dia:"d-tir",
+ ph:"condition 1 and condition 2",
+ key:[["denser to rarer","dense to rare","denser medium to a rarer","optically denser"],["greater than the critical","more than the critical","exceed","greater than critical"]],
+ ans:"(1) Light must travel from an <b>optically denser medium to an optically rarer medium</b>. (2) The <b>angle of incidence must be greater than the critical angle</b> for that pair of media.",
+ why:"The single most examinable statement in Chapter 1. It anchors the 4-mark question because it extends naturally into optical fibre, diamond sparkle and the prism periscope."},
+
+{ch:1,p:3,m:1,
+ q:"The critical angle for glass–air is 42°. A ray inside glass strikes the glass–air surface at 55°. What happens to it?",
+ dia:"d-tir",
+ ph:"one phrase",
+ key:[["total internal reflection","totally internally reflected","total reflection"]],
+ ans:"It undergoes <b>total internal reflection</b> — it is reflected back entirely into the glass and does not emerge into the air, because 55° &gt; 42° (the critical angle).",
+ why:"A one-line application check. Cheap to set, cheap to mark, appears constantly as a 1-mark or as part (a) of a longer question."},
+
+{ch:1,p:2,m:2,
+ q:"The refractive index of a medium is 2. Calculate its critical angle.<span class='given'>sin 30° = 0.5</span>",
+ dia:"d-tir",
+ ph:"in degrees",
+ num:30, tol:1, method:["sin c","1/n"],
+ ans:"sin C = 1/n = 1/2 = 0.5, so <b>C = 30°</b>",
+ why:"Uses the formula sin C = 1/n. Setters like n = 2 because the answer is a clean 30° without a calculator. Worth memorising: n = 1.5 → 42°, n = 1.33 → 49°, n = 2.42 (diamond) → about 24°."},
+
+{ch:1,p:3,m:3,
+ q:"Why do stars appear to twinkle, while planets do not?",
+ dia:"d-sunrise",
+ ph:"explain",
+ key:[["atmospheric refraction","refraction"],["changing","continuously","varying","fluctuat"],["point source","point-sized","far away","distant","extended source","larger"]],
+ ans:"Starlight passes through layers of the atmosphere whose <b>optical density keeps changing</b>, so the light is <b>refracted by continuously varying amounts</b>. A star is so far away it acts as a <b>point source</b>, so this makes its apparent brightness and position flicker. Planets are much closer and act as a collection of point sources — the variations average out, so they shine steadily.",
+ why:"The new textbook is written around real-life applications, and this is its flagship example. Expect one phenomenon question worth 2–3 marks; twinkling, mirage and early sunrise are the three that rotate."},
+
+{ch:1,p:3,m:3,
+ q:"Explain how a mirage is formed on a hot road in summer.",
+ dia:"d-mirage",
+ ph:"explain",
+ key:[["hot","warm"],["less dense","rarer","optically rarer","density decreases"],["total internal reflection","totally internally reflected","refraction"]],
+ ans:"Air near the hot road is heated and becomes <b>optically rarer</b> than the cooler air above it. Light from the sky travelling downward moves from denser to rarer layers and <b>bends away from the normal</b> repeatedly, until the angle of incidence exceeds the critical angle and it undergoes <b>total internal reflection</b>. The reflected light reaching the observer looks like a pool of water — an inverted image of the sky.",
+ why:"Ties refraction and TIR together in one answer, which is exactly what a 3-mark or 4-mark setter wants. Very high frequency in Kerala papers."},
+
+{ch:1,p:3,m:2,
+ q:"The Sun is visible to us about 2 minutes before actual sunrise. Give the reason.",
+ dia:"d-sunrise",
+ ph:"reason",
+ key:[["atmospheric refraction","refraction"],["denser","density increases","layers"]],
+ ans:"<b>Atmospheric refraction.</b> The density of air increases towards the Earth's surface, so sunlight entering the atmosphere bends continuously towards the normal. This makes the Sun appear <b>higher than its actual position</b>, so we see it before it has actually risen (and for about 2 minutes after it has actually set).",
+ why:"Same family as twinkling — a memorised real-life reason worth 2 marks. Papers usually pick one or two from this set of phenomena."},
+
+{ch:1,p:2,m:1,
+ q:"When light passes from one medium to another, which of these does NOT change — speed, wavelength, or frequency?",
+ ph:"one word",
+ key:[["frequency"]],
+ ans:"<b>Frequency.</b> Speed and wavelength both change during refraction, but frequency is determined by the source and stays the same.",
+ why:"A classic trap. It works well as a 1-mark or as the wrong option in an MCQ, because students assume everything about the wave changes."},
+
+{ch:1,p:3,m:1,
+ q:"A ray of light passes from air into water. Does it bend towards or away from the normal?",
+ dia:"d-refract",
+ ph:"towards / away",
+ key:[["towards","toward"]],
+ ans:"<b>Towards the normal</b> — because water is optically denser than air, so light slows down on entering it.",
+ why:"The most basic law-of-refraction check. It appears in nearly every paper in some form, often as a fill-in-the-blank."},
+
+{ch:1,p:2,m:2,
+ q:"A ray enters a medium from air with angle of incidence 60° and angle of refraction 30°. Find the refractive index of the medium.<span class='given'>sin 60° = 0.866,  sin 30° = 0.5</span>",
+ ph:"a number",
+ num:1.73, tol:0.06, method:["sin i","snell"],
+ ans:"n = sin i / sin r = 0.866 / 0.5 = <b>1.73</b>",
+ why:"Snell's law numerical. Slightly less common than n = c/v because it needs sine values, so setters must supply them — but when the paper wants a harder 2 or 3-mark, this is the one."},
+
+{ch:1,p:2,m:2,
+ q:"A tank is filled with water to a real depth of 4 m. Find its apparent depth.<span class='given'>Refractive index of water = 1.33</span>",
+ dia:"d-depth",
+ ph:"in metres",
+ num:3.0, tol:0.12, method:["real depth","apparent"],
+ ans:"n = real depth / apparent depth, so apparent depth = 4 / 1.33 = <b>3 m</b> (approx). This is why a swimming pool always looks shallower than it is.",
+ why:"Links a formula to a real-life observation, which is the style the new textbook pushes. Good 2-mark; also appears as a pure reasoning question ('why does a pool look shallow?')."},
+
+{ch:1,p:2,m:3,
+ q:"Diamond has a refractive index of 2.42 and a critical angle of about 24°. Explain why a cut diamond sparkles brilliantly.",
+ ph:"explain",
+ key:[["critical angle","24"],["total internal reflection","totally internally reflected"],["repeated","many times","again and again","multiple","several"]],
+ ans:"Because the critical angle of diamond is very <b>small (about 24°)</b>, light entering the diamond strikes the inner faces at angles greater than the critical angle almost every time. So it undergoes <b>repeated total internal reflection</b> inside the stone before finally emerging concentrated through the top face — which we see as sparkle. The cut of the diamond is designed to force this.",
+ why:"The textbook's applications of TIR are optical fibre, diamond, mirage and the prism periscope. Any of them can carry the 3-mark 'explain' slot; diamond and optical fibre are the two most quoted."},
+
+{ch:1,p:2,m:2,
+ q:"On what principle does an optical fibre work, and give one use of it.",
+ dia:"d-fibre",
+ ph:"principle + use",
+ key:[["total internal reflection","totally internally reflected"],["communicat","signal","internet","telephone","endoscop","medical","data"]],
+ ans:"An optical fibre works on the principle of <b>total internal reflection</b> — light entering one end strikes the walls at more than the critical angle and is reflected along the fibre with almost no loss, even around bends. Uses: <b>telecommunication / internet data transfer</b>, and <b>endoscopy</b> in medicine.",
+ why:"Easy, definite 2-mark. Almost free marks if you remember the phrase 'total internal reflection' — write it explicitly, don't paraphrase."},
+
+{ch:1,p:2,m:1,
+ q:"Refractive indices: water 1.33, crown glass 1.52, diamond 2.42. In which of these does light travel slowest?",
+ ph:"one word",
+ key:[["diamond"]],
+ ans:"<b>Diamond.</b> Higher refractive index means lower speed of light in the medium, since v = c/n. Diamond has the highest n here, so light is slowest in it.",
+ why:"Tests whether you understand that n is inversely related to speed. A very common 1-mark, and also a favourite MCQ distractor."},
+
+{ch:1,p:2,m:2,
+ q:"State the laws of refraction of light.",
+ dia:"d-refract",
+ ph:"the two laws",
+ key:[["same plane","one plane"],["sin i","snell","constant","ratio"]],
+ ans:"<b>First law:</b> the incident ray, the refracted ray and the normal at the point of incidence all lie in the <b>same plane</b>. <b>Second law (Snell's law):</b> for a given pair of media, the ratio <b>sin i / sin r is a constant</b>, and that constant is the refractive index.",
+ why:"Straight recall. If the paper has a 'state the laws' question at all, this is it — and it is very cheap for a setter to include."},
+
+/* ---------------- CHAPTER 2 · EQUATIONS OF MOTION ---------------- */
+{ch:2,p:3,m:2,
+ q:"Write the three equations of motion for uniformly accelerated motion.",
+ ph:"all three",
+ key:[["v = u + at","v=u+at"],["ut","1/2 at","0.5at"],["v^2","v2 = u2","u^2 + 2as"]],
+ ans:"<b>v = u + at</b>,  <b>s = ut + ½at²</b>,  <b>v² = u² + 2as</b> — where u = initial velocity, v = final velocity, a = acceleration, t = time, s = displacement.",
+ why:"Either asked directly for 1–2 marks, or needed for every numerical in the paper. Write these three on the rough page during the cool-off time before you touch anything else."},
+
+{ch:2,p:3,m:2,
+ q:"A car starts from rest and accelerates uniformly at 2 m/s². What is its velocity after 5 seconds?",
+ ph:"in m/s",
+ num:10, tol:0.4, method:["v = u + at","u+at"],
+ ans:"u = 0, a = 2 m/s², t = 5 s. v = u + at = 0 + (2 × 5) = <b>10 m/s</b>",
+ why:"The simplest possible application of v = u + at. There will almost certainly be a numerical at this difficulty in Section I or II — free marks if you spot 'starts from rest' means u = 0."},
+
+{ch:2,p:3,m:2,
+ q:"A body starts from rest with uniform acceleration 2 m/s². How far does it travel in 5 seconds?",
+ ph:"in metres",
+ num:25, tol:1, method:["ut + 1/2","1/2 at"],
+ ans:"s = ut + ½at² = (0 × 5) + ½ × 2 × 5² = ½ × 2 × 25 = <b>25 m</b>",
+ why:"The companion to the previous question — setters often ask both parts of the same situation for 3 marks total. Practise them as a pair."},
+
+{ch:2,p:3,m:3,
+ q:"An object moving at 5 m/s accelerates uniformly at 2 m/s² for 4 seconds. Find the distance travelled.",
+ ph:"in metres",
+ num:36, tol:1.2, method:["ut + 1/2","1/2 at"],
+ ans:"s = ut + ½at² = (5 × 4) + (½ × 2 × 4²) = 20 + 16 = <b>36 m</b>",
+ why:"The 3-mark version — non-zero initial velocity, so you cannot skip the ut term. That missing ut term is the single most common way students lose marks in this chapter."},
+
+{ch:2,p:3,m:3,
+ q:"An athlete runs exactly one complete round of a circular track of length 400 m. What is the magnitude of the athlete's displacement?",
+ dia:"d-disp",
+ ph:"a value",
+ exact:["0","zero","0 m","zero m","0m","nil","0 metre","0 metres","0 meter","0 meters"],
+ ans:"(a) Distance = <b>400 m</b> (the whole path length). (b) Displacement = <b>0</b>, because the athlete finishes at exactly the same point where they started, so the straight-line separation between start and end is zero.",
+ why:"The examiner's favourite trap in this chapter. Students on auto-pilot write 400 m for both. Any 'returns to starting point' or 'complete round' phrasing is testing this exact distinction."},
+
+{ch:2,p:3,m:2,
+ q:"Give two differences between distance and displacement.",
+ dia:"d-disp",
+ ph:"two differences",
+ key:[["scalar"],["vector"],["shortest","straight line","direct","initial and final"]],
+ ans:"(1) Distance is the <b>total length of the path</b> travelled; displacement is the <b>shortest straight-line distance</b> from the initial to the final position. (2) Distance is a <b>scalar</b> (magnitude only); displacement is a <b>vector</b> (magnitude and direction). (3) Distance can never be zero for a moving body, but displacement can be zero.",
+ why:"A definite 2-mark somewhere in Section II. Scalar/vector is half the marks — say the words explicitly."},
+
+{ch:2,p:3,m:3,
+ q:"A bus moving at 20 m/s is brought to rest in 5 seconds. Find the magnitude of its retardation.",
+ ph:"in m/s²",
+ num:4, tol:0.2, method:["v - u","v=u+at"],
+ ans:"u = 20 m/s, v = 0, t = 5 s. a = (v − u)/t = (0 − 20)/5 = −4 m/s². The negative sign means retardation, so the magnitude is <b>4 m/s²</b>.",
+ why:"Braking questions fit the road-safety theme the whole chapter is built around, so setters reach for them. Always mention that the minus sign means retardation — that is often a separate half-mark."},
+
+{ch:2,p:2,m:3,
+ q:"A car travelling at 30 m/s is stopped in a distance of 45 m. Find the magnitude of its retardation.",
+ ph:"in m/s²",
+ num:10, tol:0.4, method:["v^2","u^2 + 2as","2as"],
+ ans:"Use v² = u² + 2as with v = 0, u = 30 m/s, s = 45 m.<br>0 = 30² + 2a(45) → 0 = 900 + 90a → a = −10 m/s². Magnitude = <b>10 m/s²</b>",
+ why:"The v² = u² + 2as slot. You can spot it instantly: the question gives you a <i>distance</i> and no time. That recognition is worth practising."},
+
+{ch:2,p:3,m:3,
+ q:"A stone is thrown vertically upward with a velocity of 20 m/s. Find the maximum height it reaches.<span class='given'>Take g = 10 m/s²</span>",
+ dia:"d-freefall",
+ ph:"in metres",
+ num:20, tol:1, method:["v^2","u^2","2as","2gh"],
+ ans:"At the highest point v = 0. Using v² = u² + 2as with a = −g = −10:<br>0 = 20² − 2(10)h → 400 = 20h → h = <b>20 m</b>",
+ why:"This exact worked example is in the textbook — setters lift it and change the number. The key insight they are testing is that <b>v = 0 at the top</b>, not that the stone stops moving."},
+
+{ch:2,p:3,m:2,
+ q:"For the same stone thrown upward at 20 m/s, how long does it take to reach the highest point?<span class='given'>Take g = 10 m/s²</span>",
+ dia:"d-freefall",
+ ph:"in seconds",
+ num:2, tol:0.15, method:["v = u + at","u/g"],
+ ans:"v = u + at → 0 = 20 − 10t → t = <b>2 s</b>. (It takes another 2 s to fall back, so the total flight time is 4 s.)",
+ why:"Free-fall questions usually come as multi-part: max height, time up, total time, velocity on landing. Learn the whole family together — if one part appears the others usually do too."},
+
+{ch:2,p:2,m:2,
+ q:"A body is dropped from a height of 45 m. How long does it take to reach the ground?<span class='given'>Take g = 10 m/s², initial velocity = 0</span>",
+ ph:"in seconds",
+ num:3, tol:0.2, method:["1/2 at","1/2 gt","ut +"],
+ ans:"s = ut + ½at² with u = 0, a = g = 10:<br>45 = ½ × 10 × t² = 5t² → t² = 9 → t = <b>3 s</b>",
+ why:"The 'dropped' version of free fall — u = 0 makes it easier than the thrown-upward one, so it fits Section II. Spotting that 'dropped' or 'falls freely' means u = 0 is the whole trick."},
+
+{ch:2,p:3,m:1,
+ q:"What does the area under a velocity–time graph represent?",
+ dia:"d-graphs",
+ ph:"one word",
+ key:[["displacement","distance"]],
+ ans:"The <b>displacement</b> (or distance travelled) of the body during that time interval.",
+ why:"Graph facts are 1-mark gold for setters. The two you must know cold: <b>area under v–t = displacement</b>, and <b>slope of v–t = acceleration</b>."},
+
+{ch:2,p:3,m:1,
+ q:"What does the slope of a velocity–time graph give?",
+ dia:"d-graphs",
+ ph:"one word",
+ key:[["acceleration"]],
+ ans:"The <b>acceleration</b> of the body.",
+ why:"Paired with the previous fact. If a graph appears in Section III or IV, you will need both of these to answer the sub-parts."},
+
+{ch:2,p:2,m:2,
+ q:"What does the slope of a distance–time graph represent, and what does a straight inclined line on such a graph tell you?",
+ dia:"d-graphs",
+ ph:"two things",
+ key:[["speed","velocity"],["uniform","constant"]],
+ ans:"The slope of a distance–time graph gives the <b>speed</b> of the body. A <b>straight inclined line</b> means the speed is constant — the body is in <b>uniform motion</b>. A curved line would mean non-uniform motion.",
+ why:"Reading a graph rather than plotting one is the cheaper question to set, so this shows up more often than a full plotting question."},
+
+{ch:2,p:2,m:1,
+ q:"Which of these is a vector quantity — distance, speed, time, or velocity?",
+ ph:"one word",
+ key:[["velocity"]],
+ ans:"<b>Velocity</b>, because it has both magnitude and direction. Distance, speed and time are scalars.",
+ why:"A guaranteed-style 1-mark. Memorise the split: scalars = distance, speed, time, mass, energy; vectors = displacement, velocity, acceleration, force, momentum."},
+
+{ch:2,p:2,m:1,
+ q:"A body is moving with uniform velocity. What is its acceleration?",
+ ph:"a value",
+ exact:["0","zero","0 m/s2","zero m/s2","0 m/s^2","zero m/s^2","0m/s2","nil"],
+ ans:"<b>Zero.</b> Acceleration is the rate of change of velocity — if the velocity is not changing, there is no acceleration.",
+ why:"Simple, but a real trap when it is dressed up as 'a car moves at a steady 60 km/h — find its acceleration.' Students hunt for a formula instead of just answering zero."},
+
+{ch:2,p:2,m:2,
+ q:"A body moves in a circular path at a constant speed, yet its velocity is <i>not</i> constant. Give the reason.",
+ dia:"d-disp",
+ ph:"reason",
+ key:[["direction"],["change","changing","varies","varying","continuous"]],
+ ans:"<b>No.</b> Velocity is a vector, so it depends on both magnitude and direction. Even though the speed (magnitude) stays constant, the <b>direction of motion changes continuously</b> along a circular path, so the velocity keeps changing — which means the body is accelerating.",
+ why:"The textbook has a worked example of a child running on a circular track for exactly this point. Strong candidate for a 2-mark reasoning question."},
+
+/* ---------------- CHAPTER 3 · LAWS OF MOTION (only if taught) ---------------- */
+{ch:3,p:2,m:1,
+ q:"Calculate the momentum of a body of mass 2 kg moving with a velocity of 5 m/s.",
+ ph:"with unit",
+ num:10, tol:0.4, method:["mv","p = m"],
+ ans:"p = mv = 2 × 5 = <b>10 kg m/s</b>",
+ why:"If Chapter 3 is in your portion, this is the easiest numerical it can produce. Do not forget the unit kg m/s — it is worth marks."},
+
+{ch:3,p:2,m:2,
+ q:"State Newton's first law of motion and give one everyday example of it.",
+ ph:"law + example",
+ key:[["rest","uniform motion","straight line"],["unbalanced","external force","force"]],
+ ans:"<b>Newton's first law:</b> a body continues in its state of rest, or of uniform motion in a straight line, unless acted upon by an <b>unbalanced external force</b>. Example: when a moving bus brakes suddenly, passengers lurch forward because their bodies tend to keep moving. This tendency is called <b>inertia</b>.",
+ why:"If the chapter is in portion, the 'state the law' question is near-certain. Add the word 'unbalanced' — leaving it out costs half a mark in Kerala schemes."},
+
+{ch:3,p:2,m:2,
+ q:"Why does a cricketer move his hands backwards while catching a fast ball?",
+ ph:"reason",
+ key:[["increas","longer","more time","extend"],["time"],["force","reduce","less"]],
+ ans:"By moving his hands backwards, the cricketer <b>increases the time</b> over which the ball's momentum is reduced to zero. Since force = rate of change of momentum, spreading the same change in momentum over a longer time means a <b>smaller force</b> acts on his hands, so they are not hurt.",
+ why:"The textbook's signature impulse example. If Laws of Motion is in your portion, this or the airbag/sand-pit version has a very high chance of appearing for 2–3 marks."},
+
+{ch:3,p:2,m:2,
+ q:"A force acts on a body of mass 5 kg producing an acceleration of 2 m/s². Find the force.",
+ ph:"in newtons",
+ num:10, tol:0.4, method:["f = ma","ma"],
+ ans:"F = ma = 5 × 2 = <b>10 N</b>",
+ why:"Newton's second law in its simplest numerical form. Straightforward marks — just make sure the unit newton (N) is written."}
+);
+
+/* ============ ENDLESS QUESTION GENERATOR ============ */
+function ri(a,b){return a+Math.floor(Math.random()*(b-a+1));}
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function rnd(x,d){const p=Math.pow(10,d===undefined?2:d);return Math.round(x*p)/p;}
+function sci8(v){return rnd(v/1e8,2)+" × 10⁸";}
+
+const MEDIA=[{n:"water",v:1.33},{n:"crown glass",v:1.52},{n:"ordinary glass",v:1.50},
+             {n:"diamond",v:2.42},{n:"ethyl alcohol",v:1.36},{n:"ice",v:1.31},
+             {n:"quartz",v:1.46},{n:"kerosene",v:1.44},{n:"turpentine oil",v:1.47}];
+const SINS="sin 30° = 0.500,  sin 45° = 0.707,  sin 60° = 0.866";
+
+/* --- generic graph plotter --- */
+function plot(pts,xmax,ymax,xlab,ylab,xticks,yticks,colour){
+  const X=t=>55+(t/xmax)*345, Y=v=>210-(v/ymax)*180;
+  let s='<svg viewBox="0 0 430 252" width="430"><rect x="0" y="0" width="430" height="252" fill="none"/>';
+  s+='<line x1="55" y1="210" x2="410" y2="210" class="edge"/><line x1="55" y1="210" x2="55" y2="26" class="edge"/>';
+  yticks.forEach(v=>{ s+='<line x1="55" y1="'+Y(v)+'" x2="'+X(xmax)+'" y2="'+Y(v)+'" class="norm" opacity=".45"/>';
+    s+='<text x="47" y="'+(Y(v)+4)+'" class="lblS" text-anchor="end">'+v+'</text>'; });
+  xticks.forEach(t=>{ s+='<line x1="'+X(t)+'" y1="210" x2="'+X(t)+'" y2="'+Y(ymax)+'" class="norm" opacity=".45"/>';
+    s+='<text x="'+X(t)+'" y="228" class="lblS" text-anchor="middle">'+t+'</text>'; });
+  s+='<text x="47" y="214" class="lblS" text-anchor="end">0</text>';
+  s+='<polyline points="'+pts.map(p=>X(p[0])+","+Y(p[1])).join(" ")+'" fill="none" stroke="'+(colour||"#e0322f")+'" stroke-width="2.8" stroke-linejoin="round"/>';
+  pts.forEach(p=>{ s+='<circle cx="'+X(p[0])+'" cy="'+Y(p[1])+'" r="3.4" fill="'+(colour||"#e0322f")+'"/>'; });
+  s+='<text x="232" y="246" class="lblS" text-anchor="middle">'+xlab+'</text>';
+  s+='<text x="14" y="118" class="lblS" text-anchor="middle" transform="rotate(-90 14 118)">'+ylab+'</text>';
+  return s+'</svg>';
+}
+
+/* --- CHAPTER 1 --- */
+function gSpeedFromN(){
+  const m=pick(MEDIA), v=3e8/m.v;
+  return {ch:1,p:3,m:2,dia:"d-refract",
+    q:"The refractive index of "+m.n+" is "+m.v+". Calculate the speed of light in "+m.n+".<span class='given'>c = 3 × 10⁸ m/s</span>",
+    ph:"e.g. 2.1 x 10^8 m/s", num:v, tol:v*0.035, method:["c/n"],
+    ans:"v = c/n = (3 × 10⁸) / "+m.v+" = <b>"+sci8(v)+" m/s</b>",
+    why:"The chapter's one clean one-step numerical. Whichever medium they pick, the method is identical."};
+}
+function gNfromV(){
+  const P=pick([[2.0,1.5],[2.5,1.2],[1.5,2.0],[2.4,1.25],[1.2,2.5],[1.875,1.6]]);
+  return {ch:1,p:3,m:2,
+    q:"Light travels through a medium with a speed of "+P[0]+" × 10⁸ m/s. Find the refractive index of the medium.<span class='given'>c = 3 × 10⁸ m/s</span>",
+    ph:"a number", num:P[1], tol:0.04, method:["c/v"],
+    ans:"n = c/v = (3 × 10⁸) / ("+P[0]+" × 10⁸) = <b>"+P[1]+"</b>  (no unit — it is a ratio)",
+    why:"The reverse of the standard numerical. Remember refractive index has no unit; writing m/s costs a mark."};
+}
+function gCritical(){
+  const P=pick([[2.0,30],[1.41,45],[1.15,60]]);
+  return {ch:1,p:2,m:2,dia:"d-tir",
+    q:"The refractive index of a medium is "+P[0]+". Calculate its critical angle.<span class='given'>"+SINS+"</span>",
+    ph:"in degrees", num:P[1], tol:2.5, method:["sin c","1/n"],
+    ans:"sin C = 1/n = 1/"+P[0]+" = "+rnd(1/P[0],3)+", so <b>C = "+P[1]+"°</b>",
+    why:"Uses sin C = 1/n. Worth memorising the real ones: glass ≈ 42°, water ≈ 49°, diamond ≈ 24°."};
+}
+function gSnell(){
+  const P=pick([[60,30,1.73],[45,30,1.41],[60,45,1.22]]);
+  return {ch:1,p:2,m:2,dia:"d-refract",
+    q:"A ray of light travels from air into a medium. The angle of incidence is "+P[0]+"° and the angle of refraction is "+P[1]+"°. Find the refractive index of the medium.<span class='given'>"+SINS+"</span>",
+    ph:"a number", num:P[2], tol:0.07, method:["sin i","snell"],
+    ans:"n = sin i / sin r = sin "+P[0]+"° / sin "+P[1]+"° = <b>"+P[2]+"</b>",
+    why:"Snell's law. The setter must supply the sine values, so if you see a table of sines in the paper, this question is in it."};
+}
+function gApparentDepth(){
+  const m=pick([{n:"water",v:1.33},{n:"glass",v:1.5}]);
+  const d=pick([2,3,4,5,6,8,9,12]), ap=d/m.v;
+  return {ch:1,p:2,m:2,dia:"d-depth",
+    q:"A tank is filled with "+m.n+" to a real depth of "+d+" m. Find its apparent depth.<span class='given'>Refractive index of "+m.n+" = "+m.v+"</span>",
+    ph:"in metres", num:ap, tol:ap*0.04, method:["real depth","apparent"],
+    ans:"n = real depth / apparent depth<br>apparent depth = "+d+" / "+m.v+" = <b>"+rnd(ap,2)+" m</b>",
+    why:"Why a pool always looks shallower than it is. Can be asked as a numerical or as a pure reasoning question."};
+}
+const PHEN=[
+ {q:"Why do stars appear to twinkle?",dia:"d-sunrise",
+  key:[["atmospheric refraction","refraction"],["chang","vary","fluctuat","continuous"],["point source","point","far","distant"]],
+  ans:"Starlight passes through atmospheric layers of <b>continuously changing optical density</b>, so it is refracted by varying amounts. A star is so distant it acts as a <b>point source</b>, so its apparent brightness and position flicker."},
+ {q:"Why do planets not twinkle, while stars do?",dia:"d-sunrise",
+  key:[["closer","nearer","near"],["collection","many point","extended","larger","several"],["average","cancel","even out","steady"]],
+  ans:"A planet is far closer, so it acts as a <b>collection of many point sources</b> rather than one. The flickering from all those points <b>averages out</b>, so a planet shines steadily."},
+ {q:"Explain how a mirage is formed on a hot road.",dia:"d-mirage",
+  key:[["hot","warm"],["rarer","less dense","optically rarer"],["total internal reflection","totally internally reflected"]],
+  ans:"Air near the hot road becomes <b>optically rarer</b>. Light from the sky moving from denser to rarer layers bends away from the normal until the angle exceeds the critical angle, then undergoes <b>total internal reflection</b>, producing an inverted image of the sky that looks like water."},
+ {q:"Why is the Sun visible about two minutes before actual sunrise?",dia:"d-sunrise",
+  key:[["atmospheric refraction","refraction"],["denser","density increases","layers"],["higher","above","raised"]],
+  ans:"<b>Atmospheric refraction.</b> Air density increases towards the ground, so sunlight bends continuously towards the normal and the Sun appears <b>higher than its actual position</b> — visible before it has truly risen."},
+ {q:"Why does a swimming pool appear shallower than it really is?",dia:"d-depth",
+  key:[["refraction","bend"],["away from the normal","away"],["appear","apparent","raised","higher"]],
+  ans:"Light from the bottom <b>bends away from the normal</b> as it leaves the water. The eye traces the rays back in straight lines, and those extensions meet <b>above</b> the real bottom, so it appears raised."},
+ {q:"Why does a pencil placed in a glass of water look bent?",dia:"d-refract",
+  key:[["refraction","refract"],["bend","change direction"],["water","air","medium","surface"]],
+  ans:"Because of <b>refraction</b>. Light from the submerged part bends as it leaves the water and enters air, so that part appears displaced from the part above the surface — the pencil looks broken or bent."},
+ {q:"Why does a cut diamond sparkle so brilliantly?",dia:"d-tir",
+  key:[["critical angle","24"],["total internal reflection","totally internally reflected"],["repeat","again and again","many","multiple"]],
+  ans:"Diamond's refractive index (2.42) gives it a very <b>small critical angle of about 24°</b>, so light striking the inner faces is <b>repeatedly totally internally reflected</b> before emerging concentrated through the top."},
+ {q:"On what principle does an optical fibre work? Give one use.",dia:"d-fibre",
+  key:[["total internal reflection","totally internally reflected"],["communicat","internet","signal","data","endoscop","medical","telephone"]],
+  ans:"<b>Total internal reflection.</b> Light strikes the core–cladding boundary above the critical angle every time and is reflected along the fibre with almost no loss. Uses: internet/telephone data transmission, and endoscopy."}
+];
+function gPhenomenon(){
+  const p=pick(PHEN);
+  return {ch:1,p:3,m:pick([2,3]),dia:p.dia,q:p.q,ph:"explain",key:p.key,ans:p.ans,
+    why:"The new textbook is built around real-life applications, so at least one phenomenon question is near-certain. Name the physics term explicitly — that is where the marks are."};
+}
+function gBend(){
+  const denser=pick(["water","glass","diamond","kerosene"]);
+  const toDenser=Math.random()<0.5;
+  return {ch:1,p:3,m:1,dia:"d-refract",
+    q:"A ray of light passes from "+(toDenser?"air into "+denser:denser+" into air")+". Does it bend towards or away from the normal?",
+    ph:"towards / away", exact:toDenser?["towards","toward","towards the normal","toward the normal","towards normal"]
+                                      :["away","away from the normal","away from normal"],
+    ans:"<b>"+(toDenser?"Towards":"Away from")+" the normal</b> — light goes from "+(toDenser?"a rarer to a denser":"a denser to a rarer")+" medium, so it "+(toDenser?"slows down":"speeds up")+".",
+    why:"The most basic law-of-refraction check, and it appears in nearly every paper as a 1-mark or fill-in-the-blank."};
+}
+function gCompare(){
+  const set=[]; while(set.length<3){const m=pick(MEDIA); if(!set.some(x=>x.n===m.n)) set.push(m);}
+  const slow=Math.random()<0.5;
+  const t=set.slice().sort((a,b)=>b.v-a.v);
+  const want=slow?t[0]:t[t.length-1];
+  return {ch:1,p:2,m:1,
+    q:"Refractive indices: "+set.map(m=>m.n+" ("+m.v+")").join(", ")+". In which medium does light travel <b>"+(slow?"slowest":"fastest")+"</b>?",
+    ph:"name the medium", exact:[want.n],
+    ans:"<b>"+want.n.charAt(0).toUpperCase()+want.n.slice(1)+"</b> — it has the "+(slow?"highest":"lowest")+" refractive index, and v = c/n, so a "+(slow?"larger":"smaller")+" n means a "+(slow?"lower":"higher")+" speed.",
+    why:"Tests whether you understand n is inversely related to speed. Very common as a 1-mark or MCQ."};
+}
+function gUnchanged(){
+  return {ch:1,p:2,m:1,
+    q:"When light passes from one medium into another, which of these does <b>not</b> change — speed, wavelength, frequency, or direction?",
+    ph:"one word", exact:["frequency"],
+    ans:"<b>Frequency.</b> It is fixed by the source. Speed and wavelength both change, and the ray changes direction unless it enters along the normal.",
+    why:"A classic trap — students assume everything about the wave changes."};
+}
+function gTIRcond(){
+  return {ch:1,p:3,m:3,dia:"d-tir",
+    q:"State the two conditions necessary for total internal reflection.",
+    ph:"condition 1 and condition 2",
+    key:[["denser to rarer","dense to rare","denser medium to a rarer","optically denser"],["greater than the critical","more than the critical","exceed","greater than critical","above the critical"]],
+    ans:"(1) Light must travel from an <b>optically denser medium to an optically rarer medium</b>. (2) The <b>angle of incidence must be greater than the critical angle</b>.",
+    why:"The most examinable statement in Chapter 1 — it anchors the 4-mark question and leads into optical fibre, diamond and mirage."};
+}
+
+/* --- CHAPTER 2 --- */
+function gFindV(){
+  const u=pick([0,2,4,5,8,10,15,20]), a=pick([1,2,2.5,3,4,5]), t=pick([2,3,4,5,6,8,10]);
+  const v=u+a*t;
+  return {ch:2,p:3,m:2,
+    q:"A body "+(u===0?"starts from rest and":"moving at "+u+" m/s")+" accelerates uniformly at "+a+" m/s² for "+t+" seconds. Find its final velocity.",
+    ph:"in m/s", num:v, tol:0.3, method:["v = u + at","u+at"],
+    ans:"v = u + at = "+u+" + ("+a+" × "+t+") = <b>"+rnd(v,2)+" m/s</b>",
+    why:"The simplest application of the first equation. 'Starts from rest' always means u = 0."};
+}
+function gFindA(){
+  const u=pick([0,5,10,20,25]), a=pick([2,3,4,5,6]), t=pick([2,4,5,8,10]);
+  const v=u+a*t;
+  return {ch:2,p:3,m:2,
+    q:"A vehicle's velocity changes from "+u+" m/s to "+v+" m/s in "+t+" seconds. Calculate its acceleration.",
+    ph:"in m/s²", num:a, tol:0.2, method:["v - u","v=u+at"],
+    ans:"a = (v − u)/t = ("+v+" − "+u+")/"+t+" = <b>"+a+" m/s²</b>",
+    why:"Same equation rearranged. If the answer comes out negative, say the word 'retardation' — that is often a separate half-mark."};
+}
+function gFindS(){
+  const u=pick([0,0,3,5,10]), a=pick([2,3,4,5,6]), t=pick([3,4,5,6,8]);
+  const s=u*t+0.5*a*t*t;
+  return {ch:2,p:3,m:3,
+    q:"A body "+(u===0?"starts from rest and":"moving at "+u+" m/s")+" travels with a uniform acceleration of "+a+" m/s² for "+t+" seconds. Find the distance it covers.",
+    ph:"in metres", num:s, tol:s*0.03+0.2, method:["ut","1/2 at","0.5"],
+    ans:"s = ut + ½at² = ("+u+" × "+t+") + (½ × "+a+" × "+t+"²) = "+u*t+" + "+rnd(0.5*a*t*t,1)+" = <b>"+rnd(s,2)+" m</b>",
+    why:"The most common 3-mark numerical. With u ≠ 0, forgetting the ut term is the single biggest mark-loser in this chapter."};
+}
+function gBraking(){
+  const u=pick([20,25,30,40,50]), a=pick([2,4,5,8,10]);
+  const s=(u*u)/(2*a);
+  const askS=Math.random()<0.5;
+  if(askS) return {ch:2,p:2,m:3,
+    q:"A car moving at "+u+" m/s is brought to rest with a uniform retardation of "+a+" m/s². Find the distance it travels before stopping.",
+    ph:"in metres", num:s, tol:s*0.03+0.3, method:["v^2","u^2","2as"],
+    ans:"v² = u² + 2as with v = 0, a = −"+a+":<br>0 = "+u+"² − 2("+a+")s → s = "+u*u+"/"+2*a+" = <b>"+rnd(s,2)+" m</b>",
+    why:"You can spot the v² = u² + 2as question instantly — it gives you a distance and never mentions time."};
+  return {ch:2,p:2,m:3,
+    q:"A car travelling at "+u+" m/s is stopped in a distance of "+rnd(s,2)+" m. Find the magnitude of its retardation.",
+    ph:"in m/s²", num:a, tol:a*0.05+0.15, method:["v^2","u^2","2as"],
+    ans:"v² = u² + 2as → 0 = "+u+"² + 2a("+rnd(s,2)+")<br>a = −"+u*u+" / "+rnd(2*s,2)+" = −"+a+" m/s², so the retardation is <b>"+a+" m/s²</b>",
+    why:"Braking questions fit the road-safety theme the chapter is built around. Always state that the minus sign means retardation."};
+}
+function gDropped(){
+  const t=pick([1,2,3,4,5]), h=5*t*t, v=10*t;
+  const askT=Math.random()<0.5;
+  if(askT) return {ch:2,p:3,m:2,dia:"d-freefall",
+    q:"A stone is dropped from a height of "+h+" m. How long does it take to reach the ground?<span class='given'>Take g = 10 m/s²</span>",
+    ph:"in seconds", num:t, tol:0.2, method:["1/2","gt","ut"],
+    ans:"'Dropped' means u = 0.<br>s = ut + ½gt² → "+h+" = 5t² → t² = "+(h/5)+" → <b>t = "+t+" s</b>",
+    why:"Spotting that 'dropped' or 'falls freely' means u = 0 is the whole trick."};
+  return {ch:2,p:3,m:2,dia:"d-freefall",
+    q:"A stone is dropped from a height of "+h+" m. With what velocity does it hit the ground?<span class='given'>Take g = 10 m/s²</span>",
+    ph:"in m/s", num:v, tol:0.6, method:["v^2","2gh","u + at"],
+    ans:"v² = u² + 2gh = 0 + 2(10)("+h+") = "+2*10*h+" → <b>v = "+v+" m/s</b>",
+    why:"Free-fall questions come as families — height, time, landing velocity. Learn all three together."};
+}
+function gThrownUp(){
+  const u=pick([10,20,30,40,50]), h=(u*u)/20, t=u/10;
+  const w=pick(["height","time","flight"]);
+  const base={ch:2,p:3,m:3,dia:"d-freefall"};
+  if(w==="height") return Object.assign(base,{
+    q:"A ball is thrown vertically upward with a velocity of "+u+" m/s. Find the maximum height it reaches.<span class='given'>Take g = 10 m/s²</span>",
+    ph:"in metres", num:h, tol:h*0.03+0.3, method:["v^2","u^2","2g"],
+    ans:"At the top v = 0.<br>v² = u² − 2gh → 0 = "+u+"² − 20h → <b>h = "+rnd(h,2)+" m</b>",
+    why:"Straight from the textbook worked example — they only change the number. The point being tested is that v = 0 at the top."});
+  if(w==="time") return Object.assign(base,{
+    q:"A ball is thrown vertically upward at "+u+" m/s. How long does it take to reach its highest point?<span class='given'>Take g = 10 m/s²</span>",
+    ph:"in seconds", num:t, tol:0.2, method:["v = u + at","u/g"],
+    ans:"v = u − gt → 0 = "+u+" − 10t → <b>t = "+t+" s</b>",
+    why:"Half of the flight-time family. If this appears, the total-flight-time part usually follows."});
+  return Object.assign(base,{
+    q:"A ball is thrown vertically upward at "+u+" m/s. Find its total time of flight (until it returns to the thrower's hand).<span class='given'>Take g = 10 m/s²</span>",
+    ph:"in seconds", num:2*t, tol:0.3, method:["u/g","2u"],
+    ans:"Time up = u/g = "+t+" s. The time to come down is the same, so total flight = <b>"+2*t+" s</b>",
+    why:"Tests whether you know the ascent and descent take equal times. Many students halve instead of doubling."});
+}
+function gNthSecond(){
+  const a=pick([2,4,6,8,10]), n=pick([3,4,5,6,7]);
+  const s=a*(2*n-1)/2;
+  return {ch:2,p:1,m:4,
+    q:"A body starts from rest and moves with a uniform acceleration of "+a+" m/s². Find the distance it travels during the "+n+"th second alone.",
+    ph:"in metres", num:s, tol:s*0.03+0.2, method:["2n","nth","1/2 a"],
+    ans:"Distance in the nth second = u + ½a(2n − 1) = 0 + ½ × "+a+" × ("+(2*n)+" − 1) = <b>"+rnd(s,2)+" m</b><br><i>Or: (distance in "+n+" s) − (distance in "+(n-1)+" s) = "+rnd(0.5*a*n*n,1)+" − "+rnd(0.5*a*(n-1)*(n-1),1)+" = "+rnd(s,2)+" m</i>",
+    why:"A Section IV favourite because it has two valid methods. Don't confuse 'distance in the nth second' with 'distance in n seconds'."};
+}
+function gDisplacement(){
+  const kind=pick(["circle","there","square"]);
+  if(kind==="circle"){
+    const L=pick([200,300,400,440,500]);
+    return {ch:2,p:3,m:2,dia:"d-disp",
+      q:"An athlete runs exactly one complete round of a circular track of length "+L+" m. What is the magnitude of the displacement?",
+      ph:"a value", exact:["0","zero","0 m","zero m","0m","nil"],
+      ans:"<b>Zero.</b> The distance covered is "+L+" m, but the athlete finishes at exactly the starting point, so the straight-line separation between start and finish is zero.",
+      why:"The trap in every paper. 'Complete round' or 'returns to start' always means displacement = 0."};
+  }
+  if(kind==="there"){
+    const d=pick([20,50,60,80,100]);
+    return {ch:2,p:3,m:2,dia:"d-disp",
+      q:"A man walks "+d+" m due east and then walks back "+d+" m due west to his starting point. Find (a) the distance covered and (b) the displacement.",
+      ph:"e.g. 100 m and zero", key:[[""+2*d],["zero","displacement is 0","and 0"]],
+      ans:"(a) Distance = "+d+" + "+d+" = <b>"+2*d+" m</b>. (b) Displacement = <b>zero</b>, because he ends where he began.",
+      why:"Same trap in a straight-line dress. Distance adds up; displacement cancels."};
+  }
+  const a=pick([10,20,30,40]);
+  return {ch:2,p:2,m:3,dia:"d-disp",
+    q:"A body moves along two sides of a square field of side "+a+" m, from one corner to the opposite corner. Find (a) the distance covered and (b) the magnitude of the displacement.<span class='given'>√2 = 1.414</span>",
+    ph:"e.g. 40 m and 28.3 m", key:[[""+2*a],[""+rnd(a*1.414,1),""+Math.round(a*1.414)]],
+    ans:"(a) Distance = "+a+" + "+a+" = <b>"+2*a+" m</b>.<br>(b) Displacement is the diagonal = "+a+"√2 = <b>"+rnd(a*1.414,2)+" m</b>, directed from the start corner to the opposite corner.",
+    why:"The harder version of the same idea — displacement is the straight line, whatever path was actually walked."};
+}
+function gScalarVector(){
+  const V=["displacement","velocity","acceleration","force","momentum"];
+  const S=["distance","speed","time","mass","energy"];
+  const wantV=Math.random()<0.5;
+  const opts=[pick(V),pick(S),pick(S),pick(V)];
+  const uniq=[...new Set(opts)];
+  const target=wantV? uniq.find(o=>V.includes(o)) : uniq.find(o=>S.includes(o));
+  const shown=uniq.filter(o=> o===target || (wantV? S.includes(o) : V.includes(o)));
+  if(!target||shown.length<2) return gScalarVector();
+  return {ch:2,p:2,m:1,
+    q:"Which of these is a <b>"+(wantV?"vector":"scalar")+"</b> quantity — "+shown.join(", ")+"?",
+    ph:"one word", exact:[target],
+    ans:"<b>"+target.charAt(0).toUpperCase()+target.slice(1)+"</b>. "+(wantV?"It has both magnitude and direction; the others have magnitude only.":"It has magnitude only; the others also have direction."),
+    why:"Guaranteed-style 1-mark. Vectors: displacement, velocity, acceleration, force, momentum. Scalars: distance, speed, time, mass, energy."};
+}
+function gAvgSpeed(){
+  const d1=pick([40,60,90,120]), d2=pick([30,60,80,100]);
+  const t1=pick([2,3,4]), t2=pick([2,3,5]);
+  const avg=(d1+d2)/(t1+t2);
+  return {ch:2,p:1,m:3,
+    q:"A car travels "+d1+" m in "+t1+" s and the next "+d2+" m in "+t2+" s, all in the same direction. Find its average speed for the whole journey.",
+    ph:"in m/s", num:avg, tol:avg*0.03+0.15, method:["total distance","total time"],
+    ans:"Average speed = total distance / total time = ("+d1+" + "+d2+") / ("+t1+" + "+t2+") = "+(d1+d2)+"/"+(t1+t2)+" = <b>"+rnd(avg,2)+" m/s</b>",
+    why:"Tests that you add distances and times before dividing — averaging the two speeds separately gives the wrong answer."};
+}
+function gUniformAcc(){
+  return {ch:2,p:2,m:1,
+    q:"A body is moving with uniform velocity. What is its acceleration?",
+    ph:"a value", exact:["0","zero","0 m/s2","zero m/s2","0 m/s^2","nil"],
+    ans:"<b>Zero.</b> Acceleration is the rate of change of velocity — if velocity is not changing, there is no acceleration.",
+    why:"Simple, but a real trap when dressed up as 'a car moves at a steady 60 km/h — find its acceleration.'"};
+}
+
+/* --- GRAPH QUESTIONS --- */
+function gVTgraph(){
+  const t1=pick([2,4,5]), d2=pick([4,5,6,8]), t3d=pick([2,3,5]), v1=pick([10,15,20,25,30]);
+  const t2=t1+d2, t3=t2+t3d;
+  const a1=v1/t1, a3=v1/t3d;
+  const disp=0.5*t1*v1 + d2*v1 + 0.5*t3d*v1;
+  const svg=plot([[0,0],[t1,v1],[t2,v1],[t3,0]],t3,v1,"Time (s)","Velocity (m/s)",[t1,t2,t3],[v1]);
+  const w=pick(["acc","ret","disp","describe"]);
+  const base={ch:2,p:3,dia:"d-graphs",svg:svg};
+  if(w==="acc") return Object.assign(base,{m:2,
+    q:"The velocity–time graph of a body is shown below. Find its acceleration during the first "+t1+" seconds.",
+    ph:"in m/s²", num:a1, tol:a1*0.05+0.1, method:["slope"],
+    ans:"Acceleration = slope of the v–t graph = ("+v1+" − 0) / ("+t1+" − 0) = <b>"+rnd(a1,2)+" m/s²</b>",
+    why:"Slope of a velocity–time graph is acceleration. That single fact answers most graph sub-questions."});
+  if(w==="ret") return Object.assign(base,{m:2,
+    q:"From the velocity–time graph below, find the magnitude of the retardation in the last "+t3d+" seconds.",
+    ph:"in m/s²", num:a3, tol:a3*0.05+0.1, method:["slope"],
+    ans:"Retardation = |slope| = ("+v1+" − 0) / ("+t3+" − "+t2+") = "+v1+"/"+t3d+" = <b>"+rnd(a3,2)+" m/s²</b>",
+    why:"Same fact, negative slope. Say 'retardation' or 'negative acceleration' explicitly."});
+  if(w==="disp") return Object.assign(base,{m:4,
+    q:"The velocity–time graph of a body is shown below. Calculate the total displacement of the body.",
+    ph:"in metres", num:disp, tol:disp*0.03+0.5, method:["area","trapez"],
+    ans:"Displacement = area under the graph = triangle + rectangle + triangle<br>= ½("+t1+")("+v1+") + ("+d2+")("+v1+") + ½("+t3d+")("+v1+")<br>= "+rnd(0.5*t1*v1,1)+" + "+rnd(d2*v1,1)+" + "+rnd(0.5*t3d*v1,1)+" = <b>"+rnd(disp,2)+" m</b>",
+    why:"Area under a v–t graph is displacement. Split it into a triangle, a rectangle and a triangle — that's the marking scheme."});
+  return Object.assign(base,{m:3,
+    q:"Describe the motion of the body in each of the three parts of the velocity–time graph shown below.",
+    ph:"describe all three parts",
+    key:[["uniform acceleration","accelerat","increas"],["uniform velocity","constant","zero acceleration","steady"],["retard","decelerat","decreas","slow"]],
+    ans:"<b>0 to "+t1+" s:</b> velocity increases uniformly from 0 to "+v1+" m/s — <b>uniform acceleration</b>.<br><b>"+t1+" to "+t2+" s:</b> velocity stays at "+v1+" m/s — <b>uniform velocity, zero acceleration</b>.<br><b>"+t2+" to "+t3+" s:</b> velocity falls uniformly to zero — <b>uniform retardation</b>.",
+    why:"A cheap 3-mark for the setter and free marks for you — one sentence per segment, name the state of motion each time."});
+}
+function gDTgraph(){
+  const t1=pick([2,3,4]), rest=pick([2,3,4]), t3d=pick([2,3,4]);
+  const s1=pick([10,20,30,40]), s2=pick([10,20,30,50]);
+  const d1=s1*t1, d2=d1+s2*t3d;
+  const t2=t1+rest, t3=t2+t3d;
+  const svg=plot([[0,0],[t1,d1],[t2,d1],[t3,d2]],t3,d2,"Time (s)","Distance (m)",[t1,t2,t3],[d1,d2],"#1a7f37");
+  const w=pick(["speed1","rest","speed2","faster"]);
+  const base={ch:2,p:3,dia:"d-graphs",svg:svg};
+  if(w==="speed1") return Object.assign(base,{m:2,
+    q:"The distance–time graph of a body is shown below. Find its speed during the first "+t1+" seconds.",
+    ph:"in m/s", num:s1, tol:s1*0.05+0.1, method:["slope"],
+    ans:"Speed = slope of the distance–time graph = "+d1+" m / "+t1+" s = <b>"+s1+" m/s</b>",
+    why:"Slope of a distance–time graph is speed. The other core graph fact."});
+  if(w==="speed2") return Object.assign(base,{m:2,
+    q:"From the distance–time graph below, find the speed of the body between "+t2+" s and "+t3+" s.",
+    ph:"in m/s", num:s2, tol:s2*0.05+0.1, method:["slope"],
+    ans:"Speed = change in distance / change in time = ("+d2+" − "+d1+") / ("+t3+" − "+t2+") = "+(d2-d1)+"/"+t3d+" = <b>"+s2+" m/s</b>",
+    why:"Reading a slope off a chosen segment. Take the differences — don't just divide the final values."});
+  if(w==="rest") return Object.assign(base,{m:2,
+    q:"In the distance–time graph shown below, what does the flat portion between "+t1+" s and "+t2+" s tell you about the body?",
+    ph:"describe it",
+    key:[["rest","stationary","not moving","stopped","no motion"],["distance","zero speed","does not change","constant","same"]],
+    ans:"The distance is <b>not changing</b> with time, so the body is <b>at rest</b> (stationary) during that interval — its speed is zero.",
+    why:"A horizontal line on a distance–time graph means at rest. On a velocity–time graph the same shape means uniform velocity — don't mix them up."});
+  const faster = s2>s1 ? "second" : (s1>s2 ? "first" : "equal");
+  if(faster==="equal") return gDTgraph();
+  return Object.assign(base,{m:2,
+    q:"From the distance–time graph below, in which moving section is the body faster — the first ("+0+"–"+t1+" s) or the second ("+t2+"–"+t3+" s)?",
+    ph:"first / second", exact:[faster,"the "+faster,faster+" section"],
+    ans:"The <b>"+faster+"</b> section. Its slope is steeper: "+(faster==="first"?s1+" m/s against "+s2+" m/s":s2+" m/s against "+s1+" m/s")+", and a steeper distance–time slope means a greater speed.",
+    why:"Tests that you read steepness as speed rather than reading the height of the line."});
+}
+
+/* --- CHAPTER 3 --- */
+function gMomentum(){
+  const m=pick([2,3,4,5,8,10,50,1000]), v=pick([2,3,5,10,15,20]);
+  return {ch:3,p:2,m:2,
+    q:"Calculate the momentum of a body of mass "+m+" kg moving with a velocity of "+v+" m/s.",
+    ph:"with unit", num:m*v, tol:(m*v)*0.02+0.2, method:["mv"],
+    ans:"p = mv = "+m+" × "+v+" = <b>"+m*v+" kg m/s</b>",
+    why:"The easiest numerical in Chapter 3. The unit kg m/s carries marks — write it."};
+}
+function gForce(){
+  const m=pick([2,3,5,8,10,20,50]), a=pick([2,3,4,5,10]);
+  return {ch:3,p:2,m:2,
+    q:"A force acting on a body of mass "+m+" kg produces an acceleration of "+a+" m/s². Calculate the force.",
+    ph:"in newtons", num:m*a, tol:(m*a)*0.02+0.2, method:["ma"],
+    ans:"F = ma = "+m+" × "+a+" = <b>"+m*a+" N</b>",
+    why:"Newton's second law in its simplest form. Don't drop the unit newton."};
+}
+function gMomentumChange(){
+  const m=pick([2,5,10,50]), u=pick([0,5,10,20]), a=pick([2,4,5]), t=pick([2,4,5]);
+  const v=u+a*t, F=m*(v-u)/t;
+  return {ch:3,p:2,m:3,
+    q:"A body of mass "+m+" kg changes its velocity from "+u+" m/s to "+v+" m/s in "+t+" seconds. Find (a) the change in momentum and (b) the force acting on it.",
+    ph:"e.g. 50 kg m/s and 10 N", key:[[""+m*(v-u)],[""+rnd(F,2),""+Math.round(F)]],
+    ans:"(a) Change in momentum = m(v − u) = "+m+"("+v+" − "+u+") = <b>"+m*(v-u)+" kg m/s</b><br>(b) F = change in momentum / time = "+m*(v-u)+" / "+t+" = <b>"+rnd(F,2)+" N</b>",
+    why:"Links momentum to Newton's second law — force is the rate of change of momentum. A natural 3-mark."};
+}
+function gNewtonLaw(){
+  const which=pick([1,2,3]);
+  const D={1:{q:"State Newton's first law of motion.",
+              key:[["rest","uniform motion","straight line"],["unbalanced","external force","force"]],
+              ans:"A body continues in its state of rest, or of uniform motion in a straight line, unless acted upon by an <b>unbalanced external force</b>. This tendency to resist a change in motion is called <b>inertia</b>."},
+           2:{q:"State Newton's second law of motion and write its mathematical form.",
+              key:[["rate of change of momentum","momentum","ma"],["force","f ="]],
+              ans:"The <b>rate of change of momentum</b> of a body is directly proportional to the applied force and takes place in the direction of the force. Mathematically, <b>F = ma</b> (or F = m(v − u)/t)."},
+           3:{q:"State Newton's third law of motion and give one example.",
+              key:[["action","reaction"],["equal","opposite"],["different bodies","two different","separate","gun","rocket","boat","walk","swim"]],
+              ans:"For every action there is an <b>equal and opposite reaction</b>, and the two act on <b>different bodies</b>. Example: a gun recoils backward when a bullet is fired forward; a rocket moves up as gases are pushed down."}};
+  const d=D[which];
+  return {ch:3,p:2,m:2,q:d.q,ph:"state the law",key:d.key,ans:d.ans,
+    why:"If Chapter 3 is in your portion, a 'state the law' question is near-certain. Include the exact key words — 'unbalanced', 'equal and opposite', 'different bodies'."};
+}
+
+const GENS=[
+ /* ch1 */ [gSpeedFromN,3],[gNfromV,2],[gCritical,2],[gSnell,2],[gApparentDepth,2],
+           [gPhenomenon,4],[gBend,2],[gCompare,2],[gUnchanged,1],[gTIRcond,2],
+ /* ch2 */ [gFindV,3],[gFindA,2],[gFindS,3],[gBraking,2],[gDropped,2],[gThrownUp,3],
+           [gNthSecond,1],[gDisplacement,3],[gScalarVector,2],[gAvgSpeed,1],[gUniformAcc,1],
+ /* graphs */ [gVTgraph,4],[gDTgraph,3],
+ /* ch3 */ [gMomentum,1],[gForce,1],[gMomentumChange,1],[gNewtonLaw,1]
+];
+const GRAPHGENS=[gVTgraph,gDTgraph];
+
+function makeQuestion(mode){
+  if(mode==="graph") return pick(GRAPHGENS)();
+  let pool=GENS;
+  if(mode==="1"||mode==="2"||mode==="3"){
+    const probe=[]; // filter by chapter using a sample call
+    pool=GENS.filter(g=>{ const s=g[0](); return String(s.ch)===mode; });
+    if(!pool.length) pool=GENS;
+  } else if(mode==="core"){
+    pool=GENS.filter(g=>g[0]().ch!==3);
+  }
+  const bag=[]; pool.forEach(([fn,w])=>{ for(let i=0;i<w;i++) bag.push(fn); });
+  return pick(bag)();
+}
+
+/* ============ ENGINE ============ */
+let order = [], answered = {};
+
+function norm(s){
+  return (s||"").toString().toLowerCase()
+    .replace(/[‘’“”]/g,"'")
+    .replace(/×/g,"x").replace(/−/g,"-").replace(/²/g,"^2").replace(/√/g,"sqrt")
+    .replace(/[^a-z0-9^.\-\/ ]/g," ")
+    .replace(/\s+/g," ").trim();
+}
+function numsIn(s){
+  const m = norm(s).replace(/\s*x\s*10\s*\^\s*(-?\d+)/g, (a,b)=>"e"+b)
+                   .replace(/\s*e\s*(-?\d+)/g, (a,b)=>"e"+b)
+                   .match(/-?\d+(\.\d+)?(e-?\d+)?/g);
+  return m ? m.map(Number) : [];
+}
+function grade(q, raw){
+  const a = norm(raw);
+  if(!a) return {lvl:0};
+  // exact-match questions (used where a substring test would misfire, e.g. "0")
+  if(q.exact) return {lvl: q.exact.some(k => norm(k) === a) ? 2 : 0};
+  // numeric questions
+  if(q.num !== undefined){
+    const tol = q.tol !== undefined ? q.tol : Math.abs(q.num)*0.03 + 1e-9;
+    const hit = numsIn(raw).some(n => Math.abs(n - q.num) <= tol);
+    if(hit) return {lvl:2};
+    // partial credit if a key word / method word present
+    if(q.method && q.method.some(k => a.includes(norm(k)))) return {lvl:1};
+    return {lvl:0};
+  }
+  // keyword questions
+  const need = q.key || [];
+  let hits = 0;
+  need.forEach(group=>{
+    const alts = Array.isArray(group)? group : [group];
+    if(alts.some(k => a.includes(norm(k)))) hits++;
+  });
+  if(need.length === 0) return {lvl:1};
+  if(hits === need.length) return {lvl:2};
+  if(hits >= Math.ceil(need.length/2)) return {lvl:1};
+  return {lvl:0};
+}
+function check(i){
+  const q = QS[i];
+  const inp = document.getElementById("in"+i);
+  const fb  = document.getElementById("fb"+i);
+  const r = grade(q, inp.value);
+  const was = answered[i];
+  answered[i] = r.lvl;
+  fb.className = "fb show " + (r.lvl===2?"good":r.lvl===1?"part":"bad");
+  const verdict = r.lvl===2 ? "✓ Correct" : r.lvl===1 ? "~ Partly there" : "✗ Not quite";
+  fb.innerHTML =
+    '<p class="verdict">'+verdict+'</p>'+
+    '<p class="model"><b>Model answer:</b> '+q.ans+'</p>'+
+    (q.dia ? diaHTML(q.dia) : '')+
+    (q.why ? '<p class="why"><b>Why this could come:</b> '+q.why+'</p>' : '');
+  updateScore();
+}
+function diaHTML(id){
+  const src = document.querySelector("#"+id+" .diabox");
+  if(!src) return "";
+  return '<p class="why" style="margin:2px 0 6px"><b>Diagram — draw this in the exam:</b></p>' + src.outerHTML;
+}
+function updateScore(){
+  const vis = order.filter(i => visible(QS[i]));
+  let got = 0;
+  vis.forEach(i => { if(answered[i]===2) got++; else if(answered[i]===1) got+=0.5; });
+  document.getElementById("got").textContent = (Math.round(got*2)/2);
+  document.getElementById("tot").textContent = vis.length;
+}
+function visible(q){
+  const f = document.getElementById("filter").value;
+  if(f==="core") return q.ch!==3;
+  if(f==="all")  return true;
+  if(f==="star") return q.p===3;
+  return q.ch === +f;
+}
+function render(){
+  const list = document.getElementById("qlist");
+  const vis = order.filter(i => visible(QS[i]));
+  if(!vis.length){ list.innerHTML='<div class="empty">No questions in this filter.</div>'; updateScore(); return; }
+  list.innerHTML = vis.map((i,n)=>{
+    const q = QS[i];
+    const stars = "★".repeat(q.p) + "☆".repeat(3-q.p);
+    const cls = q.p===3?"hi":q.p===2?"med":"low";
+    return '<div class="q">'+
+      '<div class="qhead">'+
+        '<span class="qno">Q'+(n+1)+'</span>'+
+        '<span class="pill ch">Ch '+q.ch+'</span>'+
+        '<span class="pill '+cls+'">'+stars+'</span>'+
+        '<span class="marks">'+q.m+' mark'+(q.m>1?'s':'')+'</span>'+
+      '</div>'+
+      '<div class="qtext">'+q.q+'</div>'+
+      '<div class="ansrow">'+
+        '<input id="in'+i+'" type="text" autocomplete="off" placeholder="'+(q.ph||'Type your answer…')+'" '+
+          'onkeydown="if(event.key===\'Enter\')check('+i+')">'+
+        '<button onclick="check('+i+')">Check</button>'+
+      '</div>'+
+      '<div id="fb'+i+'" class="fb"></div>'+
+    '</div>';
+  }).join("");
+  updateScore();
+}
+/* ============ ENDLESS MODE ============ */
+let EQ=[], EA={}, eSeen=0, eGot=0;
+function eMode(){ return document.getElementById("efilter").value; }
+function eCard(q,i){
+  const stars="★".repeat(q.p)+"☆".repeat(3-q.p);
+  const cls=q.p===3?"hi":q.p===2?"med":"low";
+  return '<div class="q">'+
+    '<div class="qhead">'+
+      '<span class="qno">Q'+(i+1)+'</span>'+
+      '<span class="pill ch">Ch '+q.ch+'</span>'+
+      '<span class="pill '+cls+'">'+stars+'</span>'+
+      '<span class="marks">'+q.m+' mark'+(q.m>1?'s':'')+'</span>'+
+    '</div>'+
+    '<div class="qtext">'+q.q+'</div>'+
+    (q.svg?'<div class="diabox" style="margin:0 0 14px">'+q.svg+'</div>':'')+
+    '<div class="ansrow">'+
+      '<input id="ein'+i+'" type="text" autocomplete="off" placeholder="'+(q.ph||"Type your answer…")+'" '+
+        'onkeydown="if(event.key===\'Enter\')checkE('+i+')">'+
+      '<button onclick="checkE('+i+')">Check</button>'+
+    '</div>'+
+    '<div id="efb'+i+'" class="fb"></div>'+
+  '</div>';
+}
+function checkE(i){
+  const q=EQ[i], inp=document.getElementById("ein"+i), fb=document.getElementById("efb"+i);
+  const r=grade(q,inp.value);
+  if(EA[i]===undefined){ eSeen++; if(r.lvl===2) eGot++; else if(r.lvl===1) eGot+=0.5; }
+  EA[i]=r.lvl;
+  fb.className="fb show "+(r.lvl===2?"good":r.lvl===1?"part":"bad");
+  fb.innerHTML='<p class="verdict">'+(r.lvl===2?"✓ Correct":r.lvl===1?"~ Partly there":"✗ Not quite")+'</p>'+
+    '<p class="model"><b>Model answer:</b> '+q.ans+'</p>'+
+    (q.dia?diaHTML(q.dia):'')+
+    (q.why?'<p class="why"><b>Why this could come:</b> '+q.why+'</p>':'');
+  document.getElementById("estat").innerHTML="Attempted <b>"+eSeen+"</b> · scored <b>"+(Math.round(eGot*2)/2)+"</b>";
+}
+function eNew(n,append){
+  const mode=eMode();
+  if(!append){ EQ=[]; EA={}; }
+  const start=EQ.length;
+  for(let k=0;k<n;k++) EQ.push(makeQuestion(mode));
+  const list=document.getElementById("elist");
+  const html=EQ.slice(start).map((q,j)=>eCard(q,start+j)).join("");
+  if(append) list.insertAdjacentHTML("beforeend",html); else list.innerHTML=html;
+  if(append) document.getElementById("ein"+start).scrollIntoView({block:"center",behavior:"smooth"});
+}
+function eReset(){ eSeen=0; eGot=0; document.getElementById("estat").innerHTML="Attempted <b>0</b> · scored <b>0</b>"; eNew(8,false); }
+
+function shuffleQs(){
+  for(let i=order.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [order[i],order[j]]=[order[j],order[i]]; }
+  render();
+}
+function resetAll(){ answered={}; order = QS.map((_,i)=>i); render(); }
+function tab(w){
+  ["quiz","end","mock","dia","src","rep"].forEach(k=>{
+    document.getElementById("p-"+k).classList.toggle("on", w===k);
+    document.getElementById("t-"+k).classList.toggle("on", w===k);
+  });
+  window.scrollTo(0,0);
+}
+function reveal(id,btn){
+  const el=document.getElementById(id);
+  const open = el.style.display==="block";
+  el.style.display = open ? "none" : "block";
+  btn.textContent = open ? "Show model answer" : "Hide answer";
+}
+function revealAll(open){
+  document.querySelectorAll(".ansbox").forEach(e=>e.style.display=open?"block":"none");
+  document.querySelectorAll(".revealbtn").forEach(b=>b.textContent=open?"Hide answer":"Show model answer");
+}
+resetAll();
+eNew(8,false);
+</script>
+</body>
+</html>
