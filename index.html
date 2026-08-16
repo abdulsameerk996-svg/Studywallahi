@@ -17,30 +17,47 @@
            --tx:#14181d; --dim:#5b6672; --okbg:#e4f6e9; --badbg:#fdeaea; --warnbg:#fdf4e0; }
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--tx);
+  html,body{overflow-x:hidden;max-width:100%}
+  body{margin:0;background:var(--bg);color:var(--tx);-webkit-text-size-adjust:100%;
        font:15.5px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
   .wrap{max-width:880px;margin:0 auto;padding:18px 16px 90px}
+  img,svg,table,pre{max-width:100%}
+  p,li,td,th,h1,h2,h3,h4{overflow-wrap:break-word}
+  .pill{white-space:nowrap}
   header{padding:22px 0 12px}
   h1{font-size:1.5rem;margin:0 0 4px;letter-spacing:-.02em}
   .sub{color:var(--dim);font-size:.9rem}
+  .eyebrow{font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+           color:var(--acc);margin:0 0 7px}
+  .byline{margin-top:11px;padding-top:10px;border-top:1px solid var(--line);
+          font-size:.79rem;color:var(--dim)}
+  .byline b{color:var(--tx)}
+  .intro{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);
+         border-radius:0 12px 12px 0;padding:15px 16px;margin:0 0 16px;font-size:.9rem;position:relative}
+  .intro h4{margin:0 0 7px;font-size:.95rem;letter-spacing:-.01em}
+  .intro p{margin:0 0 9px}
+  .intro p:last-child{margin:0}
+  .intro .x{position:absolute;top:9px;right:10px;background:none;border:0;color:var(--dim);
+            font-size:1.05rem;cursor:pointer;line-height:1;padding:4px 6px;border-radius:6px}
+  .intro .x:hover{color:var(--tx)}
   .pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:.72rem;
         font-weight:600;letter-spacing:.02em;border:1px solid var(--line)}
   .pill.hi{background:var(--okbg);color:var(--ok);border-color:transparent}
   .pill.med{background:var(--warnbg);color:var(--warn);border-color:transparent}
   .pill.low{background:var(--panel2);color:var(--dim)}
   .pill.ch{background:var(--panel2);color:var(--dim)}
-  .subbar{display:flex;gap:8px;margin:16px 0 0}
-  .subbar button{flex:1;padding:11px 8px;border:1px solid var(--line);background:var(--panel);
-        color:var(--dim);font:inherit;border-radius:12px;cursor:pointer;display:flex;
-        flex-direction:column;gap:2px;align-items:center;line-height:1.25}
+  .subbar{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+  .subbar button{flex:1 1 calc(33.333% - 6px);min-width:0;padding:11px 6px;border:1px solid var(--line);
+        background:var(--panel);color:var(--dim);font:inherit;border-radius:12px;cursor:pointer;display:flex;
+        flex-direction:column;gap:2px;align-items:center;justify-content:center;line-height:1.25}
   .subbar button b{font-size:.95rem}
   .subbar button span{font-size:.7rem;opacity:.8;letter-spacing:.02em}
   .subbar button.on{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;border-color:transparent}
   .subbar button.on span{opacity:.9}
-  .tabs{display:flex;gap:6px;margin:14px 0 20px;background:var(--panel2);
+  .tabs{display:flex;flex-wrap:wrap;gap:5px;margin:12px 0 20px;background:var(--panel2);
         padding:5px;border-radius:12px;border:1px solid var(--line)}
-  .tabs button{flex:1;padding:9px 8px;border:0;background:transparent;color:var(--dim);
-        font:inherit;font-weight:600;font-size:.88rem;border-radius:8px;cursor:pointer}
+  .tabs button{flex:1 1 auto;min-width:74px;padding:9px 8px;border:0;background:transparent;color:var(--dim);
+        font:inherit;font-weight:600;font-size:.88rem;border-radius:8px;cursor:pointer;white-space:nowrap}
   .tabs button.on{background:var(--acc);color:#fff}
   .panel{display:none} .panel.on{display:block}
 
@@ -54,7 +71,8 @@
   .card a{color:var(--acc);text-decoration:none;border-bottom:1px solid rgba(79,156,249,.4);font-weight:600}
   .card a:hover{border-bottom-color:var(--acc)}
   table{width:100%;border-collapse:collapse;font-size:.86rem;margin:8px 0 12px}
-  th,td{text-align:left;padding:8px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+  th,td{text-align:left;padding:8px 9px;border-bottom:1px solid var(--line);vertical-align:top;
+        overflow-wrap:break-word;hyphens:none}
   th{color:var(--dim);font-weight:600;font-size:.76rem;text-transform:uppercase;letter-spacing:.04em}
   .note{background:var(--warnbg);border-left:3px solid var(--warn);padding:11px 13px;
         border-radius:0 8px 8px 0;font-size:.88rem;margin:0 0 12px}
@@ -186,6 +204,86 @@
   .lbl{font:600 12.5px -apple-system,Segoe UI,Roboto,sans-serif;fill:#1a2029}
   .lblS{font:600 11px -apple-system,Segoe UI,Roboto,sans-serif;fill:#5b6672}
   .lblR{font:700 12px -apple-system,Segoe UI,Roboto,sans-serif;fill:#e0322f}
+
+  /* ---------- table scroll wrapper ---------- */
+  .tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 12px;
+           border-radius:10px}
+  .tscroll table{margin:0}
+  .tscroll::-webkit-scrollbar{height:6px}
+  .tscroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:99px}
+
+  /* ================= PHONES ================= */
+  @media (max-width:640px){
+    body{font-size:15px}
+    .wrap{padding:14px 12px 76px}
+    header{padding:14px 0 8px}
+    h1{font-size:1.24rem;line-height:1.22}
+    .sub{font-size:.85rem}
+
+    .subbar{gap:6px}
+    .subbar button{flex:1 1 calc(33.333% - 4px);padding:9px 4px;border-radius:11px;min-height:48px}
+    .subbar button b{font-size:.8rem}
+    .subbar button span{font-size:.62rem}
+
+    .tabs{gap:4px;padding:4px;border-radius:11px;margin:10px 0 16px}
+    .tabs button{min-width:auto;flex:1 1 calc(25% - 3px);padding:9px 4px;font-size:.76rem;min-height:40px}
+
+    .card{padding:15px 14px;border-radius:12px}
+    .card h2{font-size:1rem}
+    .card h3{font-size:.87rem}
+    table{font-size:.8rem}
+    th,td{padding:7px 7px}
+    th{font-size:.68rem}
+
+    .toolbar{gap:6px}
+    .toolbar select{flex:1 1 100%}
+    .toolbar button{flex:1 1 auto;min-height:42px}
+    .score{margin-left:0;flex:1 1 100%;text-align:right}
+
+    .q{padding:14px 13px;border-radius:12px}
+    .qtext{font-size:.96rem}
+    .ansrow input{padding:12px 11px;font-size:16px}
+    .ansrow button{padding:12px 14px;min-height:46px}
+    .fb{padding:11px 12px;font-size:.87rem}
+
+    .fcard{padding:28px 18px;min-height:220px;border-radius:16px}
+    .fcard .front{font-size:1.12rem}
+    .fcard .back{font-size:1rem}
+    .fcbtns button{padding:13px 8px;min-height:48px;font-size:.9rem}
+
+    .lesson > summary{padding:14px 14px}
+    .lesson > summary b{font-size:.94rem}
+    .lesson > summary span{font-size:.79rem}
+    .lbody{padding:0 14px 15px}
+    .eq{font-size:.85rem;padding:9px 11px}
+    .eq.big{font-size:.95rem}
+    .step,.trap{padding:11px 12px;font-size:.88rem}
+    .chain{font-size:.79rem;gap:5px}
+    .chain i{padding:6px 9px}
+
+    .paper{padding:16px 13px}
+    .phead h2{font-size:.98rem}
+    .phead .split{font-size:.79rem}
+    .sechead{padding:9px 11px;font-size:.78rem;flex-direction:column;gap:3px;align-items:flex-start}
+    .mq{padding-left:26px}
+    .mq .sub{margin-left:6px}
+    .revealbtn{min-height:38px;padding:7px 12px}
+    .ansbox{padding:11px 12px;font-size:.87rem}
+    .mtable{font-size:.8rem}
+    .mtable td{padding:6px 8px}
+
+    .dia{padding:14px 13px}
+    .diabox{padding:8px 6px}
+    .dia h3{font-size:.94rem}
+    .note{padding:11px 12px;font-size:.85rem}
+  }
+
+  /* very narrow phones */
+  @media (max-width:380px){
+    .subbar button{flex:1 1 calc(50% - 4px)}
+    .tabs button{flex:1 1 calc(33.333% - 3px);font-size:.74rem}
+    h1{font-size:1.15rem}
+  }
   footer{color:var(--dim);font-size:.78rem;text-align:center;padding:26px 0 0;line-height:1.7}
   .stickybar{position:fixed;left:0;right:0;bottom:0;background:var(--panel);
         border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:10px;
@@ -197,9 +295,11 @@
 <div class="wrap">
 
 <header>
+  <div class="eyebrow">Kerala SCERT · Standard IX</div>
   <h1 id="hdr-t">Class 9 Physics — Onam Exam 2026</h1>
   <div class="sub" id="hdr-s">Kerala SCERT · First Terminal · <b>Mon 17 Aug 2026, afternoon</b> · 40 marks / 1½ hrs</div>
   <div class="sub" style="font-size:.82rem;margin-top:4px">Exam dates vary by school and sources disagree — confirm your own timetable.</div>
+  <div class="byline">Made by <b>[thenvis]</b> &nbsp;·&nbsp; last updated 16 Aug 2026</div>
 </header>
 
 <div class="subbar">
@@ -239,14 +339,14 @@
     Education Observer. All 18 questions were extracted, and every Chemistry question here is modelled on
     what that paper actually asked.</p>
     <h3>What that real paper examined</h3>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Chapter</th><th>Share of the real paper</th><th>Verdict</th></tr>
       <tr><td><b>1. Structure of Atom</b></td><td>about 9 of 18 questions</td><td><span class="pill hi">Core</span></td></tr>
       <tr><td><b>2. Periodic Table</b></td><td>about 7 of 18 questions</td><td><span class="pill hi">Core</span></td></tr>
       <tr><td>3. Chemical Bonding</td><td>2 questions, and both were really electron-configuration questions in disguise (CaO, ionic formation)</td><td><span class="pill med">Light</span></td></tr>
       <tr><td>4. Redox Reactions</td><td><b>zero</b> — no oxidation numbers, no oxidising/reducing agents, no balancing</td><td><span class="pill low">Did not appear</span></td></tr>
       <tr><td>5–8 (Part 2)</td><td>none</td><td><span class="pill low">No</span></td></tr>
-    </table>
+    </table></div>
     <p><b>One caveat, stated plainly.</b> The generic SCERT-style model paper that circulates online <i>is</i>
     heavy on Chapter 3 and Chapter 4 — electron-dot diagrams, oxidation numbers, balancing equations. So Redox
     clearly <i>can</i> be asked. It just wasn't, in the one real first-term paper available. Treat Chapters 1
@@ -255,13 +355,13 @@
     <h3>The Chemistry paper is a different shape from Physics</h3>
     <p>This one is easy to miss and it matters. The real Chemistry paper does <b>not</b> use the
     "answer any 3 of 4" structure the Physics model papers use. It runs:</p>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Section</th><th>Structure</th><th>Total</th></tr>
       <tr><td>I</td><td>Q1–4, <b>answer all</b>, 1 score each</td><td>4</td></tr>
       <tr><td>II</td><td>Q5–11, <b>answer all</b> (2 of them carry an internal OR), 2 scores each</td><td>14</td></tr>
       <tr><td>III</td><td>Q12–17, <b>answer all</b> (2 carry an internal OR), 3 scores each</td><td>18</td></tr>
       <tr><td>IV</td><td>Q18 only, with one OR, 4 scores</td><td>4</td></tr>
-    </table>
+    </table></div>
     <p><b>What this changes for you:</b> in Physics you can skip your weakest five questions. In Chemistry you
     cannot skip anything — every question must be attempted, and the only choice is between two alternatives
     inside a handful of them. So there is no hiding a weak topic. Budget your time evenly across all 18.</p>
@@ -282,13 +382,13 @@
     <b>identical to the Chemistry paper</b>. That cross-subject match is itself good evidence that this is the
     standard current format for Class 9 science papers.</p>
     <h3>Which chapters appeared</h3>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Chapter</th><th>Evidence</th></tr>
       <tr><td><b>1 · To Life Processes</b></td><td><span class="pill hi">Core</span> diffusion, osmosis, facilitated diffusion, active transport, plasmolysis, photosynthesis light and dark phases, chloroplast structure, metabolism, homeostasis</td></tr>
       <tr><td><b>2 · Digestion and Transport of Nutrients</b></td><td><span class="pill hi">Core</span> Amoeba vs Hydra, tooth structure, villi, epiglottis, bile and the liver, blood, heart, cardiac cycle, circulation</td></tr>
       <tr><td>3 · Respiration and Excretion</td><td><span class="pill low">Did not appear in any of the three documents</span> — no lungs, no alveoli, no nephron</td></tr>
       <tr><td>4–6 (Behind Movements, Reproductive Health, Classification)</td><td><span class="pill low">Part 2 — not in the portion</span></td></tr>
-    </table>
+    </table></div>
     <p><b>On Chapter 3:</b> it is nominally in the Part 1 portion but absent from every real and model paper
     checked — the same pattern as Redox in Chemistry. Learn the headline facts (nephron, glomerulus, Bowman's
     capsule, urea, alveoli, stomata, lenticels) so you could attempt a question, but don't let it eat into
@@ -314,7 +414,7 @@
     <b>62 of the 80 marks</b>. Those are all "explain / describe / justify" questions — so reasoning, not recall,
     is what this paper rewards.</p>
     <h3>Which chapters actually appeared</h3>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Chapter</th><th>Evidence</th></tr>
       <tr><td><b>Ideas and Early States</b></td><td><span class="pill hi">Heaviest</span> Arthashastra, Saptanga, Magadha, Mauryas, Ashoka's Dhamma, Buddhism, Jainism, Athenian democracy</td></tr>
       <tr><td><b>On the Roof of the World</b></td><td><span class="pill hi">Heaviest</span> the three ranges, Bugyals, Karewas, river origins, climate, tourism phases, map-marking</td></tr>
@@ -325,7 +425,7 @@
       <tr><td>Land Grants and the Indian Society</td><td><span class="pill low">Did not appear in either real year</span></td></tr>
       <tr><td>Demographic Trends in India</td><td><span class="pill low">Did not appear in either real year</span></td></tr>
       <tr><td>Plateau Where the Earth's History Slumbers</td><td><span class="pill low">Did not appear in either real year</span></td></tr>
-    </table>
+    </table></div>
     <p><b>The caveat on those last three:</b> two years is not many, and Kerala first-terminals are set at school
     or district level. They may simply be taught after the Onam cutoff. Treat them as low priority rather than
     zero risk, and check your own notebook.</p>
@@ -362,14 +462,14 @@
     <h2>1 · What's actually in the Physics portion</h2>
     <p>The Class 9 Physics book (new SCERT textbook, 8 chapters) splits into Part 1 = Ch 1–4, Part 2 = Ch 5–8.
        First term covers what was taught June → July, and the exam is only 40 marks in 1½ hours.</p>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Chapter</th><th>In the Onam paper?</th><th>Expected weight</th></tr>
       <tr><td><b>1. Refraction of Light</b></td><td><span class="pill hi">Certain</span></td><td>~14–18 marks</td></tr>
       <tr><td><b>2. Equations of Motion</b></td><td><span class="pill hi">Certain</span></td><td>~14–18 marks</td></tr>
       <tr><td><b>3. Laws of Motion</b></td><td><span class="pill med">Possible — if your teacher finished it</span></td><td>0–8 marks</td></tr>
       <tr><td>4. Gravitation</td><td><span class="pill low">Unlikely</span></td><td>0</td></tr>
       <tr><td>5–8 (Buoyancy, Work &amp; Energy, Electricity, Sound)</td><td><span class="pill low">No</span></td><td>0</td></tr>
-    </table>
+    </table></div>
     <p><b>Action:</b> check your own class notebook. If Laws of Motion was started and momentum (<span class="mono">p = mv</span>)
        was taught, do the Ch 3 questions in the quiz too — they are tagged separately. If not, ignore them and put
        that time into refraction numericals.</p>
@@ -378,13 +478,13 @@
   <div class="card">
     <h2>2 · Paper pattern (this is the reliable part)</h2>
     <p>Every SCERT Class 9 Physics model paper follows the same skeleton, and first-term papers copy it:</p>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Section</th><th>Format</th><th>Total</th><th>What it tests</th></tr>
       <tr><td>I</td><td>Answer 3 of 4 · 1 mark</td><td>3</td><td>One-word / MCQ / odd-one-out. Definitions and units.</td></tr>
       <tr><td>II</td><td>Answer 7 of 9 · 2 marks</td><td>14</td><td>Short reason, one-step numerical, match the following.</td></tr>
       <tr><td>III</td><td>Answer 5 of 6 · 3 marks</td><td>15</td><td>Two-step numericals, explain-with-diagram.</td></tr>
       <tr><td>IV</td><td>Answer 2 of 3 · 4 marks</td><td>8</td><td>Long: derivation, graph, multi-part numerical.</td></tr>
-    </table>
+    </table></div>
     <p><b>The choice matters more than people realise.</b> You skip 1 in Section I, 2 in II, 1 in III, 1 in IV.
        So there is room to drop your weakest topic entirely. But you cannot drop a whole chapter — both
        chapters appear in every section.</p>
@@ -396,7 +496,7 @@
     <h2>3 · Highest-probability question types, with reasoning</h2>
 
     <h3>Chapter 1 — Refraction of Light</h3>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Question type</th><th>Odds</th><th>Why it comes</th></tr>
       <tr><td>Calculate speed of light in a medium from n, or n from speed</td><td>★★★</td>
           <td>Only formula in the chapter that gives a clean one-step numerical. Perfect 2-mark question. Appears in almost every model paper.</td></tr>
@@ -414,10 +514,10 @@
           <td>Classic trick question. Frequency does <i>not</i> change — high chance as a 1-mark or MCQ distractor.</td></tr>
       <tr><td>Ray diagram: glass slab / lateral shift</td><td>★★</td>
           <td>Diagram questions are cheap to mark. Often 3-mark "draw and label".</td></tr>
-    </table>
+    </table></div>
 
     <h3>Chapter 2 — Equations of Motion</h3>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Question type</th><th>Odds</th><th>Why it comes</th></tr>
       <tr><td>Numerical using v = u + at or s = ut + ½at²</td><td>★★★</td>
           <td>The bread and butter of this chapter. There will be at least two, almost certainly three.</td></tr>
@@ -435,21 +535,21 @@
           <td>Usually 1–2 marks. Straight line = uniform, curve = non-uniform.</td></tr>
       <tr><td>Derive one of the three equations (graphically)</td><td>★</td>
           <td>Possible as the 4-mark, but Class 9 setters more often ask for the graph interpretation instead of the derivation.</td></tr>
-    </table>
+    </table></div>
 
     <h3>Chapter 3 — Laws of Motion (only if taught)</h3>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Question type</th><th>Odds</th><th>Why it comes</th></tr>
       <tr><td>State Newton's laws / examples of inertia</td><td>★★</td><td>If the chapter is in portion, this is the guaranteed easy question.</td></tr>
       <tr><td>Momentum calculation p = mv, or force from change in momentum</td><td>★★</td><td>The only numerical if only the first half of the chapter was covered.</td></tr>
       <tr><td>Why a cricketer pulls hands back while catching</td><td>★★</td><td>The textbook's signature example. Impulse reasoning, 2–3 marks.</td></tr>
-    </table>
+    </table></div>
   </div>
 
   <div class="card">
     <h2>4 · Background check on the channels</h2>
     <p>You asked how likely these channels are to actually guess the questions. Here's an honest read.</p>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Channel</th><th>What it is</th><th>How much to trust the "sure questions"</th></tr>
       <tr><td><b>Xylem Learning</b></td>
           <td>Kozhikode-based edtech founded 2020 by Ananthu S Kumar, bootstrapped, ~1,300+ staff. Core business is NEET/JEE; Kerala state-syllabus school classes are a large free-YouTube funnel into paid courses.</td>
@@ -466,7 +566,7 @@
       <tr><td><b>"Major Exam Online"</b></td>
           <td>No channel by this exact name could be confirmed in the Kerala Class 9 space. It may be Exam Winner under another name, or a smaller regional channel that doesn't surface in search.</td>
           <td><b>Unverified.</b> Worth checking directly in the YouTube app if a classmate uses it.</td></tr>
-    </table>
+    </table></div>
     <h3>The honest verdict</h3>
     <ul>
       <li><b>Their topic prediction is genuinely good</b> — maybe 80–90% of the topics they flag will appear in some form. That's not clairvoyance; a 40-mark paper on two chapters has a limited number of things it <i>can</i> ask.</li>
@@ -490,6 +590,18 @@
 
 <!-- ===================== QUIZ ===================== -->
 <div id="p-quiz" class="panel on">
+  <div class="intro" id="introbox">
+    <button class="x" onclick="document.getElementById('introbox').style.display='none'" aria-label="close">✕</button>
+    <h4>Why I made this</h4>
+    <p>Every channel says something different about what's coming, and half the "100% sure question" videos
+    turn out to be recycled from last year. So instead of guessing, I went and found the <b>actual papers</b> —
+    real Pareeksha Bhavan first-term papers from 2024-25 and 2025-26, plus the SCERT model papers — and built
+    the questions from what was really asked. Every source is listed in the <b>Sources</b> tab if you want to
+    check for yourself.</p>
+    <p>Pick a subject above. <b>Cards</b> for quick revision, <b>Learn</b> if you want to actually understand
+    something, <b>Mock Paper</b> when you're ready to sit one under a clock.</p>
+    <p>Good luck — and send this to anyone else writing the same exam.</p>
+  </div>
   <div class="toolbar">
     <select id="filter" onchange="render()">
       <option value="core">Core portion (Ch 1 + 2)</option>
@@ -2096,7 +2208,7 @@
 
   <div class="card">
     <h2>Do these tonight, in this order</h2>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>#</th><th>Source</th><th>Why it's ranked here</th></tr>
       <tr><td><b>1</b></td>
           <td><b>SCERT Question Pool</b><br><span class="mono" style="font-size:.8rem">questionpool.scert.kerala.gov.in</span> ·
@@ -2133,7 +2245,7 @@
               <a href="https://www.aplusblog.in/2024/06/std-9-physics-chapter-1-refraction-of.html" target="_blank" rel="noopener">Ch 1 Refraction Q&amp;A (EM + MM)</a></td>
           <td>Chapter-wise textbook Q&amp;A, PDF notes, online tests, and the SCERT Teacher Text. Run by a
               practising teacher (Malappuram). Both mediums side by side.</td></tr>
-    </table>
+    </table></div>
     <p class="note" style="margin-top:14px"><b>If you only have two hours:</b> item 3 (one real past paper, under
     timer) then item 1 (question pool for the two chapters). That combination is worth more than every prediction
     video put together.</p>
@@ -2143,7 +2255,7 @@
     <h2>YouTube — the full sweep, including the small ones</h2>
     <p>Small channels can matter, and one did turn up. But the honest ranking puts the big two on top, because they
     are the only ones verifiably active in 2026 <i>and</i> teaching the current textbook.</p>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Channel</th><th>Verdict</th><th>Detail</th></tr>
       <tr><td><b>Exam Winner Class 9</b><br><span class="lblS">554K subs · ~9 uploads/week</span></td>
           <td><span class="pill hi">Best overall</span></td>
@@ -2200,14 +2312,14 @@
           Winners Education, Focus Academy, Sasthram, Edumate, Brainy Bees, Padasala, and <b>"Major Exam Online"</b>.
           Either they don't cover this, or they're too small to surface in search. If a friend actually uses one,
           that hyperlocal tip beats anything a search engine can find.</td></tr>
-    </table>
+    </table></div>
   </div>
 
   <div class="card">
     <h2>Instagram, Telegram and the rest</h2>
     <p>Instagram blocks automated checking, so the follower counts below are unverified — judge them in-app.
     <b>Telegram turned out to be the more useful platform</b> for this syllabus.</p>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Where</th><th>What</th><th>Worth it?</th></tr>
       <tr><td><b>Telegram — Textbooks All</b><br><span class="mono" style="font-size:.78rem">t.me/textbooksall</span></td>
           <td>~19.1K members. Posts SCERT Kerala summative-assessment papers and answer keys for Standards 6–10,
@@ -2230,7 +2342,7 @@
       <tr><td><b>Reddit / Quora</b></td>
           <td>No Kerala-SCERT-specific discussion found at all. Results were generic CBSE/ICSE threads.</td>
           <td><span class="pill low">Skip</span></td></tr>
-    </table>
+    </table></div>
   </div>
 
   <div class="card" style="border-color:#f85149">
@@ -2661,7 +2773,7 @@
   <div class="card" style="border-color:#4f9cf9;margin-bottom:14px">
     <h2>Important points at a glance</h2>
     <h3>📜 History &amp; Civics — Social Science I</h3>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Topic</th><th>Must know</th></tr>
       <tr><td>Stone ages</td><td>Palaeolithic (rough tools) → Mesolithic (<b>microliths</b>) → Neolithic (<b>polished</b> tools, agriculture). "Neolithic Revolution" coined by <b>Gordon Childe</b>. Agriculture began in the <b>Fertile Crescent</b>.</td></tr>
       <tr><td>Harappan cities</td><td><b>Harappa, Mohenjodaro, Lothal</b> — grid streets, covered drainage, granaries, standardised bricks and weights.</td></tr>
@@ -2677,9 +2789,9 @@
       <tr><td>Lok Sabha</td><td><b>543</b> members · directly elected · <b>5</b>-year term · minimum age <b>25</b> · Speaker presides.</td></tr>
       <tr><td>Rajya Sabha</td><td>Upper House · minimum age <b>30</b> · elected by state assemblies · 6-year terms.</td></tr>
       <tr><td>Federalism</td><td>Division of powers · written Constitution supreme · independent judiciary · bicameral legislature · <b>single citizenship</b>.</td></tr>
-    </table>
+    </table></div>
     <h3>🗺️ Geography &amp; Economics — Social Science II</h3>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Topic</th><th>Must know</th></tr>
       <tr><td>Three ranges</td><td><b>Himadri</b> (~6,100 m) → <b>Himachal</b> (3,500–4,500 m) → <b>Shiwalik</b> (60–150 km wide).</td></tr>
       <tr><td>Trans-Himalaya</td><td><b>Karakoram, Ladakh, Zaskar</b> — north of the main Himalaya. <b>K2</b> is India's highest peak.</td></tr>
@@ -2695,7 +2807,7 @@
       <tr><td>Factors of production</td><td><b>Land → Rent · Labour → Wage · Capital → Interest · Entrepreneurship → Profit</b>.</td></tr>
       <tr><td>Human capital</td><td>Built by education, healthcare, training, migration, information. Blocked by <b>poverty</b>.</td></tr>
       <tr><td>Unemployment</td><td><b>Open · Seasonal · Disguised · Structural</b> — classify by what caused it.</td></tr>
-    </table>
+    </table></div>
   </div>
 
   <div class="dia" id="d-indiamap">
@@ -3067,7 +3179,7 @@
 
 <footer>
   <b>Class 9 Onam Exam Guide · 2026–27</b> &nbsp;·&nbsp; Kerala SCERT<br>
-  Compiled by <b>[your name]</b> from the SCERT textbooks, SCERT model question papers, and real
+  Compiled by <b>[thenvis]</b> from the SCERT textbooks, SCERT model question papers, and real
   Pareeksha Bhavan first-term papers from 2024-25 and 2025-26.<br>
   Everything here is a probability estimate, not a leaked question. Confirm your exam dates with your school.
 </footer>
@@ -4962,11 +5074,11 @@ function setSub(s){
   const noDia = (s==="E");
   document.getElementById("t-dia").style.display = noDia ? "none" : "";
   if(noDia && document.getElementById("p-dia").classList.contains("on")) tab("learn");
-  const H={P:["Class 9 Physics — Onam Exam 2026","Kerala SCERT · First Terminal · <b>Mon 17 Aug 2026, afternoon</b> · 40 marks / 1½ hrs"],
-           C:["Class 9 Chemistry — Onam Exam 2026","Kerala SCERT · First Terminal · <b>Thu 20 Aug 2026, forenoon</b> · 40 marks / 1½ hrs"],
-           E:["Class 9 English — Onam Exam 2026","Kerala SCERT · First Terminal · <b>Mon 17 Aug 2026, forenoon</b> · check your school's timetable"],
-           S:["Class 9 Social Science — Onam Exam 2026","Kerala SCERT · First Terminal · <b>Wed 19 Aug 2026, 10:00–12:45</b> · 80 marks / 2½ hrs"],
-           B:["Class 9 Biology — Onam Exam 2026","Kerala SCERT · First Terminal · <b>Wed 19 or Thu 20 Aug, afternoon</b> — sources conflict · 40 marks / 1½ hrs"]};
+  const H={P:["Class 9 Physics — Onam Exam 2026","<b>Mon 17 Aug 2026, afternoon</b> · 40 marks · 1½ hours"],
+           C:["Class 9 Chemistry — Onam Exam 2026","<b>Thu 20 Aug 2026, forenoon</b> · 40 marks · 1½ hours"],
+           E:["Class 9 English — Onam Exam 2026","<b>Mon 17 Aug 2026, forenoon</b> · check your school's timetable"],
+           S:["Class 9 Social Science — Onam Exam 2026","<b>Wed 19 Aug 2026, 10:00–12:45</b> · 80 marks · 2½ hours"],
+           B:["Class 9 Biology — Onam Exam 2026","<b>Wed 19 or Thu 20 Aug, afternoon</b> — sources conflict · 40 marks · 1½ hours"]};
   document.getElementById("hdr-t").innerHTML=H[s][0];
   document.getElementById("hdr-s").innerHTML=H[s][1];
   resetAll(); eReset(); fStart();
