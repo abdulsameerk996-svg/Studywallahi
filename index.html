@@ -54,6 +54,14 @@
   .subbar button span{font-size:.7rem;opacity:.8;letter-spacing:.02em}
   .subbar button.on{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;border-color:transparent}
   .subbar button.on span{opacity:.9}
+  .subbar button.done{opacity:.5}
+  .subbar button.done span{color:var(--ok)}
+  .subbar button.done.on{opacity:1}
+  .donebar{background:var(--okbg);border:1px solid rgba(63,185,80,.3);border-radius:12px;
+           padding:13px 15px;margin:0 0 14px;font-size:.9rem;display:none}
+  .donebar.show{display:block}
+  .donebar b{color:var(--ok)}
+  .potipoi{font-weight:900;letter-spacing:.04em;color:var(--warn)}
   .tabs{display:flex;flex-wrap:wrap;gap:5px;margin:12px 0 20px;background:var(--panel2);
         padding:5px;border-radius:12px;border:1px solid var(--line)}
   .tabs button{flex:1 1 auto;min-width:74px;padding:9px 8px;border:0;background:transparent;color:var(--dim);
@@ -299,15 +307,17 @@
   <h1 id="hdr-t">Class 9 Physics — Onam Exam 2026</h1>
   <div class="sub" id="hdr-s">Kerala SCERT · First Terminal · <b>Mon 17 Aug 2026, afternoon</b> · 40 marks / 1½ hrs</div>
   <div class="sub" style="font-size:.82rem;margin-top:4px">Exam dates vary by school and sources disagree — confirm your own timetable.</div>
-  <div class="byline">Made by <b>[thenvis]</b> &nbsp;·&nbsp; last updated 16 Aug 2026</div>
+  <div class="byline">Made by <b>Thenvis</b> &nbsp;·&nbsp; last updated 17 Aug 2026</div>
 </header>
+<div class="donebar" id="donebar"></div>
 
 <div class="subbar">
-  <button id="sb-P" class="on" onclick="setSub('P')"><b>Physics</b><span>Mon 17 · PM</span></button>
-  <button id="sb-C" onclick="setSub('C')"><b>Chemistry</b><span>Thu 20 · AM</span></button>
-  <button id="sb-E" onclick="setSub('E')"><b>English</b><span>Mon 17 · AM</span></button>
+  <button id="sb-M" class="on" onclick="setSub('M')"><b>Maths</b><span>Tue 18 · next up</span></button>
   <button id="sb-S" onclick="setSub('S')"><b>Social Sci.</b><span>Wed 19 · AM</span></button>
   <button id="sb-B" onclick="setSub('B')"><b>Biology</b><span>19 or 20 · PM</span></button>
+  <button id="sb-C" onclick="setSub('C')"><b>Chemistry</b><span>Thu 20 · AM</span></button>
+  <button id="sb-P" class="done" onclick="setSub('P')"><b>Physics</b><span>✓ done</span></button>
+  <button id="sb-E" class="done" onclick="setSub('E')"><b>English</b><span>✓ done</span></button>
 </div>
 
 <div class="tabs">
@@ -876,6 +886,166 @@
     <div class="sechead" style="margin-top:26px"><b>End of question paper</b><span>Total: 3 + 14 + 15 + 8 = 40 scores</span></div>
   </div>
   </div><!-- /mock-P -->
+
+  <!-- ============ MATHS MOCK ============ -->
+  <div id="mock-M" style="display:none">
+  <div class="note" style="background:var(--okbg);border-left-color:var(--ok)">
+    <b>Built on the real 2025-26 paper.</b> Structure copied from the genuine <b>Summative Assessment Term I
+    2025-26</b> Class 9 Maths paper and the <b>SCERT 2025-26 model paper</b>, which match exactly: 26 questions,
+    80 marks, 2½ hours. <b>Answer every question</b> — the only choice is where a question is labelled
+    <b>A or B</b>, and then you answer just one.<br><br>
+    <b>Important:</b> the model papers circulating on HSSLive still show the <i>older</i> "answer any 3 of 4"
+    format. That was the 2024-25 pattern. The last real paper and SCERT's own current model both use the
+    answer-all format below — do not walk in planning to skip questions.
+  </div>
+
+  <div class="paper">
+    <div class="phead">
+      <h2>FIRST TERMINAL EVALUATION 2026–27</h2>
+      <div class="meta">STANDARD IX &nbsp;·&nbsp; MATHEMATICS</div>
+      <div class="split"><span>Time: 2½ Hours</span><span>Total Score: 80</span></div>
+      <div class="meta" style="margin-top:10px;text-align:left;font-size:.83rem">
+        <b>Instructions:</b> First 15 minutes are cool-off time. <b>Answer all questions.</b> Where a question
+        is given as <b>A or B</b>, answer only one of them.
+      </div>
+    </div>
+
+    <div class="sechead"><b>SECTION A</b><span>Questions 1–8 · 1 score each (8 × 1 = 8)</span></div>
+
+    <div class="mq"><span class="n">1.</span> The sum of two numbers is 30 and their difference is 8. What is the larger number?
+      <button class="revealbtn" onclick="reveal('m1',this)">Show answer</button>
+      <div class="ansbox" id="m1">(30 + 8)/2 = <b>19</b></div></div>
+
+    <div class="mq"><span class="n">2.</span> Write a number between 1/4 and 3/2.
+      <button class="revealbtn" onclick="reveal('m2',this)">Show answer</button>
+      <div class="ansbox" id="m2">Any value in between — for example <b>1</b>, or <b>1/2</b>, or <b>3/4</b>. (1/4 = 0.25 and 3/2 = 1.5.)</div></div>
+
+    <div class="mq"><span class="n">3.</span> If 40 × 80 = 3200, find 41 × 81 using an identity.
+      <button class="revealbtn" onclick="reveal('m3',this)">Show answer</button>
+      <div class="ansbox" id="m3">41 × 81 = (40+1)(80+1) = 3200 + 40 + 80 + 1 = <b>3321</b></div></div>
+
+    <div class="mq"><span class="n">4.</span> D and E are the midpoints of AB and AC in triangle ABC. If BC = 8 cm, then DE = ______
+      <button class="revealbtn" onclick="reveal('m4',this)">Show answer</button>
+      <div class="ansbox" id="m4"><b>4 cm</b> — the midpoint theorem gives DE = ½ BC.</div></div>
+
+    <div class="mq"><span class="n">5.</span> Four parallel lines are equally spaced. A transversal cuts them at A, B, C, D. If AB = 2 cm, find BC.
+      <button class="revealbtn" onclick="reveal('m5',this)">Show answer</button>
+      <div class="ansbox" id="m5"><b>2 cm.</b> Equally spaced parallel lines cut every transversal into equal parts.</div></div>
+
+    <div class="mq"><span class="n">6.</span> Which of these triangles has its circumcentre on one of its sides?
+      <span class="sub">(a) sides 10, 5, 5 &nbsp; (b) sides 5, 4, 3 &nbsp; (c) sides 5, 5, 6</span>
+      <button class="revealbtn" onclick="reveal('m6',this)">Show answer</button>
+      <div class="ansbox" id="m6"><b>(b) 5, 4, 3</b> — it is right-angled (3² + 4² = 5²), and the circumcentre of a right triangle is the <b>midpoint of the hypotenuse</b>, which lies on a side.</div></div>
+
+    <div class="mq"><span class="n">7.</span> √18 = ______ (simplify)
+      <button class="revealbtn" onclick="reveal('m7',this)">Show answer</button>
+      <div class="ansbox" id="m7">√18 = √(9 × 2) = <b>3√2</b></div></div>
+
+    <div class="mq"><span class="n">8.</span> The centroid divides a median in the ratio ______
+      <button class="revealbtn" onclick="reveal('m8',this)">Show answer</button>
+      <div class="ansbox" id="m8"><b>2 : 1</b>, measured from the vertex.</div></div>
+
+    <div class="sechead"><b>SECTION B</b><span>Questions 9–14 · 3 scores each (6 × 3 = 18)</span></div>
+
+    <div class="mq"><span class="n">9.</span> Draw a line of 12 cm and divide it into <b>3 equal parts</b> using compass and straightedge. Describe the steps.
+      <button class="revealbtn" onclick="reveal('m9',this)">Show answer</button>
+      <div class="ansbox" id="m9">1. Draw AB = 12 cm.<br>2. From A draw a <b>ray at an acute angle</b> to AB.<br>3. With a fixed compass opening, mark <b>3 equal parts</b> along the ray: P₁, P₂, P₃.<br>4. Join <b>P₃ to B</b>.<br>5. Through P₁ and P₂ draw lines <b>parallel to P₃B</b>. Where they cut AB divide it into three equal parts.</div></div>
+
+    <div class="mq"><span class="n">10.</span> The sum of two numbers is 53 and their difference is 19. Find the numbers.
+      <button class="revealbtn" onclick="reveal('m10',this)">Show answer</button>
+      <div class="ansbox" id="m10">Larger = (53 + 19)/2 = <b>36</b><br>Smaller = (53 − 19)/2 = <b>17</b><br><i>Check: 36 + 17 = 53 ✓, 36 − 17 = 19 ✓</i></div></div>
+
+    <div class="mq"><span class="n">11.</span> Represent <b>21</b> as the difference of two perfect squares, and hence describe how to draw a square of area 21 sq.cm.
+      <button class="revealbtn" onclick="reveal('m11',this)">Show answer</button>
+      <div class="ansbox" id="m11">21 = 2(10) + 1, so 21 = <b>11² − 10²</b> = 121 − 100 ✓<br>To draw it: construct a right triangle with hypotenuse 11 cm and one leg 10 cm. The third side is √21 cm, and a square on that side has area <b>21 sq.cm</b>.</div></div>
+
+    <div class="mq"><span class="n">12.</span> <b>(A)</b> Two pens and one notebook cost ₹90. Two pens and three notebooks cost ₹170. Find the price of each.
+      <span class="sub"><b>(B)</b> The ratio of two numbers is 1 : 6 and their sum is 28. Find the numbers.</span>
+      <button class="revealbtn" onclick="reveal('m12',this)">Show answer</button>
+      <div class="ansbox" id="m12"><b>(A)</b> Subtracting: 2 notebooks = ₹80, so a notebook = <b>₹40</b>. Then 2 pens = 90 − 40 = 50, so a pen = <b>₹25</b>.<br><br>
+      <b>(B)</b> Let the numbers be x and 6x. Then 7x = 28 → x = 4. The numbers are <b>4 and 24</b>.</div></div>
+
+    <div class="mq"><span class="n">13.</span> A two-digit number ends in 3, so it can be written as 10x + 3. Show that the product of two such numbers ends in 9.
+      <button class="revealbtn" onclick="reveal('m13',this)">Show answer</button>
+      <div class="ansbox" id="m13">(10x + 3)(10y + 3) = 100xy + 30x + 30y + 9<br>Every term except the last is a multiple of 10, so the units digit comes entirely from the <b>9</b>. Hence the product always ends in <b>9</b>.</div></div>
+
+    <div class="mq"><span class="n">14.</span> <b>(A)</b> The sum of two even numbers is 26 and their product is 144. Find them.
+      <span class="sub"><b>(B)</b> A rectangle has perimeter 40 m and one side 12 m. Find its area.</span>
+      <button class="revealbtn" onclick="reveal('m14',this)">Show answer</button>
+      <div class="ansbox" id="m14"><b>(A)</b> Two numbers with sum 26 and product 144: try factor pairs of 144 — <b>18 and 8</b> (18 + 8 = 26 ✓).<br><br>
+      <b>(B)</b> Perimeter 40 → length + breadth = 20. One side 12, so the other = <b>8 m</b>. Area = 12 × 8 = <b>96 sq.m</b>.</div></div>
+
+    <div class="sechead"><b>SECTION C</b><span>Questions 15–20 · 4 scores each (6 × 4 = 24)</span></div>
+
+    <div class="mq"><span class="n">15.</span> <b>(A)</b> A square has side √5 cm. Find its perimeter and area.
+      <span class="sub"><b>(B)</b> Simplify √12 × √27 and √8 × √18.</span>
+      <button class="revealbtn" onclick="reveal('m15',this)">Show answer</button>
+      <div class="ansbox" id="m15"><b>(A)</b> Perimeter = 4 × √5 = <b>4√5 cm</b> ≈ 8.94 cm. Area = (√5)² = <b>5 sq.cm</b>.<br><br>
+      <b>(B)</b> √12 × √27 = √324 = <b>18</b>. √8 × √18 = √144 = <b>12</b>.</div></div>
+
+    <div class="mq"><span class="n">16.</span> In triangle ABC, DE ∥ BC with D on AB and E on AC. AD : AB = 1 : 3 and AE = 2 cm. Find EC and AC.
+      <button class="revealbtn" onclick="reveal('m16',this)">Show answer</button>
+      <div class="ansbox" id="m16">By the Basic Proportionality theorem, AE/AC = AD/AB = 1/3.<br>AC = 3 × 2 = <b>6 cm</b><br>EC = AC − AE = 6 − 2 = <b>4 cm</b></div></div>
+
+    <div class="mq"><span class="n">17.</span> Using an algebraic identity, calculate 71 × 91 and explain each step.
+      <button class="revealbtn" onclick="reveal('m17',this)">Show answer</button>
+      <div class="ansbox" id="m17">71 × 91 = (70 + 1)(90 + 1)<br>Apply (x+1)(y+1) = xy + x + y + 1:<br>= (70 × 90) + 70 + 90 + 1<br>= 6300 + 160 + 1 = <b>6461</b></div></div>
+
+    <div class="mq"><span class="n">18.</span> <b>(A)</b> A father is 30 years older than his son and the sum of their ages is 46. Find both ages.
+      <span class="sub"><b>(B)</b> The product of two numbers is 117 and their difference is 4. Find them.</span>
+      <button class="revealbtn" onclick="reveal('m18',this)">Show answer</button>
+      <div class="ansbox" id="m18"><b>(A)</b> Father = (46 + 30)/2 = <b>38</b>, son = (46 − 30)/2 = <b>8</b>.<br><br>
+      <b>(B)</b> Factor pairs of 117: 1×117, 3×39, 9×13. The pair differing by 4 is <b>13 and 9</b>.</div></div>
+
+    <div class="mq"><span class="n">19.</span> Find the area of an equilateral triangle of perimeter 18 cm. <span class="data">Take √3 = 1.732</span>
+      <button class="revealbtn" onclick="reveal('m19',this)">Show answer</button>
+      <div class="ansbox" id="m19">Side = 18/3 = <b>6 cm</b><br>Area = (√3/4) a² = (1.732/4) × 36 = 0.433 × 36 = <b>15.59 sq.cm</b></div></div>
+
+    <div class="mq"><span class="n">20.</span> <b>(A)</b> Prove that joining the midpoints of the four sides of any quadrilateral gives a parallelogram.
+      <span class="sub"><b>(B)</b> In triangle ABC, G is the centroid and AQ a median with AG = 10 cm. Find GQ and AQ.</span>
+      <button class="revealbtn" onclick="reveal('m20',this)">Show answer</button>
+      <div class="ansbox" id="m20"><b>(A)</b> Draw diagonal AC. In triangle ABC, the segment joining the midpoints of AB and BC is parallel to AC and half its length (midpoint theorem). In triangle ACD, the segment joining the midpoints of AD and DC is also parallel to AC and half its length. So both segments are <b>parallel and equal</b> — and a quadrilateral with one pair of opposite sides parallel and equal is a <b>parallelogram</b>.<br><br>
+      <b>(B)</b> AG : GQ = 2 : 1, so GQ = <b>5 cm</b> and AQ = 10 + 5 = <b>15 cm</b>.</div></div>
+
+    <div class="sechead"><b>SECTION D</b><span>Questions 21–26 · 5 scores each (6 × 5 = 30)</span></div>
+
+    <div class="mq"><span class="n">21.</span> Draw a line of 8.5 cm, divide it in the ratio <b>4 : 3</b>, and construct a rectangle whose sides are the two parts.
+      <button class="revealbtn" onclick="reveal('m21',this)">Show answer</button>
+      <div class="ansbox" id="m21">1. Draw AB = 8.5 cm.<br>2. From A draw a ray at an acute angle.<br>3. Mark <b>7 equal parts</b> (4 + 3) along the ray; call the last point P₇.<br>4. Join P₇B.<br>5. Through <b>P₄</b> draw a line parallel to P₇B, meeting AB at C. Now AC : CB = 4 : 3, giving parts of about <b>4.86 cm and 3.64 cm</b>.<br>6. At C erect a perpendicular, mark off the shorter part on it, and complete the rectangle.</div></div>
+
+    <div class="mq"><span class="n">22.</span> A right triangle has both legs 1 cm. Each new triangle uses the previous hypotenuse as one leg and 1 cm as the other.
+      <span class="sub">(a) Write the hypotenuses of the first four triangles.</span>
+      <span class="sub">(b) Find the perimeter of the third triangle. <i>(√3 = 1.732, √4 = 2)</i></span>
+      <button class="revealbtn" onclick="reveal('m22',this)">Show answer</button>
+      <div class="ansbox" id="m22">(a) <b>√2, √3, √4 = 2, √5</b> — each new hypotenuse is √(n+1).<br>
+      (b) The third triangle has legs <b>√3</b> and <b>1</b>, hypotenuse <b>√4 = 2</b>.<br>
+      Perimeter = √3 + 1 + 2 = 1.732 + 3 = <b>4.732 cm</b></div></div>
+
+    <div class="mq"><span class="n">23.</span> A rectangle has area 280 sq.m and perimeter 68 m. Find its length and breadth.
+      <button class="revealbtn" onclick="reveal('m23',this)">Show answer</button>
+      <div class="ansbox" id="m23">Perimeter 68 → length + breadth = <b>34</b><br>Area 280 → length × breadth = <b>280</b><br>Two numbers with sum 34 and product 280: <b>20 and 14</b>.<br><i>Check: 2(20 + 14) = 68 ✓ and 20 × 14 = 280 ✓</i></div></div>
+
+    <div class="mq"><span class="n">24.</span> <b>(A)</b> A two-digit number has digit sum 13, and reversing the digits decreases it by 27. Find the number.
+      <span class="sub"><b>(B)</b> Prove that the sum of any three consecutive natural numbers is divisible by 3.</span>
+      <button class="revealbtn" onclick="reveal('m24',this)">Show answer</button>
+      <div class="ansbox" id="m24"><b>(A)</b> Let the digits be t and u: t + u = 13. Reversing gives (10u + t), which is 27 less: (10t + u) − (10u + t) = 27 → 9(t − u) = 27 → t − u = 3.<br>t = (13 + 3)/2 = <b>8</b>, u = <b>5</b>. The number is <b>85</b>.<br><br>
+      <b>(B)</b> Let them be n, n+1, n+2. Sum = 3n + 3 = <b>3(n + 1)</b>, which is a multiple of 3 for every natural n.</div></div>
+
+    <div class="mq"><span class="n">25.</span> <b>(A)</b> In a right triangle, prove that the circumcentre is the midpoint of the hypotenuse.
+      <span class="sub"><b>(B)</b> P, Q, R, S are the midpoints of the sides of quadrilateral ABCD. If AC = 24 cm, show that PQ = SR = 12 cm and that PQRS is a parallelogram.</span>
+      <button class="revealbtn" onclick="reveal('m25',this)">Show answer</button>
+      <div class="ansbox" id="m25"><b>(A)</b> Let the right angle be at C, with M the midpoint of hypotenuse AB. The median CM to the hypotenuse equals half the hypotenuse, so MA = MB = MC. Since M is equidistant from all three vertices, it is the <b>circumcentre</b> — and it lies on AB.<br><br>
+      <b>(B)</b> In triangle ABC, PQ joins the midpoints of AB and BC, so PQ ∥ AC and PQ = ½ AC = <b>12 cm</b>. In triangle ACD, SR joins the midpoints of AD and DC, so SR ∥ AC and SR = <b>12 cm</b>. PQ and SR are parallel and equal, so <b>PQRS is a parallelogram</b>.</div></div>
+
+    <div class="mq"><span class="n">26.</span> <b>(A)</b> Three notebooks and two pens cost ₹190. Five notebooks and four pens cost ₹340. Find the price of each.
+      <span class="sub"><b>(B)</b> A fraction becomes 1/2 when 1 is added to the numerator, and 1/3 when 1 is subtracted from the numerator. Find the fraction.</span>
+      <button class="revealbtn" onclick="reveal('m26',this)">Show answer</button>
+      <div class="ansbox" id="m26"><b>(A)</b> 3n + 2p = 190 … (i) &nbsp; 5n + 4p = 340 … (ii)<br>Multiply (i) by 2: 6n + 4p = 380. Subtract (ii): <b>n = 40</b>.<br>Then 3(40) + 2p = 190 → 2p = 70 → <b>p = 35</b>. Notebook ₹40, pen ₹35.<br><br>
+      <b>(B)</b> Let the fraction be x/y. Then (x+1)/y = 1/2 → 2x + 2 = y … (i), and (x−1)/y = 1/3 → 3x − 3 = y … (ii).<br>So 2x + 2 = 3x − 3 → <b>x = 5</b>, and y = 2(5) + 2 = <b>12</b>. The fraction is <b>5/12</b>.<br><i>Check: 6/12 = 1/2 ✓ and 4/12 = 1/3 ✓</i></div></div>
+
+    <div class="sechead" style="margin-top:26px"><b>End of question paper</b><span>Total: 8 + 18 + 24 + 30 = 80 scores</span></div>
+  </div>
+  </div><!-- /mock-M -->
 
   <!-- ============ CHEMISTRY MOCK ============ -->
   <div id="mock-C" style="display:none">
@@ -1852,6 +2022,7 @@
   </div>
 
   <!-- ================= BIOLOGY ================= -->
+  <div id="learn-M" style="display:none"></div>
   <div id="learn-B" style="display:none">
     <details class="lesson" open><summary><span style="flex:1"><b>1 · The four transport processes, sorted by two questions</b>
       <span>Stop memorising four definitions. Ask two yes/no questions instead.</span></span></summary>
@@ -3037,6 +3208,7 @@
   </div><!-- /dia-S -->
 
   <!-- ================= BIOLOGY DIAGRAMS ================= -->
+  <div id="dia-M" style="display:none"></div>
   <div id="dia-B" style="display:none">
   <div class="dia" id="d-chloro">
     <h3>1 · Chloroplast — grana and stroma</h3>
@@ -3179,7 +3351,7 @@
 
 <footer>
   <b>Class 9 Onam Exam Guide · 2026–27</b> &nbsp;·&nbsp; Kerala SCERT<br>
-  Compiled by <b>[thenvis]</b> from the SCERT textbooks, SCERT model question papers, and real
+  Compiled by <b>Thenvis</b> from the SCERT textbooks, SCERT model question papers, and real
   Pareeksha Bhavan first-term papers from 2024-25 and 2025-26.<br>
   Everything here is a probability estimate, not a leaked question. Confirm your exam dates with your school.
 </footer>
@@ -3480,7 +3652,8 @@ QS.push(
 
 /* ============ SUBJECTS ============ */
 let CURSUB="P";
-const SUBJECTS={P:"Physics",C:"Chemistry",E:"English",S:"Social Science",B:"Biology"};
+const SUBJECTS={P:"Physics",C:"Chemistry",E:"English",S:"Social Science",B:"Biology",M:"Mathematics"};
+const DONE={P:1,E:1};
 QS.forEach(q=>{ if(!q.sub) q.sub="P"; });
 
 /* ---------- CHEMISTRY question bank ----------
@@ -4102,6 +4275,283 @@ function gNewtonLaw(){
   return {ch:3,p:2,m:2,q:d.q,ph:"state the law",key:d.key,ans:d.ans,
     why:"If Chapter 3 is in your portion, a 'state the law' question is near-certain. Include the exact key words — 'unbalanced', 'equal and opposite', 'different bodies'."};
 }
+
+/* ---------- MATHEMATICS question bank ----------
+   Modelled on the real Summative Assessment Term I 2025-26 paper, the real 2024-25
+   paper, and the SCERT 2025-26 model paper. Chapters 1-6 only (Ch 7 Negative Numbers
+   appeared in none of the five documents checked).                                  */
+QS.push(
+{sub:"M",ch:1,p:3,m:3,
+ q:"The sum of two numbers is 41 and their difference is 15. Find the numbers.",
+ ph:"both numbers", key:[["28"],["13"]],
+ ans:"Larger = (sum + difference)/2 = (41 + 15)/2 = <b>28</b><br>Smaller = (sum − difference)/2 = (41 − 15)/2 = <b>13</b><br><i>Check: 28 + 13 = 41 ✓ and 28 − 13 = 15 ✓</i>",
+ why:"Question 10 of the real 2025-26 paper. The sum-and-difference shortcut is the single most repeated idea in the whole Maths portion — it turns up 6 to 9 times per paper in different disguises."},
+
+{sub:"M",ch:1,p:3,m:3,
+ q:"Two bags and one umbrella cost ₹1150. Two bags and three umbrellas cost ₹1850. Find the price of each.",
+ ph:"bag and umbrella prices", key:[["400"],["350"]],
+ ans:"Subtract the first equation from the second: the two bags cancel, leaving <b>2 umbrellas = ₹700</b>, so one umbrella = <b>₹350</b>.<br>Then 2 bags + 350 = 1150 → 2 bags = 800 → one bag = <b>₹400</b>.",
+ why:"Question 12A of the real 2025-26 paper, word for word. The trick is always the same: line the two equations up so one item cancels when you subtract."},
+
+{sub:"M",ch:2,p:3,m:3,
+ q:"Represent <b>15</b> as the difference of two perfect squares.",
+ ph:"e.g. a² − b²", key:[["8"],["7"]],
+ ans:"For any odd number written as 2x + 1, we have <b>2x + 1 = (x+1)² − x²</b>.<br>Here 15 = 2(7) + 1, so x = 7 and 15 = <b>8² − 7²</b> = 64 − 49 = 15 ✓<br><i>(15 = 4² − 1² also works, since 16 − 1 = 15.)</i>",
+ why:"Question 11 of the real 2025-26 paper (15) and question 11 of the real 2024-25 paper (13 = 7² − 6²). Two years running — learn the identity, not the individual answer."},
+
+{sub:"M",ch:4,p:3,m:3,
+ q:"Using an algebraic identity, calculate <b>71 × 91</b> without long multiplication.",
+ ph:"the answer", num:6461, tol:0.5, method:["70","90","identity"],
+ ans:"71 × 91 = (70 + 1)(90 + 1)<br>= (70 × 90) + 70 + 90 + 1<br>= 6300 + 160 + 1 = <b>6461</b><br>This uses <b>(x+1)(y+1) = xy + x + y + 1</b>.",
+ why:"The SCERT model paper does exactly this with 41 × 81 from 40 × 80 = 3200. Mental-math shortcuts using the multiplication identities appear in every paper found."},
+
+{sub:"M",ch:5,p:3,m:2,
+ q:"Simplify: <b>√12 × √27</b>",
+ ph:"a number", num:18, tol:0.4, method:["ab","324"],
+ ans:"√12 × √27 = √(12 × 27) = √324 = <b>18</b><br>Uses the rule <b>√a × √b = √(ab)</b>.",
+ why:"Question 10 of the real 2024-25 paper. Look for pairs whose product is a perfect square — that is how these are always designed."},
+
+{sub:"M",ch:3,p:3,m:4,
+ q:"In triangle ABC, D is on AB and E is on AC with DE parallel to BC. If AD : AB = 1 : 3 and AE = 2 cm, find EC.",
+ ph:"in cm", num:4, tol:0.2, method:["proportion","thales","ratio"],
+ ans:"By the <b>Basic Proportionality (Thales) theorem</b>, AD/AB = AE/AC.<br>So AE/AC = 1/3 → AC = 3 × AE = 3 × 2 = 6 cm.<br>EC = AC − AE = 6 − 2 = <b>4 cm</b>",
+ why:"Question 18 of the real 2025-26 paper, exactly these numbers. Also tested in 2024-25. Watch the trap — they ask for EC, not AC."},
+
+{sub:"M",ch:3,p:3,m:3,
+ q:"In triangle ABC, D and E are the midpoints of AB and AC. If BC = 8 cm, find DE.",
+ ph:"in cm", num:4, tol:0.2, method:["midpoint","half"],
+ ans:"By the <b>midpoint theorem</b>, the line joining the midpoints of two sides is <b>parallel to the third side and half its length</b>.<br>DE = ½ × BC = ½ × 8 = <b>4 cm</b>",
+ why:"Section A of the real 2025-26 paper. Also remember the two consequences: the midpoint triangle has half the perimeter and a quarter of the area."},
+
+{sub:"M",ch:3,p:3,m:4,
+ q:"Which special point of a <b>right-angled triangle</b> lies on one of its sides, and where exactly?",
+ ph:"name it + where",
+ key:[["circumcentre","circumcenter"],["midpoint","middle","centre of"],["hypotenuse"]],
+ ans:"The <b>circumcentre</b>. In a right-angled triangle it lies at the <b>midpoint of the hypotenuse</b> — so it sits on a side rather than inside the triangle.<br><i>Also worth knowing: the centroid divides each median in the ratio <b>2 : 1</b>, and in an equilateral triangle the centroid, circumcentre and orthocentre all coincide.</i>",
+ why:"Question 6 of the real 2025-26 paper gave three side-triples and asked which triangle has its circumcentre on a side — the answer is whichever one is right-angled."},
+
+{sub:"M",ch:3,p:2,m:5,
+ q:"In triangle ABC, G is the centroid and AQ is a median. If AG = 8 cm, find GQ and the whole median AQ.",
+ ph:"GQ and AQ", key:[["4"],["12"]],
+ ans:"The centroid divides every median in the ratio <b>AG : GQ = 2 : 1</b>.<br>So GQ = ½ × AG = ½ × 8 = <b>4 cm</b>, and AQ = AG + GQ = 8 + 4 = <b>12 cm</b>.",
+ why:"Question 25B of the real 2025-26 paper used AG:GQ = 2:1 to prove a parallelogram. The 2024-25 paper used AG = 8, GP = 4 directly."},
+
+{sub:"M",ch:5,p:3,m:4,
+ q:"Find the area of an equilateral triangle of side <b>6 cm</b>.<span class='given'>√3 = 1.732</span>",
+ ph:"in sq.cm", num:15.588, tol:0.4, method:["√3/4","1.732"],
+ ans:"Area = <b>(√3/4) × a²</b> = (1.732/4) × 6² = 0.433 × 36 = <b>15.59 sq.cm</b> (approximately)",
+ why:"The equilateral-triangle formula appears in the SCERT model paper and behind the 'construct an equilateral triangle of perimeter 14 cm' question in both real papers."},
+
+{sub:"M",ch:5,p:3,m:5,
+ q:"A right triangle has both perpendicular sides 1 cm. A second right triangle is built with this hypotenuse as one side and 1 cm as the other, and so on. Write the hypotenuses of the first three triangles.",
+ ph:"three lengths", key:[["2"],["3"],["4","2"]],
+ ans:"Triangle 1: legs 1 and 1 → hypotenuse <b>√2</b><br>Triangle 2: legs √2 and 1 → hypotenuse √(2+1) = <b>√3</b><br>Triangle 3: legs √3 and 1 → hypotenuse √(3+1) = <b>√4 = 2</b><br>Each new hypotenuse is <b>√(n+1)</b> — this is the spiral of square roots.",
+ why:"This construction appeared in <b>all three</b> primary documents — the real 2025-26 paper, the real 2024-25 paper and the SCERT model paper. Of everything in the Maths portion, it is the most reliably recurring single question type."},
+
+{sub:"M",ch:1,p:3,m:5,
+ q:"A father is 30 years older than his son. The sum of their ages is 46. Find both ages.",
+ ph:"both ages", key:[["8"],["38"]],
+ ans:"Sum = 46, difference = 30.<br>Father = (46 + 30)/2 = <b>38 years</b><br>Son = (46 − 30)/2 = <b>8 years</b><br><i>Check: 38 + 8 = 46 ✓ and 38 − 8 = 30 ✓</i>",
+ why:"Question 23 of the real 2025-26 paper gave son = 8, father = 38. Age problems are just the sum-and-difference shortcut wearing a hat."},
+
+{sub:"M",ch:1,p:3,m:5,
+ q:"A rectangle has perimeter 110 m and area 280 sq.m... actually check this: a rectangle has perimeter <b>34 m</b> and area <b>70 sq.m</b>. Find its length and breadth.",
+ ph:"length and breadth", key:[["10"],["7"]],
+ ans:"Perimeter 34 → length + breadth = 34/2 = <b>17</b>.<br>Area 70 → length × breadth = <b>70</b>.<br>Two numbers adding to 17 and multiplying to 70: <b>10 and 7</b>.<br><i>Check: 2(10+7) = 34 ✓ and 10 × 7 = 70 ✓</i>",
+ why:"The real 2024-25 paper had a classroom of 10 m × 7 m from exactly this setup. Halve the perimeter first — that is the step students forget."},
+
+{sub:"M",ch:1,p:2,m:5,
+ q:"The product of two numbers is 117 and their difference is 4. Find the numbers.",
+ ph:"both numbers", key:[["13"],["9"]],
+ ans:"Look for factor pairs of 117: 1×117, 3×39, 9×13.<br>The pair differing by 4 is <b>13 and 9</b>.<br><i>Check: 13 × 9 = 117 ✓ and 13 − 9 = 4 ✓</i>",
+ why:"Question 26A of the real 2025-26 paper, these exact numbers. With a product, factorise first rather than trying to solve algebraically."},
+
+{sub:"M",ch:2,p:2,m:3,
+ q:"Write <b>0.333…</b> and <b>0.777…</b> as fractions, then add them.",
+ ph:"the sum", key:[["1/3"],["7/9"],["10/9","1 1/9"]],
+ ans:"0.333… = <b>1/3</b> and 0.777… = <b>7/9</b>.<br>Sum = 1/3 + 7/9 = 3/9 + 7/9 = <b>10/9</b> (or 1⅑).",
+ why:"Question 8 of the real 2024-25 paper. Learn the repeating-decimal fractions: 0.333…= 1/3, 0.666…= 2/3, 0.111…= 1/9, and any single repeating digit d gives d/9."},
+
+{sub:"M",ch:4,p:2,m:4,
+ q:"Expand <b>(x + 1)(y + 1)</b> and use it to explain why the product of two numbers each one more than a multiple of 10 always ends in 1.",
+ ph:"expand + explain",
+ key:[["xy"],["x y","x + y"],["1"]],
+ ans:"<b>(x + 1)(y + 1) = xy + x + y + 1</b><br>If x and y are both multiples of 10, then xy, x and y are all multiples of 10, so their sum ends in 0. Adding the final 1 makes the product end in <b>1</b>. That is why 71 × 91 = 6461 ends in 1.",
+ why:"The multiplication identities are always tested through a concrete number pattern rather than as abstract algebra. Expect 'explain why' rather than 'expand this'."},
+
+{sub:"M",ch:3,p:2,m:5,
+ q:"How do you divide a line segment of 8.5 cm in the ratio <b>4 : 3</b> using only compass and straightedge?",
+ ph:"describe the construction",
+ key:[["ray","line at an angle","acute angle","slant"],["equal","7","parts"],["parallel","join","last point"]],
+ ans:"1. Draw the 8.5 cm segment AB.<br>2. From A, draw a <b>ray at an acute angle</b> to AB.<br>3. With the compass set to any fixed opening, mark <b>7 equal parts</b> along the ray (because 4 + 3 = 7). Call the last point X.<br>4. Join <b>X to B</b>.<br>5. Through the <b>4th mark</b>, draw a line <b>parallel to XB</b>. Where it meets AB is the point dividing AB in the ratio 4 : 3.<br><i>It works because equally spaced parallel lines cut any transversal into equal parts.</i>",
+ why:"Question 21 of the real 2025-26 paper (8.5 cm in 4:3) and question 9 of the 2024-25 paper (4:5). Constructions appear 2 to 4 times per paper — practise them on paper, not in your head."},
+
+{sub:"M",ch:2,p:2,m:4,
+ q:"A two-digit number has digit sum 13 and the tens digit is larger than the units digit by 3. Find the number.",
+ ph:"the number", num:85, tol:0.5, method:["digit","sum","difference"],
+ ans:"Let the digits be t and u. t + u = 13 and t − u = 3.<br>t = (13 + 3)/2 = <b>8</b>, u = (13 − 3)/2 = <b>5</b>.<br>The number is <b>85</b>.",
+ why:"The SCERT model paper has a two-digit-number question with digit sum 13. Notice it collapses to the same sum-and-difference shortcut yet again."}
+);
+
+/* ================= MATHEMATICS GENERATORS ================= */
+function mSumDiff(){
+  const a=ri(6,40), b=ri(2,a-1);
+  const S=a+b, D=a-b;
+  return {sub:"M",ch:1,p:3,m:3,
+    q:"The sum of two numbers is <b>"+S+"</b> and their difference is <b>"+D+"</b>. Find the larger number.",
+    ph:"the larger number", num:a, tol:0.4, method:["sum","difference","/2"],
+    ans:"Larger = (sum + difference)/2 = ("+S+" + "+D+")/2 = <b>"+a+"</b><br>Smaller = (sum − difference)/2 = ("+S+" − "+D+")/2 = <b>"+b+"</b><br><i>Check: "+a+" + "+b+" = "+S+" ✓</i>",
+    why:"The most repeated idea in the whole Maths portion — 6 to 9 questions per paper reduce to this. Learn it as a reflex: larger = (S+D)/2."};
+}
+function mTwoItems(){
+  const items=[["bag","umbrella"],["notebook","pen"],["bulb","battery"],["chair","table"],["shirt","cap"]];
+  const it=pick(items);
+  const b=ri(4,12)*50, u=ri(2,9)*50;
+  const e1=2*b+u, e2=2*b+3*u;
+  return {sub:"M",ch:1,p:3,m:3,
+    q:"Two "+it[0]+"s and one "+it[1]+" cost ₹"+e1+". Two "+it[0]+"s and three "+it[1]+"s cost ₹"+e2+". Find the price of one "+it[1]+".",
+    ph:"in rupees", num:u, tol:1, method:["subtract","eliminat"],
+    ans:"Subtracting the first from the second, the two "+it[0]+"s cancel:<br>2 "+it[1]+"s = ₹"+e2+" − ₹"+e1+" = ₹"+(e2-e1)+"<br>One "+it[1]+" = <b>₹"+u+"</b><br>Then 2 "+it[0]+"s = "+e1+" − "+u+" = ₹"+(e1-u)+", so one "+it[0]+" = <b>₹"+b+"</b>.",
+    why:"Question 12A of the real 2025-26 paper. Always line the equations up so one item cancels — never substitute first."};
+}
+function mAges(){
+  const son=ri(5,18), gap=ri(22,36);
+  const dad=son+gap, S=son+dad;
+  return {sub:"M",ch:1,p:3,m:5,
+    q:"A father is <b>"+gap+" years</b> older than his son. The sum of their ages is <b>"+S+"</b>. Find the son's age.",
+    ph:"in years", num:son, tol:0.4, method:["sum","difference"],
+    ans:"Sum = "+S+", difference = "+gap+".<br>Father = ("+S+" + "+gap+")/2 = <b>"+dad+"</b><br>Son = ("+S+" − "+gap+")/2 = <b>"+son+"</b>",
+    why:"Question 23 of the real 2025-26 paper was an age problem of exactly this shape. Age problems are the sum-and-difference shortcut in disguise."};
+}
+function mRectPA(){
+  const l=ri(6,20), w=ri(3,l-1);
+  const P=2*(l+w), A=l*w;
+  return {sub:"M",ch:1,p:3,m:5,
+    q:"A rectangle has perimeter <b>"+P+" m</b> and area <b>"+A+" sq.m</b>. Find its length.",
+    ph:"in metres", num:l, tol:0.4, method:["half","semi","sum","product"],
+    ans:"Perimeter "+P+" → length + breadth = "+P+"/2 = <b>"+(l+w)+"</b><br>Area "+A+" → length × breadth = <b>"+A+"</b><br>Two numbers adding to "+(l+w)+" and multiplying to "+A+": <b>"+l+" and "+w+"</b>. Length = <b>"+l+" m</b>.",
+    why:"The real 2024-25 paper had a 10 m × 7 m classroom from this exact setup. Halving the perimeter first is the step people skip."};
+}
+function mProdDiff(){
+  const a=ri(7,20), d=ri(2,6), b=a-d;
+  return {sub:"M",ch:1,p:2,m:5,
+    q:"The product of two numbers is <b>"+a*b+"</b> and their difference is <b>"+d+"</b>. Find the larger number.",
+    ph:"the larger number", num:a, tol:0.4, method:["factor","pair"],
+    ans:"Factorise "+a*b+" and look for the pair differing by "+d+": <b>"+a+" and "+b+"</b>.<br><i>Check: "+a+" × "+b+" = "+a*b+" ✓ and "+a+" − "+b+" = "+d+" ✓</i>",
+    why:"Question 26A of the real 2025-26 paper. When you are given a product, factorise — do not try to grind it out algebraically."};
+}
+function mDiffSquares(){
+  const x=ri(3,12), n=2*x+1;
+  return {sub:"M",ch:2,p:3,m:3,
+    q:"Represent <b>"+n+"</b> as the difference of two perfect squares.",
+    ph:"e.g. a² − b²", key:[[""+(x+1)],[""+x]],
+    ans:"Any odd number 2x + 1 equals <b>(x+1)² − x²</b>.<br>Here "+n+" = 2("+x+") + 1, so "+n+" = <b>"+(x+1)+"² − "+x+"²</b> = "+(x+1)*(x+1)+" − "+x*x+" = "+n+" ✓",
+    why:"Tested in both real years — 15 = 8² − 7² in 2025-26 and 13 = 7² − 6² in 2024-25. Learn the identity, not the individual answers."};
+}
+function mMentalMath(){
+  const a=ri(2,9)*10, b=ri(2,9)*10;
+  return {sub:"M",ch:4,p:3,m:3,
+    q:"Use an algebraic identity to calculate <b>"+(a+1)+" × "+(b+1)+"</b>.",
+    ph:"the answer", num:(a+1)*(b+1), tol:0.5, method:["identity","expand"],
+    ans:"("+a+" + 1)("+b+" + 1) = ("+a+" × "+b+") + "+a+" + "+b+" + 1<br>= "+a*b+" + "+a+" + "+b+" + 1 = <b>"+(a+1)*(b+1)+"</b><br>Identity used: <b>(x+1)(y+1) = xy + x + y + 1</b>.",
+    why:"The SCERT model paper does this with 41 × 81. Mental-math shortcuts from the multiplication identities appear in every single paper found."};
+}
+const SURDS=[[12,27,18],[8,18,12],[2,32,8],[3,27,9],[5,20,10],[6,24,12],[7,28,14],[2,50,10],[3,48,12],[5,45,15]];
+function mSurd(){
+  const d=pick(SURDS);
+  return {sub:"M",ch:5,p:3,m:2,
+    q:"Simplify: <b>√"+d[0]+" × √"+d[1]+"</b>",
+    ph:"a number", num:d[2], tol:0.3, method:["ab","product"],
+    ans:"√"+d[0]+" × √"+d[1]+" = √("+d[0]+" × "+d[1]+") = √"+d[0]*d[1]+" = <b>"+d[2]+"</b><br>Rule: <b>√a × √b = √(ab)</b>.",
+    why:"Question 10 of the real 2024-25 paper used √12 × √27. They always choose a pair whose product is a perfect square."};
+}
+function mThales(){
+  const k=pick([2,3,4,5]), ae=ri(2,6);
+  return {sub:"M",ch:3,p:3,m:4,
+    q:"In triangle ABC, DE is parallel to BC with D on AB and E on AC. If AD : AB = 1 : "+k+" and AE = "+ae+" cm, find <b>EC</b>.",
+    ph:"in cm", num:ae*(k-1), tol:0.3, method:["proportion","thales","ratio"],
+    ans:"By the Basic Proportionality theorem, AD/AB = AE/AC = 1/"+k+".<br>So AC = "+k+" × "+ae+" = "+k*ae+" cm.<br>EC = AC − AE = "+k*ae+" − "+ae+" = <b>"+ae*(k-1)+" cm</b>",
+    why:"Question 18 of the real 2025-26 paper, same structure. The trap is answering AC when they asked for EC."};
+}
+function mMidpoint(){
+  const bc=ri(3,15)*2;
+  const ask=Math.random()<0.5;
+  if(ask) return {sub:"M",ch:3,p:3,m:3,
+    q:"D and E are the midpoints of sides AB and AC of triangle ABC. If BC = "+bc+" cm, find DE.",
+    ph:"in cm", num:bc/2, tol:0.25, method:["midpoint","half"],
+    ans:"By the midpoint theorem, DE is parallel to BC and <b>half its length</b>.<br>DE = "+bc+"/2 = <b>"+bc/2+" cm</b>",
+    why:"Section A of the real 2025-26 paper. Also know: the midpoint triangle has half the perimeter and a quarter of the area."};
+  return {sub:"M",ch:3,p:3,m:3,
+    q:"D and E are the midpoints of sides AB and AC of triangle ABC. If DE = "+bc/2+" cm, find BC.",
+    ph:"in cm", num:bc, tol:0.4, method:["midpoint","double","twice"],
+    ans:"By the midpoint theorem DE = ½ BC, so BC = 2 × DE = 2 × "+bc/2+" = <b>"+bc+" cm</b>",
+    why:"The reverse of the standard midpoint question — check carefully which one they are asking for before doubling or halving."};
+}
+function mCentroid(){
+  const ag=ri(2,9)*2;
+  return {sub:"M",ch:3,p:2,m:5,
+    q:"G is the centroid of triangle ABC and AQ is a median. If AG = "+ag+" cm, find the length of the whole median AQ.",
+    ph:"in cm", num:ag*1.5, tol:0.4, method:["2:1","centroid","ratio"],
+    ans:"The centroid divides each median in the ratio <b>AG : GQ = 2 : 1</b>.<br>GQ = ½ × "+ag+" = "+ag/2+" cm<br>AQ = AG + GQ = "+ag+" + "+ag/2+" = <b>"+ag*1.5+" cm</b>",
+    why:"Question 25B of the real 2025-26 paper. Remember the ratio is measured from the vertex — AG is the long piece."};
+}
+function mEquilateral(){
+  const a=pick([4,6,8,10,12]);
+  const area=1.732/4*a*a;
+  const ask=Math.random()<0.5;
+  if(ask) return {sub:"M",ch:5,p:3,m:4,
+    q:"Find the area of an equilateral triangle of side <b>"+a+" cm</b>.<span class='given'>√3 = 1.732</span>",
+    ph:"in sq.cm", num:area, tol:area*0.03+0.2, method:["√3/4","1.732"],
+    ans:"Area = (√3/4) × a² = (1.732/4) × "+a+"² = 0.433 × "+a*a+" = <b>"+rnd(area,2)+" sq.cm</b>",
+    why:"The equilateral-triangle formula sits behind the 'construct an equilateral triangle of perimeter 14 cm' questions in both real papers."};
+  return {sub:"M",ch:5,p:3,m:3,
+    q:"An equilateral triangle has perimeter <b>"+3*a+" cm</b>. Find its side and its area.<span class='given'>√3 = 1.732</span>",
+    ph:"side + area", key:[[""+a],[""+Math.round(area)]],
+    ans:"Side = "+3*a+"/3 = <b>"+a+" cm</b><br>Area = (√3/4) × "+a+"² = <b>"+rnd(area,2)+" sq.cm</b>",
+    why:"Both real papers had a 'construct an equilateral triangle of perimeter 14 cm' question — perimeter to side is always the first step."};
+}
+function mSpiral(){
+  const n=ri(1,6);
+  const hyp=Math.sqrt(n+1);
+  return {sub:"M",ch:5,p:3,m:5,
+    q:"A right triangle has both legs 1 cm, giving hypotenuse √2. Each new triangle uses the previous hypotenuse as one leg and 1 cm as the other. What is the hypotenuse of <b>triangle "+n+"</b>?",
+    ph:"e.g. root 5 or a decimal", num:hyp, tol:0.06, method:["√","root","sqrt"],
+    ans:"Each new hypotenuse is <b>√(n+1)</b>. For triangle "+n+" that is <b>√"+(n+1)+"</b> ≈ "+rnd(hyp,3)+" cm."+((n+1)===4?"<br><i>Note √4 = 2 exactly.</i>":""),
+    why:"This spiral appeared in <b>all three</b> primary documents — both real papers and the SCERT model. Of everything in the portion, it is the most reliably recurring construction."};
+}
+function mTwoDigit(){
+  const t=ri(4,9), u=ri(1,t-1);
+  return {sub:"M",ch:2,p:2,m:4,
+    q:"A two-digit number has digit sum <b>"+(t+u)+"</b>, and its tens digit exceeds the units digit by <b>"+(t-u)+"</b>. Find the number.",
+    ph:"the number", num:10*t+u, tol:0.4, method:["digit","sum","difference"],
+    ans:"Digits: sum = "+(t+u)+", difference = "+(t-u)+".<br>Tens digit = ("+(t+u)+" + "+(t-u)+")/2 = <b>"+t+"</b>, units digit = ("+(t+u)+" − "+(t-u)+")/2 = <b>"+u+"</b>.<br>The number is <b>"+(10*t+u)+"</b>.",
+    why:"The SCERT model paper has a digit-sum-13 question. Notice it reduces to the sum-and-difference shortcut once more."};
+}
+const REPEAT=[["0.333…","1/3"],["0.666…","2/3"],["0.111…","1/9"],["0.777…","7/9"],["0.444…","4/9"],["0.555…","5/9"],["0.222…","2/9"]];
+function mRepeat(){
+  const d=pick(REPEAT);
+  return {sub:"M",ch:2,p:2,m:2,
+    q:"Write <b>"+d[0]+"</b> as a fraction in its simplest form.",
+    ph:"a fraction", exact:[d[1],d[1].replace("/"," / ")],
+    ans:"<b>"+d[1]+"</b><br>A single repeating digit d gives the fraction d/9, then simplify: 0.333… = 3/9 = 1/3.",
+    why:"Question 8 of the real 2024-25 paper asked for 0.333… + 0.777…. Learn the single-digit rule and these are instant."};
+}
+function mConstruct(){
+  const a=ri(3,9), b=ri(2,8);
+  const L=pick([8,8.5,9,10,12]);
+  return {sub:"M",ch:3,p:3,m:5,
+    q:"Describe how to divide a line segment of <b>"+L+" cm</b> in the ratio <b>"+a+" : "+b+"</b> using compass and straightedge.",
+    ph:"describe the steps",
+    key:[["ray","angle","slant","oblique"],[""+(a+b),"equal parts","equal"],["parallel"]],
+    ans:"1. Draw the segment AB of "+L+" cm.<br>2. From A draw a <b>ray at an acute angle</b> to AB.<br>3. With a fixed compass opening, mark <b>"+(a+b)+" equal parts</b> along the ray (since "+a+" + "+b+" = "+(a+b)+"). Call the last point X.<br>4. Join <b>X to B</b>.<br>5. Through the <b>"+a+"th mark</b>, draw a line <b>parallel to XB</b>. Where it cuts AB divides it in the ratio "+a+" : "+b+".",
+    why:"Question 21 of the real 2025-26 paper (8.5 cm, 4:3) and question 9 of 2024-25 (4:5). Constructions are 2 to 4 marks each, every paper."};
+}
+
+const GENS_M=[
+ [mSumDiff,5],[mTwoItems,4],[mAges,3],[mRectPA,3],[mProdDiff,3],
+ [mDiffSquares,3],[mMentalMath,3],[mSurd,3],[mThales,4],[mMidpoint,3],
+ [mCentroid,2],[mEquilateral,3],[mSpiral,4],[mTwoDigit,2],[mRepeat,2],[mConstruct,3]
+];
 
 /* ---------- BIOLOGY question bank ----------
    Modelled on the SCERT model paper (First Term 2025-26) and two real Pareeksha Bhavan
@@ -4924,7 +5374,7 @@ const GENS_S=[
 const GENS_B=[
  [bTransport,3],[bWhere,3],[bTerm,4],[bWhy,4]
 ];
-const POOLS={P:GENS_P,C:GENS_C,E:GENS_E,S:GENS_S,B:GENS_B};
+const POOLS={P:GENS_P,C:GENS_C,E:GENS_E,S:GENS_S,B:GENS_B,M:GENS_M};
 const GRAPHGENS=[gVTgraph,gDTgraph];
 
 function makeQuestion(mode){
@@ -5002,10 +5452,12 @@ function check(i){
 const SS_CH={1:"📜 Stone Age",2:"📜 Early States",3:"📜 Constitution",
              4:"🗺️ Himalayas",5:"🗺️ Northern Plains",6:"🗺️ Human Resources"};
 const B_CH={1:"Life Processes",2:"Digestion &amp; Transport",3:"Respiration &amp; Excretion"};
+const M_CH={1:"Pairs of Equations",2:"New Numbers",3:"Parallel Lines",4:"Multiplication Identities",5:"Irrational Multiplication",6:"Similar Triangles"};
 function chLabel(q){
   if(q.sub==="E") return q.ch===1 ? "Discourse" : "Grammar";
   if(q.sub==="S") return SS_CH[q.ch]||("Ch "+q.ch);
   if(q.sub==="B") return B_CH[q.ch]||("Ch "+q.ch);
+  if(q.sub==="M") return M_CH[q.ch]||("Ch "+q.ch);
   return "Ch "+q.ch;
 }
 function diaHTML(id){
@@ -5043,7 +5495,10 @@ const QFILT={
     ["1","Moving Forward from the Stone Age"],["3","Distribution of Power"],["5","In the Expansive Plain"],
     ["6","Human Resources"],["star","★★★ only"]],
  B:[["core","Core portion (Ch 1 + 2)"],["all","Everything incl. Ch 3"],["1","Ch 1 · To Life Processes"],
-    ["2","Ch 2 · Digestion &amp; Transport"],["3","Ch 3 · Respiration &amp; Excretion"],["star","★★★ only"]]
+    ["2","Ch 2 · Digestion &amp; Transport"],["3","Ch 3 · Respiration &amp; Excretion"],["star","★★★ only"]],
+ M:[["all","Everything (Ch 1–6)"],["1","Ch 1 · Pairs of Equations"],["2","Ch 2 · New Numbers"],
+    ["3","Ch 3 · Parallel Lines"],["4","Ch 4 · Multiplication Identities"],
+    ["5","Ch 5 · Irrational Multiplication"],["star","★★★ only"]]
 };
 const EFILT={
  P:[["core","Core portion (Ch 1 + 2)"],["all","Everything incl. Ch 3"],["1","Ch 1 · Refraction only"],
@@ -5054,7 +5509,9 @@ const EFILT={
  S:[["all","Everything"],["2","Ideas &amp; Early States"],["4","On the Roof of the World"],
     ["1","Stone Age"],["3","Distribution of Power"],["5","In the Expansive Plain"],["6","Human Resources"]],
  B:[["core","Core portion (Ch 1 + 2)"],["all","Everything"],["1","Ch 1 · To Life Processes"],
-    ["2","Ch 2 · Digestion &amp; Transport"]]
+    ["2","Ch 2 · Digestion &amp; Transport"]],
+ M:[["all","Everything (Ch 1–6)"],["1","Ch 1 · Pairs of Equations"],["2","Ch 2 · New Numbers"],
+    ["3","Ch 3 · Parallel Lines"],["4","Ch 4 · Identities"],["5","Ch 5 · Surds"]]
 };
 EFILT.S=[["all","Everything"],["h","📜 History &amp; Civics"],["g","🗺️ Geography &amp; Economics"],
     ["2","Ideas &amp; Early States"],["4","On the Roof of the World"],["1","Stone Age"],
@@ -5063,7 +5520,7 @@ function fillSel(id,rows){
   document.getElementById(id).innerHTML =
     rows.map(r=>'<option value="'+r[0]+'">'+r[1]+'</option>').join("");
 }
-const SUBS=["P","C","E","S","B"];
+const SUBS=["M","S","B","C","P","E"];
 function setSub(s){
   CURSUB=s;
   SUBS.forEach(k=>document.getElementById("sb-"+k).classList.toggle("on",k===s));
@@ -5078,9 +5535,21 @@ function setSub(s){
            C:["Class 9 Chemistry — Onam Exam 2026","<b>Thu 20 Aug 2026, forenoon</b> · 40 marks · 1½ hours"],
            E:["Class 9 English — Onam Exam 2026","<b>Mon 17 Aug 2026, forenoon</b> · check your school's timetable"],
            S:["Class 9 Social Science — Onam Exam 2026","<b>Wed 19 Aug 2026, 10:00–12:45</b> · 80 marks · 2½ hours"],
-           B:["Class 9 Biology — Onam Exam 2026","<b>Wed 19 or Thu 20 Aug, afternoon</b> — sources conflict · 40 marks · 1½ hours"]};
+           B:["Class 9 Biology — Onam Exam 2026","<b>Wed 19 or Thu 20 Aug, afternoon</b> — sources conflict · 40 marks · 1½ hours"],
+           M:["Class 9 Maths — Onam Exam 2026","<b>Tue 18 Aug 2026, 10:00–12:45</b> · 80 marks · 2½ hours"]};
   document.getElementById("hdr-t").innerHTML=H[s][0];
   document.getElementById("hdr-s").innerHTML=H[s][1];
+  const db=document.getElementById("donebar");
+  const MSG={
+    P:'<b>✓ Physics — written.</b> <span class="potipoi">POTI POI 💀</span> Well. It happened. '+
+      'The paper is behind you and there is nothing left to do about it, so do not spend tonight replaying it — '+
+      'Maths is on Tuesday and that one is still winnable. Leaving the Physics material here in case '+
+      'you want to check an answer, but honestly: close this tab and go do Maths.',
+    E:'<b>✓ English — written.</b> Done and dusted. The material is still here if you want to check '+
+      'something, but your time is better spent on what is left.'
+  };
+  if(DONE[s]){ db.className="donebar show"; db.innerHTML=MSG[s]; }
+  else { db.className="donebar"; db.innerHTML=""; }
   resetAll(); eReset(); fStart();
 }
 function render(){
@@ -5214,6 +5683,26 @@ S:[
  ["The four factors of production and their rewards","<b>Land → Rent</b> · <b>Labour → Wage</b> · <b>Capital → Interest</b> · <b>Entrepreneurship → Profit</b>.","Human Resources"],
  ["What is human capital?","The <b>economic value of a population's knowledge, skills and health</b>. Built by education, healthcare, training, migration, information.","Human Resources"],
  ["The four types of unemployment","<b>Open</b> (no job at all) · <b>Seasonal</b> · <b>Disguised</b> (more workers than the job needs) · <b>Structural</b> (technology or the economy changed).","Human Resources"]],
+M:[
+ ["Sum = S, difference = D. The two numbers?","Larger = <b>(S + D)/2</b> · Smaller = <b>(S − D)/2</b>. This one shortcut answers 6–9 questions per paper.","Pairs of Equations"],
+ ["Two items, two totals — how do you start?","<b>Subtract one equation from the other</b> so the item with the same count cancels. Never substitute first.","Pairs of Equations"],
+ ["Rectangle: perimeter P, area A. First step?","<b>Halve the perimeter</b> → length + breadth = P/2. Then find two numbers with that sum and product A.","Pairs of Equations"],
+ ["Product given instead of sum?","<b>Factorise it.</b> List the factor pairs and pick the one with the right difference.","Pairs of Equations"],
+ ["Write an odd number as a difference of two squares","<b>2x + 1 = (x+1)² − x²</b>. So 15 = 8² − 7², 13 = 7² − 6².","New Numbers"],
+ ["0.333… · 0.777… · 0.111… as fractions","<b>1/3 · 7/9 · 1/9</b>. A single repeating digit d gives <b>d/9</b>, then simplify.","New Numbers"],
+ ["(x + 1)(y + 1) = ?","<b>xy + x + y + 1</b>. This is how 71 × 91 = 6300 + 70 + 90 + 1 = <b>6461</b>.","Identities"],
+ ["√a × √b = ?","<b>√(ab)</b>. They always pick a pair whose product is a perfect square: √12 × √27 = √324 = 18.","Surds"],
+ ["Area of an equilateral triangle of side a","<b>(√3/4) a²</b> &nbsp;(√3 ≈ 1.732)","Surds"],
+ ["The spiral of square roots — what is each hypotenuse?","<b>√(n+1)</b>. Legs 1 and 1 give √2, then √2 and 1 give √3, and so on. It appeared in <b>all three</b> real/model papers.","Surds"],
+ ["Basic Proportionality (Thales) theorem","If DE ∥ BC in triangle ABC, then <b>AD/DB = AE/EC</b> (and AD/AB = AE/AC).","Parallel Lines"],
+ ["Midpoint theorem","The segment joining the midpoints of two sides is <b>parallel to the third side and half its length</b>. The midpoint triangle has ½ the perimeter and ¼ the area.","Parallel Lines"],
+ ["Where is the centroid on a median?","It divides every median <b>2 : 1</b>, measured from the vertex. So AG : GQ = 2 : 1.","Parallel Lines"],
+ ["Circumcentre of a right-angled triangle","At the <b>midpoint of the hypotenuse</b> — the only case where it lies on a side.","Parallel Lines"],
+ ["Divide a line in the ratio a : b — the construction","Ray at an acute angle from A → mark <b>(a + b) equal parts</b> → join the <b>last point to B</b> → through the <b>ath mark</b> draw a line <b>parallel</b> to it.","Construction"],
+ ["Midpoint quadrilateral theorem","Join the midpoints of any quadrilateral → always a <b>parallelogram</b>. Rhombus if the diagonals are equal, rectangle if they are perpendicular, square if both.","Parallel Lines"],
+ ["Altitude on the hypotenuse — the relation","<b>h² = p × q</b>, where p and q are the two segments the altitude cuts the hypotenuse into.","Similar Triangles"],
+ ["If the sides scale by k, the area scales by…","<b>k²</b>. Double the sides → four times the area.","Similar Triangles"],
+ ["The Maths paper — format to expect","<b>80 marks, 2½ hours, 26 questions.</b> Section A 8×1 · B 6×3 · C 6×4 · D 6×5. <b>Answer everything</b> — only the labelled A/B pairs give you a choice.","Exam"]],
 B:[
  ["Metabolism, anabolism, catabolism","<b>Metabolism</b> = all chemical reactions in an organism. <b>Anabolism</b> = building up (photosynthesis). <b>Catabolism</b> = breaking down, releasing energy.","Life Processes"],
  ["Diffusion","Movement of molecules from <b>high to low concentration</b>. <b>No energy needed.</b>","Transport"],
@@ -5353,7 +5842,7 @@ function revealAll(open){
   document.querySelectorAll(".ansbox").forEach(e=>e.style.display=open?"block":"none");
   document.querySelectorAll(".revealbtn").forEach(b=>b.textContent=open?"Hide answer":"Show model answer");
 }
-setSub("P");
+setSub("M");
 </script>
 </body>
 </html>
